@@ -11,17 +11,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Sticky Navbar Behavior on Scroll
+ * Sticky Navbar & Floating WhatsApp Button Behavior on Scroll
+ * Both activate smoothly once the 630px scroll threshold is reached
  */
 function initStickyNavbar() {
   const navbar = document.querySelector('.header-navbar');
-  if (!navbar) return;
+  const whatsappBtn = document.querySelector('.floating-whatsapp-btn');
+  if (!navbar && !whatsappBtn) return;
+
+  const scrollThreshold = 630; // Trigger threshold for navbar and floating WhatsApp button
+  let navHeight = navbar ? navbar.offsetHeight : 80;
+
+  window.addEventListener('resize', () => {
+    if (navbar && !navbar.classList.contains('scrolled')) {
+      navHeight = navbar.offsetHeight;
+    }
+  }, { passive: true });
 
   const handleScroll = () => {
-    if (window.scrollY > 20) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    const isPastThreshold = window.scrollY > scrollThreshold;
+
+    // Sticky Navbar
+    if (navbar) {
+      if (isPastThreshold) {
+        if (!navbar.classList.contains('scrolled')) {
+          navbar.classList.add('scrolled');
+          document.body.style.paddingTop = `${navHeight}px`;
+        }
+      } else {
+        if (navbar.classList.contains('scrolled')) {
+          navbar.classList.remove('scrolled');
+          document.body.style.paddingTop = '0px';
+        }
+      }
+    }
+
+    // Floating WhatsApp Button
+    if (whatsappBtn) {
+      if (isPastThreshold) {
+        whatsappBtn.classList.add('show');
+      } else {
+        whatsappBtn.classList.remove('show');
+      }
     }
   };
 
@@ -95,7 +126,7 @@ function initSmoothScroll() {
         e.preventDefault();
         const navbarHeight = document.querySelector('.header-navbar')?.offsetHeight || 80;
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
