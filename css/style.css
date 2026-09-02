@@ -183,11 +183,6 @@ img {
   height: 54px;
   width: auto;
   object-fit: contain;
-  transition: transform var(--transition-fast);
-}
-
-.brand-logo-img:hover {
-  transform: scale(1.02);
 }
 
 .nav-link-custom {
@@ -278,7 +273,6 @@ img {
 .btn-nav-outline:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: var(--shadow-cta);
 }
 
 .btn-nav-hamburger {
@@ -308,7 +302,6 @@ img {
 
 .btn-nav-hamburger:hover {
   background-color: var(--color-primary);
-  transform: scale(1.05);
 }
 
 /* --------------------------------------------------------------------------
@@ -420,8 +413,6 @@ img {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
   color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 98, 254, 0.35);
 }
 
 .btn-secondary-hero {
@@ -442,8 +433,6 @@ img {
   border-color: var(--color-primary);
   color: var(--color-primary);
   background-color: var(--color-bg-page);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
 }
 
 /* Hero Visual Art (Right Column) */
@@ -576,12 +565,6 @@ img {
   justify-content: center;
   flex-shrink: 0;
   color: var(--color-primary);
-  transition: transform var(--transition-fast);
-}
-
-.stat-card-item:hover .stat-icon-wrap {
-  transform: scale(1.08);
-  background-color: #DDEBFF;
 }
 
 .stat-icon-wrap svg {
@@ -669,26 +652,9 @@ img {
   overflow: hidden;
 }
 
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-cyan) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-
 .service-card:hover {
-  transform: translateY(-6px);
   border-color: var(--color-border-primary);
   box-shadow: var(--shadow-card-hover);
-}
-
-.service-card:hover::before {
-  opacity: 1;
 }
 
 .service-icon-box {
@@ -1025,27 +991,9 @@ img {
   position: relative;
 }
 
-.pillar-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-cyan) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-
 .pillar-card:hover {
-  transform: translateY(-6px);
   box-shadow: var(--shadow-card-hover);
   border-color: var(--color-border-primary);
-}
-
-.pillar-card:hover::before {
-  opacity: 1;
 }
 
 .pillar-icon-wrap {
@@ -1288,12 +1236,6 @@ img {
 .btn-feature-primary:hover {
   background-color: var(--color-primary-hover);
   color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 98, 254, 0.38);
-}
-
-.btn-feature-primary:hover svg {
-  transform: translateX(4px);
 }
 
 /* --------------------------------------------------------------------------
@@ -1333,7 +1275,6 @@ img {
 .process-step-item:hover {
   box-shadow: var(--shadow-card-hover);
   border-color: var(--color-border-primary);
-  transform: translateY(-4px);
 }
 
 .process-step-icon {
@@ -1353,14 +1294,6 @@ img {
   height: 28px;
   stroke: var(--color-primary);
   stroke-width: 1.75;
-}
-
-.process-step-item:hover .process-step-icon {
-  background-color: var(--color-primary);
-}
-
-.process-step-item:hover .process-step-icon svg {
-  stroke: var(--color-white);
 }
 
 .process-step-num {
@@ -1439,7 +1372,6 @@ img {
 }
 
 .portfolio-card:hover {
-  transform: translateY(-6px);
   box-shadow: var(--shadow-card-hover);
   border-color: var(--color-border-primary);
 }
@@ -1459,18 +1391,6 @@ img {
 
 .portfolio-card:hover .portfolio-card-img img {
   transform: scale(1.05);
-}
-
-.portfolio-card-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 98, 254, 0) 0%, rgba(0, 98, 254, 0.45) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
-.portfolio-card:hover .portfolio-card-img-overlay {
-  opacity: 1;
 }
 
 .portfolio-card-body {
