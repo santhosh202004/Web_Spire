@@ -1,0 +1,791 @@
+/* ==========================================================================
+   WebSpire Labs - Contact Us Stylesheet (contact.css)
+   Dedicated Component Styles for contact.html
+   Sections:
+     C1. Contact Hero Section (Angled Blue Polygon, 45° Diamond Art, Floating Badges)
+     C2. Let's Connect & Interactive Form Section (Info Cards, Inputs, Send Button)
+     C3. Why Work With Us Section (4-Pillar Grid with Elevating Cards)
+     C4. How Can We Help? Catalog (7 Comprehensive IT Services, Cyan Links)
+     C5. Contact Page Responsive Media Queries
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   C1. Contact Hero Section (1_header.png)
+   -------------------------------------------------------------------------- */
+.contact-hero-section {
+  position: relative;
+  background-color: var(--color-white);
+  padding: 60px 0 100px 0;
+  overflow: hidden;
+  min-height: 580px;
+}
+
+.contact-hero-left {
+  position: relative;
+  z-index: 5;
+}
+
+.contact-eyebrow-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.contact-eyebrow {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-eyebrow-line {
+  width: 44px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.contact-hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.contact-hero-desc {
+  font-size: 1.05rem;
+  color: var(--color-body);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 36px;
+  text-align: justify;
+}
+
+.contact-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-contact-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 14px rgba(0, 98, 254, 0.28);
+}
+
+.btn-contact-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 98, 254, 0.38);
+}
+
+.btn-contact-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background-color: transparent;
+  color: var(--color-heading);
+  border: 1.5px solid var(--color-primary);
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+}
+
+.btn-contact-outline:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Contact Hero Visual (Right Side with Angled Backdrop & Diamond Frame) */
+.contact-hero-right {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-angled-backdrop {
+  position: absolute;
+  top: -80px;
+  right: -100px;
+  width: 140%;
+  height: 140%;
+  background: linear-gradient(135deg, #0052E0 0%, #0062FE 60%, #1A75FF 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-diamond-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 320px;
+  height: 320px;
+}
+
+.contact-diamond-frame {
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 40, 140, 0.35), 0 0 0 10px rgba(255, 255, 255, 0.95);
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.contact-diamond-img {
+  width: 145%;
+  height: 145%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  object-fit: cover;
+}
+
+/* Floating Glassmorphic Badges (Rotated Diamonds with unrotated icons) */
+.contact-float-badge {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  transform: rotate(45deg);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 40, 130, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  transition: all var(--transition-base);
+}
+
+.contact-float-badge svg {
+  transform: rotate(-45deg);
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  transition: transform var(--transition-fast);
+}
+
+.contact-float-badge:hover {
+  background: var(--color-primary);
+  transform: rotate(45deg) scale(1.12);
+  box-shadow: 0 14px 30px rgba(0, 98, 254, 0.4);
+}
+
+.contact-float-badge:hover svg {
+  color: var(--color-white);
+  stroke: var(--color-white);
+}
+
+.contact-badge-team {
+  top: 25px;
+  left: -20px;
+}
+
+.contact-badge-chat {
+  top: -15px;
+  right: 15px;
+}
+
+.contact-badge-phone {
+  bottom: 0px;
+  left: 20px;
+}
+
+.contact-badge-mail {
+  bottom: 30px;
+  right: -30px;
+}
+
+/* Decorative Dot Grids & Pixel Cubes */
+.dot-grid-accent {
+  display: grid;
+  grid-template-columns: repeat(6, 6px);
+  gap: 12px;
+  pointer-events: none;
+}
+
+.dot-grid-accent span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+}
+
+.dot-grid-accent.dot-grid-blue span {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.pixel-cube-accent {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+}
+
+.pixel-cube-accent div {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.pixel-cube-accent .px-1 {
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+}
+
+.pixel-cube-accent .px-2 {
+  top: 18px;
+  left: 0;
+  background-color: var(--color-primary);
+}
+
+.pixel-cube-accent .px-3 {
+  top: 18px;
+  left: 18px;
+  background-color: #93C5FD;
+}
+
+/* --------------------------------------------------------------------------
+   C2. Section 2: Let's Connect + Form + Interactive Map (2_form_map.png)
+   -------------------------------------------------------------------------- */
+.contact-main-section {
+  padding: 80px 0 90px 0;
+  background-color: var(--color-bg-subtle);
+  position: relative;
+}
+
+.connect-info-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.connect-heading-wrap {
+  margin-bottom: 28px;
+}
+
+.connect-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.connect-lead {
+  font-size: 0.94rem;
+  color: var(--color-body);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.connect-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.connect-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.connect-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.connect-item:hover .connect-icon-box {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.connect-icon-box svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  transition: stroke var(--transition-fast);
+}
+
+.connect-item:hover .connect-icon-box svg {
+  stroke: var(--color-white);
+}
+
+.connect-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 3px;
+}
+
+.connect-value {
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.connect-value a {
+  color: var(--color-primary);
+}
+
+.connect-value a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 44px 38px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.contact-form-card .form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.contact-form-card .form-label .required-star {
+  color: #EF4444;
+}
+
+.form-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-wrap .form-control,
+.form-input-wrap .form-select {
+  padding: 12px 42px 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.92rem;
+  color: var(--color-heading);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background-color: var(--color-bg-page);
+}
+
+.form-input-wrap .form-control:focus,
+.form-input-wrap .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 98, 254, 0.15);
+  outline: none;
+}
+
+.form-input-icon {
+  position: absolute;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-muted);
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.form-input-wrap textarea.form-control {
+  padding-right: 36px;
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-input-wrap textarea+.form-input-icon {
+  bottom: 12px;
+  right: 14px;
+}
+
+.btn-send-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 32px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.96rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(0, 98, 254, 0.28);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.btn-send-message:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 98, 254, 0.38);
+}
+
+.btn-send-message svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-white);
+  stroke-width: 2;
+  transition: transform var(--transition-fast);
+}
+
+.btn-send-message:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   C3. Section 3: Why Work With Us (3_work_with_us.png)
+   -------------------------------------------------------------------------- */
+.work-with-us-section {
+  padding: 90px 0 100px 0;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.work-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 44px 24px 36px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 98, 254, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 98, 254, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.work-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.work-card:hover .work-card-icon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.work-card-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  transition: stroke var(--transition-fast);
+}
+
+.work-card:hover .work-card-icon svg {
+  stroke: var(--color-white);
+}
+
+.work-card-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.work-card-underline {
+  width: 32px;
+  height: 2.5px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  margin: 0 auto 16px auto;
+}
+
+.work-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-body);
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+/* --------------------------------------------------------------------------
+   C4. Section 4: How Can We Help? (4_how_can_i.png)
+   -------------------------------------------------------------------------- */
+.how-can-we-help-section {
+  padding: 90px 0 110px 0;
+  background-color: var(--color-bg-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.help-grid-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.help-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.help-service-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 38px 24px 30px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.help-service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 98, 254, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 98, 254, 0.12);
+}
+
+.help-icon-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.help-service-card:hover .help-icon-wrap {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.help-icon-wrap svg {
+  width: 30px;
+  height: 30px;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  transition: stroke var(--transition-fast);
+}
+
+.help-service-card:hover .help-icon-wrap svg {
+  stroke: var(--color-white);
+}
+
+.help-card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+
+.help-card-desc {
+  font-size: 0.86rem;
+  color: var(--color-body);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.help-card-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-cyan-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.help-card-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-cyan-accent);
+  stroke-width: 2;
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
+}
+
+.help-service-card:hover .help-card-link {
+  color: var(--color-cyan-accent-hover);
+}
+
+.help-service-card:hover .help-card-link svg {
+  transform: translateX(4px);
+  stroke: var(--color-cyan-accent-hover);
+}
+
+/* Background floating translucent glass diamonds */
+.floating-glass-diamonds {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-diamond {
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0.08) 0%, rgba(56, 189, 248, 0.04) 100%);
+  border: 1.5px solid rgba(0, 98, 254, 0.12);
+}
+
+/* ==========================================================================
+   C5. CONTACT PAGE RESPONSIVE QUERIES
+   ========================================================================== */
+@media (max-width: 1199px) {
+  .contact-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .work-cards-grid,
+  .help-grid-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .help-grid-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-hero-section {
+    padding: 40px 0 70px 0;
+  }
+
+  .contact-hero-left {
+    text-align: center;
+  }
+
+  .contact-eyebrow-wrap {
+    align-items: center;
+  }
+
+  .contact-hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-cta-group {
+    justify-content: center;
+  }
+
+  .contact-hero-right {
+    margin-top: 50px;
+    min-height: 400px;
+  }
+
+  .contact-diamond-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  .contact-float-badge {
+    width: 56px;
+    height: 56px;
+  }
+
+  .contact-float-badge svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .btn-contact-primary,
+  .btn-contact-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work-cards-grid,
+  .help-grid-top,
+  .help-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card,
+  .connect-info-card {
+    padding: 30px 20px;
+  }
+}

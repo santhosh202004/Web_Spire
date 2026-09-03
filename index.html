@@ -39,8 +39,11 @@
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- Custom Stylesheet -->
+  <!-- Custom Stylesheet (Global Tokens, Navigation, Footer) -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Homepage Specific Stylesheet (Hero, Services, Why Choose Us, Testimonials, Portfolio) -->
+  <link rel="stylesheet" href="css/home.css">
 
   <!-- Schema.org JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
@@ -116,14 +119,34 @@
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- ==========================================================================
+       Top Announcement Strip (Cognisive Layout Inspired)
+       ========================================================================== -->
+  <div class="announcement-strip" id="announcementStrip">
+    <div class="container announcement-inner">
+      <div class="announcement-content">
+        <span class="announcement-text">
+          🚀 <strong>WebSpire Labs:</strong> Transforming Ideas into Scalable Digital Realities — Web Development, Mobile Apps &amp; Digital Solutions.
+        </span>
+        <a href="contact.html" class="announcement-link">
+          Get Free Consultation
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <button class="announcement-dismiss-btn" id="announcementDismissBtn" type="button" aria-label="Dismiss Announcement">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        Header & Navigation Bar
        ========================================================================== -->
-  <header class="header-navbar">
+  <header class="header-navbar" id="siteHeader">
     <div class="container">
       <nav class="navbar navbar-expand-lg p-0" aria-label="Main Navigation">
         
         <!-- Brand Logo -->
-        <a class="navbar-brand brand-logo-container" href="#" aria-label="WebSpire Labs Home">
+        <a class="navbar-brand brand-logo-container" href="index.html" aria-label="WebSpire Labs Home">
           <img src="asstes/logo.jpg" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img">
         </a>
 
@@ -134,34 +157,62 @@
 
         <!-- Navbar Menu Items -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarMainContent">
-          <ul class="navbar-nav align-items-lg-center gap-lg-2 my-3 my-lg-0">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+            
+            <!-- Home -->
             <li class="nav-item">
-              <a class="nav-link nav-link-custom active" aria-current="page" href="#">Home</a>
+              <a class="nav-link nav-link-custom active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="about.html">About Us</a>
-            </li>
+
+            <!-- Services Link -->
             <li class="nav-item">
               <a class="nav-link nav-link-custom" href="#services">Services</a>
             </li>
+
+            <!-- About Us -->
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
+              <a class="nav-link nav-link-custom" href="about.html">About Us</a>
             </li>
+
+            <!-- Our Work / Portfolio -->
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#our-work">Our Work</a>
+            </li>
+
+            <!-- Blogs -->
             <li class="nav-item">
               <a class="nav-link nav-link-custom" href="#services">Blogs</a>
             </li>
+
+            <!-- Contact Us (visible on mobile in drawer) -->
+            <li class="nav-item d-lg-none">
+              <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
+            </li>
+
           </ul>
+
+          <!-- Mobile Drawer CTA Button -->
+          <div class="d-lg-none header-nav-actions">
+            <a href="contact.html" class="btn-nav-pill">
+              <span>Contact Us</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Header Actions (Right) -->
-        <!-- <div class="d-none d-lg-flex align-items-center gap-3">
-          <a href="#services" class="btn-nav-outline" id="headerCtaBtn">Get In Touch</a>
-          <button class="btn-nav-hamburger" type="button" aria-label="Toggle Side Menu" title="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div> -->
+        <!-- Header Actions (Right on Desktop: Deep Navy Pill CTA) -->
+        <div class="d-none d-lg-flex align-items-center">
+          <a href="contact.html" class="btn-nav-pill" id="headerCtaBtn">
+            <span>Contact Us</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
 
       </nav>
     </div>
@@ -173,139 +224,379 @@
   <main id="main-content">
 
     <!-- ==========================================================================
-         Hero Section
+         Hero Section: 3-Slide Interactive Ecosystem Carousel (Cognisive Inspired)
          ========================================================================== -->
-    <section class="hero-section" id="hero" aria-labelledby="hero-title">
-      <!-- Angled Blue Polygon Graphic Backdrop (Right) -->
-      <div class="hero-bg-accent" aria-hidden="true"></div>
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-diagonal-line" aria-hidden="true"></div>
+    <section class="hero-section" id="hero" aria-labelledby="hero-title-1">
+      <!-- High-Tech Constellation & Network Mesh Backdrop -->
+      <div class="hero-network-backdrop" aria-hidden="true">
+        <svg class="hero-constellation-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="heroGlow" cx="75%" cy="40%" r="50%">
+              <stop offset="0%" stop-color="rgba(0, 163, 196, 0.08)" />
+              <stop offset="100%" stop-color="rgba(244, 245, 247, 0)" />
+            </radialGradient>
+            <pattern id="dotGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.2" fill="rgba(11, 27, 50, 0.045)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#heroGlow)" />
+          <rect width="100%" height="100%" fill="url(#dotGrid)" />
+        </svg>
+      </div>
 
-      <div class="container hero-content">
-        <div class="row align-items-center gy-5">
+      <div class="container hero-container">
+        
+        <!-- Slides Viewport -->
+        <div class="hero-slides-wrapper">
           
-          <!-- Left Column: Typography & CTAs -->
-          <div class="col-lg-6">
-            <h1 class="hero-headline" id="hero-title">
-              Building Digital<br>
-              <span class="highlight-amber">Solutions.</span><br>
-              Empowering Businesses.
-            </h1>
-
-            <p class="hero-description">
-              We deliver innovative and scalable IT solutions that help businesses streamline operations, accelerate growth, and achieve lasting success.
-            </p>
-
-            <div class="hero-cta-group">
-              <a href="#services" class="btn-primary-hero" id="heroExploreBtn">Explore Services</a>
-              <a href="#services" class="btn-secondary-hero" id="heroContactBtn">Get In Touch</a>
-            </div>
-          </div>
-
-          <!-- Right Column: Geometric Diamond Visual Artwork -->
-          <div class="col-lg-6">
-            <div class="hero-visual-wrapper" aria-hidden="true">
-              
-              <!-- Floating Layered Diamond Accents -->
-              <div class="accent-diamond accent-diamond-1"></div>
-              <div class="accent-diamond accent-diamond-2"></div>
-              <div class="accent-diamond accent-diamond-3"></div>
-              <div class="accent-diamond accent-diamond-4"></div>
-
-              <!-- Main Diamond Rotated Container -->
-              <div class="diamond-image-frame">
-                <img 
-                  src="asstes/hero-placeholder.svg" 
-                  alt="WebSpire Labs IT Team collaborating on scalable digital solutions" 
-                  class="diamond-image-inner"
-                  width="500" 
-                  height="500"
-                  loading="eager"
-                >
+          <!-- Slide 1: Web & Cloud Solutions (Active by default) -->
+          <div class="hero-slide active" id="heroSlide1" data-slide="0">
+            <div class="row align-items-center gy-5">
+              <!-- Left Content -->
+              <div class="col-lg-6 hero-text-col">
+                <span class="hero-slide-badge">
+                  ENTERPRISE WEB &amp; CLOUD
+                </span>
+                <h1 class="hero-headline" id="hero-title-1">
+                  Future-Proof<br>
+                  <span class="highlight-cyan">Digital Engineering.</span>
+                </h1>
+                <p class="hero-description">
+                  Enterprise-grade, scalable web applications and cloud architectures built for exceptional speed, continuous uptime, and effortless scaling.
+                </p>
+                <a href="#services" class="hero-action-row" aria-label="Explore Web &amp; Cloud Solutions">
+                  <span class="hero-circle-cta">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span class="hero-action-label">Explore Web &amp; Cloud Architecture</span>
+                </a>
               </div>
 
+              <!-- Right Visual Artwork (Line-Art Digital Ecosystem) -->
+              <div class="col-lg-6 hero-visual-col">
+                <div class="hero-artwork-card">
+                  <!-- Vector Line Art SVG: Web, Cloud, Code, Servers -->
+                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tech Grid Mesh -->
+                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
+                      <line x1="40" y1="60" x2="500" y2="60" />
+                      <line x1="40" y1="190" x2="500" y2="190" />
+                      <line x1="40" y1="320" x2="500" y2="320" />
+                      <line x1="120" y1="20" x2="120" y2="360" />
+                      <line x1="270" y1="20" x2="270" y2="360" />
+                      <line x1="420" y1="20" x2="420" y2="360" />
+                    </g>
+                    
+                    <!-- Center Code & Cloud Container Window -->
+                    <rect x="130" y="80" width="280" height="190" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 12px 28px rgba(11,27,50,0.08))" />
+                    <!-- Browser Window Header -->
+                    <rect x="130" y="80" width="280" height="34" rx="14" fill="#F8FAFC" stroke="#0B1B32" stroke-width="2" />
+                    <line x1="130" y1="114" x2="410" y2="114" stroke="#E2E8F0" stroke-width="1.5" />
+                    <circle cx="152" cy="97" r="4" fill="#EF4444" />
+                    <circle cx="166" cy="97" r="4" fill="#F59E0B" />
+                    <circle cx="180" cy="97" r="4" fill="#10B981" />
+                    <rect x="200" y="90" width="140" height="14" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+                    
+                    <!-- Code & Architecture lines inside window -->
+                    <rect x="155" y="132" width="70" height="8" rx="4" fill="#00A3C4" />
+                    <rect x="235" y="132" width="110" height="8" rx="4" fill="#E2E8F0" />
+                    <rect x="155" y="152" width="130" height="8" rx="4" fill="#E2E8F0" />
+                    <rect x="175" y="172" width="85" height="8" rx="4" fill="#38BDF8" opacity="0.6" />
+                    <rect x="175" y="192" width="160" height="8" rx="4" fill="#E2E8F0" />
+                    <rect x="155" y="212" width="60" height="8" rx="4" fill="#0062FE" />
+                    <rect x="225" y="212" width="90" height="8" rx="4" fill="#E2E8F0" />
+
+                    <!-- Floating Node 1: Cloud Architecture (Top Left) -->
+                    <g class="float-node-1">
+                      <circle cx="85" cy="110" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(0,163,196,0.15))" />
+                      <circle cx="85" cy="110" r="28" fill="rgba(0,163,196,0.06)" />
+                      <!-- Cloud Icon -->
+                      <path d="M74 116a8 8 0 0 1-1-16 11 11 0 0 1 20-3 9 9 0 0 1 8 9 7 7 0 0 1-7 10h-20z" fill="none" stroke="#00A3C4" stroke-width="2" stroke-linejoin="round" />
+                    </g>
+                    <!-- Connector line to window -->
+                    <path d="M117 110 L 130 110" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Floating Node 2: Server Stack / DevOps (Bottom Left) -->
+                    <g class="float-node-2">
+                      <circle cx="95" cy="270" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(11,27,50,0.1))" />
+                      <!-- Server Icon -->
+                      <rect x="83" y="258" width="24" height="7" rx="2" stroke="#0B1B32" stroke-width="1.8" fill="none" />
+                      <rect x="83" y="268" width="24" height="7" rx="2" stroke="#0B1B32" stroke-width="1.8" fill="none" />
+                      <circle cx="88" cy="261.5" r="1.5" fill="#00A3C4" />
+                      <circle cx="88" cy="271.5" r="1.5" fill="#00A3C4" />
+                    </g>
+                    <!-- Connector curve -->
+                    <path d="M127 270 Q 140 270 150 240 L 150 215" fill="none" stroke="#0B1B32" stroke-width="1.8" stroke-dasharray="4 3" />
+
+                    <!-- Floating Node 3: AI & Microservices (Top Right) -->
+                    <g class="float-node-3">
+                      <circle cx="455" cy="100" r="34" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 20px rgba(0,98,254,0.14))" />
+                      <circle cx="455" cy="100" r="30" fill="rgba(0,98,254,0.06)" />
+                      <!-- Circuit / AI Node Icon -->
+                      <circle cx="455" cy="100" r="6" fill="#0062FE" />
+                      <circle cx="442" cy="90" r="3" fill="#00A3C4" />
+                      <circle cx="468" cy="90" r="3" fill="#00A3C4" />
+                      <circle cx="455" cy="116" r="3" fill="#00A3C4" />
+                      <line x1="455" y1="94" x2="455" y2="106" stroke="#0B1B32" stroke-width="1.5" />
+                      <line x1="444" y1="92" x2="451" y2="98" stroke="#0B1B32" stroke-width="1.5" />
+                      <line x1="466" y1="92" x2="459" y2="98" stroke="#0B1B32" stroke-width="1.5" />
+                    </g>
+                    <!-- Connector line -->
+                    <path d="M410 120 L 425 110" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Floating Node 4: Security Shield (Bottom Right) -->
+                    <g class="float-node-4">
+                      <circle cx="445" cy="275" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
+                      <circle cx="445" cy="275" r="28" fill="rgba(0,163,196,0.08)" />
+                      <!-- Shield Icon -->
+                      <path d="M445 261 L 434 265 v 10 c0 7 11 12 11 12 s 11 -5 11 -12 v -10 z" fill="none" stroke="#00A3C4" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M441 275 l 3 3 6 -6" fill="none" stroke="#0B1B32" stroke-width="2" stroke-linecap="round" />
+                    </g>
+                    <!-- Connector curve -->
+                    <path d="M410 240 Q 425 255 425 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
+
+                    <!-- Decorative Cyan Accent Rings -->
+                    <circle cx="475" cy="180" r="14" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.4" />
+                    <circle cx="65" cy="200" r="10" fill="none" stroke="#00A3C4" stroke-width="2" opacity="0.3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Mobile Applications -->
+          <div class="hero-slide" id="heroSlide2" data-slide="1" aria-hidden="true">
+            <div class="row align-items-center gy-5">
+              <!-- Left Content -->
+              <div class="col-lg-6 hero-text-col">
+                <span class="hero-slide-badge">
+                  NATIVE &amp; CROSS-PLATFORM APPS
+                </span>
+                <h1 class="hero-headline" id="hero-title-2">
+                  Seamless Mobile<br>
+                  <span class="highlight-cyan">Experiences.</span>
+                </h1>
+                <p class="hero-description">
+                  High-performance iOS and Android mobile solutions engineered for intuitive user journeys, lightning-fast interactions, and seamless offline-ready capabilities.
+                </p>
+                <a href="#services" class="hero-action-row" aria-label="Explore Mobile Application Services">
+                  <span class="hero-circle-cta">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span class="hero-action-label">Explore Mobile App Development</span>
+                </a>
+              </div>
+
+              <!-- Right Visual Artwork (Line-Art Mobile Ecosystem) -->
+              <div class="col-lg-6 hero-visual-col">
+                <div class="hero-artwork-card">
+                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tech Grid Mesh -->
+                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
+                      <line x1="40" y1="60" x2="500" y2="60" />
+                      <line x1="40" y1="190" x2="500" y2="190" />
+                      <line x1="40" y1="320" x2="500" y2="320" />
+                    </g>
+                    
+                    <!-- Center Smartphone Frame -->
+                    <rect x="200" y="45" width="140" height="270" rx="22" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2.5" filter="drop-shadow(0 14px 32px rgba(11,27,50,0.12))" />
+                    <!-- Dynamic Island / Speaker Notch -->
+                    <rect x="245" y="55" width="50" height="8" rx="4" fill="#0B1B32" />
+                    
+                    <!-- App UI Elements inside Phone -->
+                    <rect x="214" y="75" width="112" height="42" rx="8" fill="rgba(0,163,196,0.1)" stroke="#00A3C4" stroke-width="1.2" />
+                    <circle cx="230" cy="96" r="10" fill="#00A3C4" />
+                    <rect x="248" y="90" width="54" height="5" rx="2" fill="#0B1B32" />
+                    <rect x="248" y="98" width="38" height="4" rx="2" fill="#64748B" />
+
+                    <!-- App Card 2 -->
+                    <rect x="214" y="125" width="112" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+                    <rect x="224" y="137" width="50" height="6" rx="3" fill="#0B1B32" />
+                    <rect x="224" y="148" width="90" height="4" rx="2" fill="#94A3B8" />
+                    <rect x="224" y="156" width="70" height="4" rx="2" fill="#CBD5E1" />
+                    <circle cx="298" cy="140" r="6" fill="#38BDF8" />
+
+                    <!-- App Card 3: Metrics -->
+                    <rect x="214" y="193" width="112" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+                    <!-- Mini Graph curve inside app -->
+                    <path d="M224 245 C 240 230, 260 250, 280 220 S 310 205, 314 210" fill="none" stroke="#0062FE" stroke-width="2" stroke-linecap="round" />
+                    <circle cx="314" cy="210" r="3" fill="#00A3C4" />
+
+                    <!-- Home Indicator Bar -->
+                    <rect x="245" y="300" width="50" height="4" rx="2" fill="#94A3B8" />
+
+                    <!-- Left Satellite Device: Tablet Wireframe -->
+                    <g class="float-node-1">
+                      <rect x="65" y="110" width="105" height="150" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(11,27,50,0.09))" />
+                      <rect x="75" y="125" width="85" height="120" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+                      <circle cx="117" cy="185" r="14" fill="rgba(0,163,196,0.12)" />
+                      <path d="M112 185 l 4 4 8 -8" stroke="#00A3C4" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </g>
+                    <!-- Connector line -->
+                    <path d="M170 185 L 200 185" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Right Satellite Device: Smart Watch & Touch Node -->
+                    <g class="float-node-3">
+                      <rect x="375" y="120" width="90" height="90" rx="24" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 10px 24px rgba(0,98,254,0.12))" />
+                      <circle cx="420" cy="165" r="32" fill="rgba(0,98,254,0.06)" />
+                      <circle cx="420" cy="165" r="22" stroke="#0062FE" stroke-width="2" stroke-dasharray="2 2" fill="none" />
+                      <text x="420" y="170" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0B1B32">iOS/APK</text>
+                    </g>
+                    <!-- Connector line -->
+                    <path d="M340 165 L 375 165" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Floating Sync Cloud Node (Bottom Right) -->
+                    <g class="float-node-4">
+                      <circle cx="430" cy="275" r="30" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
+                      <!-- Sync Arrows Icon -->
+                      <path d="M422 268 a9 9 0 0 1 15 2 l 3-3 v 8 h-8 l 3-3 a6 6 0 0 0-10-1" fill="none" stroke="#00A3C4" stroke-width="1.8" />
+                      <path d="M438 282 a9 9 0 0 1-15-2 l-3 3 v-8 h 8 l-3 3 a6 6 0 0 0 10 1" fill="none" stroke="#0B1B32" stroke-width="1.8" />
+                    </g>
+                    <!-- Connector line -->
+                    <path d="M340 250 Q 380 275 400 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Growth & Branding -->
+          <div class="hero-slide" id="heroSlide3" data-slide="2" aria-hidden="true">
+            <div class="row align-items-center gy-5">
+              <!-- Left Content -->
+              <div class="col-lg-6 hero-text-col">
+                <span class="hero-slide-badge">
+                  DIGITAL MARKETING &amp; IDENTITY
+                </span>
+                <h1 class="hero-headline" id="hero-title-3">
+                  Data-Driven<br>
+                  <span class="highlight-cyan">Brand Acceleration.</span>
+                </h1>
+                <p class="hero-description">
+                  Precision-targeted performance marketing, data-backed SEO ranking strategies, and distinctive brand identities designed to build lasting market authority.
+                </p>
+                <a href="#services" class="hero-action-row" aria-label="Explore Growth &amp; Branding Services">
+                  <span class="hero-circle-cta">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span class="hero-action-label">Explore Marketing &amp; Brand Solutions</span>
+                </a>
+              </div>
+
+              <!-- Right Visual Artwork (Line-Art Growth & Analytics Ecosystem) -->
+              <div class="col-lg-6 hero-visual-col">
+                <div class="hero-artwork-card">
+                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tech Grid Mesh -->
+                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
+                      <line x1="40" y1="60" x2="500" y2="60" />
+                      <line x1="40" y1="190" x2="500" y2="190" />
+                      <line x1="40" y1="320" x2="500" y2="320" />
+                    </g>
+                    
+                    <!-- Center Analytics Growth Dashboard -->
+                    <rect x="130" y="80" width="280" height="190" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 12px 28px rgba(11,27,50,0.08))" />
+                    <!-- Header -->
+                    <rect x="130" y="80" width="280" height="34" rx="14" fill="#F8FAFC" stroke="#0B1B32" stroke-width="2" />
+                    <line x1="130" y1="114" x2="410" y2="114" stroke="#E2E8F0" stroke-width="1.5" />
+                    <circle cx="152" cy="97" r="4" fill="#00A3C4" />
+                    <rect x="166" y="93" width="70" height="8" rx="3" fill="#0B1B32" />
+                    <rect x="340" y="91" width="50" height="12" rx="6" fill="rgba(16,185,129,0.15)" />
+                    <text x="365" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#10B981">+240%</text>
+
+                    <!-- Chart Grid inside Dashboard -->
+                    <line x1="160" y1="140" x2="380" y2="140" stroke="#F1F5F9" stroke-width="1" />
+                    <line x1="160" y1="180" x2="380" y2="180" stroke="#F1F5F9" stroke-width="1" />
+                    <line x1="160" y1="220" x2="380" y2="220" stroke="#F1F5F9" stroke-width="1" />
+                    
+                    <!-- Gradient Area Fill under Curve -->
+                    <defs>
+                      <linearGradient id="growthArea" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00A3C4" stop-opacity="0.25" />
+                        <stop offset="100%" stop-color="#00A3C4" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M165 220 Q 200 215 230 185 T 310 160 T 375 135 L 375 220 Z" fill="url(#growthArea)" />
+                    <!-- Bold Growth Line -->
+                    <path d="M165 220 Q 200 215 230 185 T 310 160 T 375 135" fill="none" stroke="#00A3C4" stroke-width="3" stroke-linecap="round" />
+                    <!-- Data Points -->
+                    <circle cx="230" cy="185" r="5" fill="#FFFFFF" stroke="#00A3C4" stroke-width="2.5" />
+                    <circle cx="310" cy="160" r="5" fill="#FFFFFF" stroke="#0062FE" stroke-width="2.5" />
+                    <circle cx="375" cy="135" r="6" fill="#00A3C4" stroke="#FFFFFF" stroke-width="2" />
+
+                    <!-- Floating Node 1: Target / SEO Keyword Acquisition (Left) -->
+                    <g class="float-node-1">
+                      <circle cx="85" cy="130" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(0,163,196,0.15))" />
+                      <circle cx="85" cy="130" r="28" fill="rgba(0,163,196,0.06)" />
+                      <!-- Target Icon -->
+                      <circle cx="85" cy="130" r="14" stroke="#0B1B32" stroke-width="1.8" fill="none" />
+                      <circle cx="85" cy="130" r="8" stroke="#00A3C4" stroke-width="2" fill="none" />
+                      <circle cx="85" cy="130" r="3" fill="#00A3C4" />
+                    </g>
+                    <path d="M117 130 L 130 130" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Floating Node 2: Brand Star / Creative Sparkle (Top Right) -->
+                    <g class="float-node-3">
+                      <circle cx="455" cy="100" r="34" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 20px rgba(0,98,254,0.14))" />
+                      <circle cx="455" cy="100" r="30" fill="rgba(0,98,254,0.06)" />
+                      <!-- 4-point Star -->
+                      <path d="M455 86 L 458 96 L 468 100 L 458 104 L 455 114 L 452 104 L 442 100 L 452 96 Z" fill="#0062FE" />
+                    </g>
+                    <path d="M410 115 L 425 105" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
+
+                    <!-- Floating Node 3: Conversion Bar Chart (Bottom Right) -->
+                    <g class="float-node-4">
+                      <circle cx="445" cy="275" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
+                      <!-- Bar chart icon -->
+                      <rect x="432" y="274" width="5" height="12" rx="1.5" fill="#CBD5E1" />
+                      <rect x="442" y="266" width="5" height="20" rx="1.5" fill="#38BDF8" />
+                      <rect x="452" y="258" width="5" height="28" rx="1.5" fill="#00A3C4" />
+                    </g>
+                    <path d="M410 240 Q 425 255 425 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- ==========================================================================
-         Key Performance Metrics / Stats Strip
-         ========================================================================== -->
-    <section class="stats-section" id="stats" aria-label="Key Performance Metrics">
-      <div class="container">
-        <div class="stats-grid">
-          
-          <!-- Stat 1: Projects Delivered -->
-          <div class="stat-card-item">
-            <div class="stat-icon-wrap stat-icon-amber" aria-hidden="true">
-              <!-- Calendar / Check Icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-                <path d="M9 16l2 2 4-4"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="stat-number stat-number-amber" data-target="100" data-suffix="+">100+</div>
-              <p class="stat-label">Projects Delivered</p>
-            </div>
-          </div>
+        <!-- ==========================================================================
+             Bottom Tab Switcher (Cognisive Inspired 3-Pillar Tabs)
+             ========================================================================== -->
+        <div class="hero-tabs-bar" role="tablist" aria-label="Hero Service Solutions">
+          <button class="hero-tab-btn active" role="tab" aria-selected="true" aria-controls="heroSlide1" data-slide-target="0">
+            <span class="hero-tab-num">01</span>
+            <span class="hero-tab-title">Web &amp; Cloud Solutions</span>
+            <span class="hero-tab-line"></span>
+          </button>
 
-          <!-- Stat 2: Happy Clients -->
-          <div class="stat-card-item">
-            <div class="stat-icon-wrap" aria-hidden="true">
-              <!-- Users / Team Icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="stat-number" data-target="50" data-suffix="+">50+</div>
-              <p class="stat-label">Happy Clients</p>
-            </div>
-          </div>
+          <button class="hero-tab-btn" role="tab" aria-selected="false" aria-controls="heroSlide2" data-slide-target="1" tabindex="-1">
+            <span class="hero-tab-num">02</span>
+            <span class="hero-tab-title">Mobile Applications</span>
+            <span class="hero-tab-line"></span>
+          </button>
 
-          <!-- Stat 3: Countries Served -->
-          <div class="stat-card-item">
-            <div class="stat-icon-wrap" aria-hidden="true">
-              <!-- Location Pin / Global Icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </div>
-            <div>
-              <div class="stat-number" data-target="10" data-suffix="+">10+</div>
-              <p class="stat-label">Countries Served</p>
-            </div>
-          </div>
-
-          <!-- Stat 4: Years Experience -->
-          <div class="stat-card-item">
-            <div class="stat-icon-wrap" aria-hidden="true">
-              <!-- Award Ribbon Badge Icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-              </svg>
-            </div>
-            <div>
-              <div class="stat-number" data-target="5" data-suffix="+">5+</div>
-              <p class="stat-label">Years Experience</p>
-            </div>
-          </div>
-
+          <button class="hero-tab-btn" role="tab" aria-selected="false" aria-controls="heroSlide3" data-slide-target="2" tabindex="-1">
+            <span class="hero-tab-num">03</span>
+            <span class="hero-tab-title">Brand &amp; Growth</span>
+            <span class="hero-tab-line"></span>
+          </button>
         </div>
+
       </div>
     </section>
+
+
 
     <!-- ==========================================================================
          "Our Services" Section
@@ -322,10 +613,10 @@
           </p>
         </div>
 
-        <!-- Service Cards Grid (3x2) -->
+        <!-- Services Grid (3x2 Minimalist Frameless Layout) -->
         <div class="services-grid">
 
-          <!-- Card 1: Web Development -->
+          <!-- Service 1: Web Development -->
           <article class="service-card" aria-labelledby="service-1-title">
             <div class="service-icon-box" aria-hidden="true">
               <!-- Monitor / Code Icon -->
@@ -350,7 +641,7 @@
             </a>
           </article>
 
-          <!-- Card 2: Mobile Application -->
+          <!-- Service 2: Mobile Application -->
           <article class="service-card" aria-labelledby="service-2-title">
             <div class="service-icon-box" aria-hidden="true">
               <!-- Smartphone Icon -->
@@ -375,9 +666,9 @@
             </a>
           </article>
 
-          <!-- Card 3: Digital Marketing -->
+          <!-- Service 3: Digital Marketing -->
           <article class="service-card" aria-labelledby="service-3-title">
-            <div class="service-icon-box service-icon-amber" aria-hidden="true">
+            <div class="service-icon-box" aria-hidden="true">
               <!-- Megaphone / Marketing Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -389,7 +680,7 @@
             <p class="service-card-desc">
               Data-driven marketing strategies, social media growth, and paid ads to amplify brand reach and lead generation.
             </p>
-            <a href="#contact" class="service-card-link service-link-amber" aria-label="Learn more about Digital Marketing">
+            <a href="#contact" class="service-card-link" aria-label="Learn more about Digital Marketing">
               Learn More
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -398,7 +689,7 @@
             </a>
           </article>
 
-          <!-- Card 4: SEO -->
+          <!-- Service 4: SEO -->
           <article class="service-card" aria-labelledby="service-4-title">
             <div class="service-icon-box" aria-hidden="true">
               <!-- Search & Growth Chart Icon -->
@@ -421,9 +712,9 @@
             </a>
           </article>
 
-          <!-- Card 5: Branding -->
+          <!-- Service 5: Branding -->
           <article class="service-card" aria-labelledby="service-5-title">
-            <div class="service-icon-box service-icon-amber" aria-hidden="true">
+            <div class="service-icon-box" aria-hidden="true">
               <!-- Palette / Creative Design Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -437,7 +728,7 @@
             <p class="service-card-desc">
               Distinctive brand identities, logos, style guides, and creative visuals that make your business stand out.
             </p>
-            <a href="#contact" class="service-card-link service-link-amber" aria-label="Learn more about Branding">
+            <a href="#contact" class="service-card-link" aria-label="Learn more about Branding">
               Learn More
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -446,9 +737,9 @@
             </a>
           </article>
 
-          <!-- Card 6: Video Editing -->
+          <!-- Service 6: Video Editing -->
           <article class="service-card" aria-labelledby="service-6-title">
-            <div class="service-icon-box service-icon-amber" aria-hidden="true">
+            <div class="service-icon-box" aria-hidden="true">
               <!-- Video / Film Reel Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="15" height="16" rx="2" ry="2"></rect>
@@ -460,7 +751,7 @@
             <p class="service-card-desc">
               High-quality video production, motion graphics, and engaging social reels edited for maximum audience impact.
             </p>
-            <a href="#contact" class="service-card-link service-link-amber" aria-label="Learn more about Video Editing">
+            <a href="#contact" class="service-card-link" aria-label="Learn more about Video Editing">
               Learn More
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -480,167 +771,237 @@
     <section class="why-choose-section" id="why-choose-us" aria-labelledby="why-title">
       <div class="container">
 
-        <!-- Header -->
-        <div class="why-choose-header">
-          <span class="section-eyebrow">WHY CHOOSE US</span>
-          <h2 class="section-title" id="why-title">We Build Solutions That <span class="highlight-amber">Drive Growth</span></h2>
-          <p class="section-subtitle">Our approach combines technology, creativity and strategy to deliver solutions that make a real impact.</p>
-        </div>
+        <!-- 2-Column Split Layout (Screenshot 1 Alignment: Left 4-Petal Emblem + Right Interactive Accordion) -->
+        <div class="why-layout-grid">
 
-        <!-- 4-Column Pillar Cards -->
-        <div class="why-pillars-grid">
+          <!-- Left Column: 4-Petal Emblem Graphic -->
+          <div class="why-petal-col">
+            <div class="why-petal-emblem-wrap" role="img" aria-label="Why Choose WebSpire Labs - Innovation, Agile Delivery, Scalability and Business ROI">
+              <svg class="why-petal-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Drop Shadow for Center Disc -->
+                  <filter id="centerDiscShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0B1B32" flood-opacity="0.18" />
+                  </filter>
+                  <!-- Petal Glow Filter -->
+                  <filter id="petalGlow" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#DC2626" flood-opacity="0.2" />
+                  </filter>
+                </defs>
 
-          <!-- Pillar 1: Expert Team -->
-          <article class="pillar-card" aria-labelledby="pillar-1-title">
-            <div class="pillar-icon-wrap" aria-hidden="true">
-              <!-- Award / Expert icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"></circle>
-                <path d="M12 14v7"></path>
-                <path d="M9 18l3 3 3-3"></path>
-                <circle cx="12" cy="8" r="2"></circle>
+                <!-- Petal 1: Top-Left (Unified Red #DC2626 - Engineering & Innovation) -->
+                <g class="why-petal-node" data-accordion-target="0" transform="translate(250, 250) rotate(-45)">
+                  <!-- Petal Blade Base (Enlarged) -->
+                  <path d="M -38 0 L -72 -170 A 72 72 0 0 1 72 -170 L 38 0 Z" fill="#DC2626" />
+                  <!-- 3D Shadow Fold on Right Half -->
+                  <path d="M 0 0 L 38 0 L 72 -170 L 0 -170 Z" fill="#B91C1C" opacity="0.95" />
+                  <!-- Icon Container -->
+                  <g transform="translate(0, -175) rotate(45)">
+                    <circle cx="0" cy="0" r="34" fill="rgba(255, 255, 255, 0.15)" />
+                    <g transform="scale(1.3)">
+                      <!-- Lightbulb / Innovation Vector Icon -->
+                      <path d="M -9 -4 C -9 -11 9 -11 9 -4 C 9 1 3 5 3 9 L -3 9 C -3 5 -9 1 -9 -4 Z" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                      <line x1="-3" y1="12" x2="3" y2="12" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <line x1="-1.5" y1="15" x2="1.5" y2="15" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <line x1="0" y1="-15" x2="0" y2="-18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                      <line x1="-11" y1="-13" x2="-13" y2="-15" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                      <line x1="11" y1="-13" x2="13" y2="-15" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Petal 2: Top-Right (Unified Red #DC2626 - Agile & Innovation) -->
+                <g class="why-petal-node" data-accordion-target="1" transform="translate(250, 250) rotate(45)">
+                  <!-- Petal Blade Base (Enlarged) -->
+                  <path d="M -38 0 L -72 -170 A 72 72 0 0 1 72 -170 L 38 0 Z" fill="#DC2626" />
+                  <!-- 3D Shadow Fold on Right Half -->
+                  <path d="M 0 0 L 38 0 L 72 -170 L 0 -170 Z" fill="#B91C1C" opacity="0.95" />
+                  <!-- Icon Container -->
+                  <g transform="translate(0, -175) rotate(-45)">
+                    <circle cx="0" cy="0" r="34" fill="rgba(255, 255, 255, 0.15)" />
+                    <g transform="scale(1.3)">
+                      <!-- Gear in Hand / Process Icon -->
+                      <circle cx="0" cy="-3" r="7" fill="none" stroke="#FFFFFF" stroke-width="2" />
+                      <circle cx="0" cy="-3" r="3" fill="#FFFFFF" />
+                      <line x1="0" y1="-12" x2="0" y2="-10" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <line x1="0" y1="4" x2="0" y2="6" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <line x1="-9" y1="-3" x2="-7" y2="-3" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <line x1="7" y1="-3" x2="9" y2="-3" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                      <path d="M -11 9 C -11 9 -5 6 0 6 C 5 6 11 9 11 9 L 9 13 C 6 12 0 12 -3 13 Z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Petal 3: Bottom-Left (Unified Red #DC2626 - ROI & Business Growth) -->
+                <g class="why-petal-node" data-accordion-target="4" transform="translate(250, 250) rotate(-135)">
+                  <!-- Petal Blade Base (Enlarged) -->
+                  <path d="M -38 0 L -72 -170 A 72 72 0 0 1 72 -170 L 38 0 Z" fill="#DC2626" />
+                  <!-- 3D Shadow Fold on Right Half -->
+                  <path d="M 0 0 L 38 0 L 72 -170 L 0 -170 Z" fill="#B91C1C" opacity="0.95" />
+                  <!-- Icon Container -->
+                  <g transform="translate(0, -175) rotate(135)">
+                    <circle cx="0" cy="0" r="34" fill="rgba(255, 255, 255, 0.15)" />
+                    <g transform="scale(1.3)">
+                      <!-- Growth Bar Chart & Dollar / Trending Icon -->
+                      <rect x="-10" y="2" width="4" height="9" rx="1" fill="#FFFFFF" />
+                      <rect x="-3" y="-3" width="4" height="14" rx="1" fill="#FFFFFF" />
+                      <rect x="4" y="-8" width="4" height="19" rx="1" fill="#FFFFFF" />
+                      <polyline points="-10 -7 -3 -12 6 -12" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <polyline points="2 -15 6 -12 2 -9" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Petal 4: Bottom-Right (Unified Red #DC2626 - AI & Scalability) -->
+                <g class="why-petal-node" data-accordion-target="2" transform="translate(250, 250) rotate(135)">
+                  <!-- Petal Blade Base (Enlarged) -->
+                  <path d="M -38 0 L -72 -170 A 72 72 0 0 1 72 -170 L 38 0 Z" fill="#DC2626" />
+                  <!-- 3D Shadow Fold on Right Half -->
+                  <path d="M 0 0 L 38 0 L 72 -170 L 0 -170 Z" fill="#B91C1C" opacity="0.95" />
+                  <!-- Icon Container -->
+                  <g transform="translate(0, -175) rotate(-135)">
+                    <circle cx="0" cy="0" r="34" fill="rgba(255, 255, 255, 0.15)" />
+                    <g transform="scale(1.3)">
+                      <!-- Circuit / Brain Intelligence Icon -->
+                      <rect x="-9" y="-9" width="18" height="18" rx="4" fill="none" stroke="#FFFFFF" stroke-width="2" />
+                      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+                      <line x1="0" y1="-9" x2="0" y2="-14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                      <line x1="0" y1="9" x2="0" y2="14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                      <line x1="-9" y1="0" x2="-14" y2="0" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                      <line x1="9" y1="0" x2="14" y2="0" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Central Circular Badge with Soft Elevation Shadow -->
+                <circle cx="250" cy="250" r="82" fill="#FFFFFF" filter="url(#centerDiscShadow)" />
+                <circle cx="250" cy="250" r="76" fill="#FFFFFF" stroke="#F1F5F9" stroke-width="1.5" />
+
+                <!-- Center Badge Typography -->
+                <text x="250" y="232" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0B1B32">Why choose</text>
+                <text x="250" y="258" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="800" fill="#0062FE">WebSpire Labs</text>
+                <text x="250" y="280" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#64748B">for your business?</text>
               </svg>
             </div>
-            <h3 class="pillar-title" id="pillar-1-title">Expert Team</h3>
-            <p class="pillar-desc">Skilled professionals with deep industry knowledge.</p>
-          </article>
+          </div>
 
-          <!-- Pillar 2: Quality Focused -->
-          <article class="pillar-card" aria-labelledby="pillar-2-title">
-            <div class="pillar-icon-wrap" aria-hidden="true">
-              <!-- Verified person / quality icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="5"></circle>
-                <path d="M20 21a8 8 0 1 0-16 0"></path>
-                <path d="M9 11l2 2 4-4"></path>
-              </svg>
-            </div>
-            <h3 class="pillar-title" id="pillar-2-title">Quality Focused</h3>
-            <p class="pillar-desc">We deliver reliable, secure and high-quality solutions.</p>
-          </article>
+          <!-- Right Column: Interactive Value Accordion (Screenshot 1 & 2 Layout) -->
+          <div class="why-accordion-col">
+            <div class="why-accordion" id="whyChooseAccordion">
 
-          <!-- Pillar 3: Customer First -->
-          <article class="pillar-card" aria-labelledby="pillar-3-title">
-            <div class="pillar-icon-wrap pillar-icon-amber" aria-hidden="true">
-              <!-- Heart / Customer first icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </div>
-            <h3 class="pillar-title" id="pillar-3-title">Customer First</h3>
-            <p class="pillar-desc">Your success is our priority at every step.</p>
-          </article>
-
-          <!-- Pillar 4: On-Time Delivery -->
-          <article class="pillar-card" aria-labelledby="pillar-4-title">
-            <div class="pillar-icon-wrap" aria-hidden="true">
-              <!-- Hourglass / Timer icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 22h14"></path>
-                <path d="M5 2h14"></path>
-                <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"></path>
-                <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"></path>
-              </svg>
-            </div>
-            <h3 class="pillar-title" id="pillar-4-title">On-Time Delivery</h3>
-            <p class="pillar-desc">We value time and ensure projects are delivered on time.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         Section 6 — Feature / About Block  (Image2 — Lower Half)
-         ====================================================================== -->
-    <section class="feature-block-section" id="about" aria-labelledby="feature-title">
-      <div class="container">
-        <div class="row align-items-center gy-5">
-
-          <!-- Left: Stacked Image Collage -->
-          <div class="col-lg-6">
-            <div class="feature-image-collage">
-
-              <!-- Main large image -->
-              <div class="feature-img-main">
-                <img src="asstes/hero-placeholder.svg" alt="WebSpire Labs team analyzing business solutions together" loading="lazy" width="520" height="300">
-              </div>
-
-              <!-- Secondary overlapping image -->
-              <div class="feature-img-secondary">
-                <img src="asstes/hero-placeholder.svg" alt="Software developer working at multiple monitors on enterprise software" loading="lazy" width="380" height="200">
-              </div>
-
-              <!-- Satisfied Clients Badge -->
-              <div class="feature-clients-badge badge-amber-gradient" aria-label="515,178 Satisfied Clients">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                <div>
-                  <p class="badge-label">Satisfied Clients</p>
-                  <p class="badge-number">515,178+</p>
+              <!-- Item 1 (Default Active as shown in Screenshot 2) -->
+              <div class="why-acc-item active" data-index="0">
+                <button class="why-acc-trigger" type="button" aria-expanded="true" aria-controls="whyAccContent1" id="whyAccTrigger1">
+                  <span class="why-acc-title">Turn strategic vision into high-impact software</span>
+                  <span class="why-acc-icon" aria-hidden="true">
+                    <svg class="why-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <svg class="why-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="why-acc-content" id="whyAccContent1" role="region" aria-labelledby="whyAccTrigger1">
+                  <div class="why-acc-body">
+                    <p>We engineer bespoke web and mobile platforms with scalable architectures, transforming complex operational requirements into seamless, high-converting digital products.</p>
+                  </div>
                 </div>
               </div>
 
-              <!-- Floating SVG Donut Ring Accent -->
-              <div class="feature-ring-accent" aria-hidden="true">
-                <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="55" cy="55" r="45" stroke="#E2E8F0" stroke-width="14"/>
-                  <circle cx="55" cy="55" r="45" stroke="#0062FE" stroke-width="14" stroke-dasharray="220 70" stroke-dashoffset="30" stroke-linecap="round"/>
-                  <circle cx="55" cy="55" r="20" fill="white" stroke="#E2E8F0" stroke-width="2"/>
-                  <circle cx="55" cy="30" r="10" fill="white" stroke="#E2E8F0" stroke-width="2"/>
-                  <!-- Avatar silhouette placeholder -->
-                  <circle cx="55" cy="26" r="5" fill="#CBD5E1"/>
-                  <rect x="48" y="32" width="14" height="8" rx="3" fill="#CBD5E1"/>
-                </svg>
+              <!-- Item 2 -->
+              <div class="why-acc-item" data-index="1">
+                <button class="why-acc-trigger" type="button" aria-expanded="false" aria-controls="whyAccContent2" id="whyAccTrigger2">
+                  <span class="why-acc-title">Adapt as your business changes</span>
+                  <span class="why-acc-icon" aria-hidden="true">
+                    <svg class="why-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <svg class="why-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="why-acc-content" id="whyAccContent2" role="region" aria-labelledby="whyAccTrigger2">
+                  <div class="why-acc-body">
+                    <p>Future-proof tech stacks and modular cloud architectures ensure your software effortlessly adapts to shifting market demands and scales from initial launch to millions of users.</p>
+                  </div>
+                </div>
               </div>
 
-            </div>
-          </div>
+              <!-- Item 3 -->
+              <div class="why-acc-item" data-index="2">
+                <button class="why-acc-trigger" type="button" aria-expanded="false" aria-controls="whyAccContent3" id="whyAccTrigger3">
+                  <span class="why-acc-title">Scale without performance trade-offs</span>
+                  <span class="why-acc-icon" aria-hidden="true">
+                    <svg class="why-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <svg class="why-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="why-acc-content" id="whyAccContent3" role="region" aria-labelledby="whyAccTrigger3">
+                  <div class="why-acc-body">
+                    <p>Engineered for high concurrency and zero latency bottlenecks. We deploy microservices, distributed caching, and automated autoscaling to maintain sub-second response times under peak loads.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- Right: Content -->
-          <div class="col-lg-6">
-            <div class="feature-content-col">
-              <span class="feature-eyebrow">HELPING YOU GROW AT A PACE YOU WANT</span>
-              <h2 class="feature-title" id="feature-title">Helping Early Adopters Find Solutions Faster</h2>
-              <p class="feature-body">
-                If you're a leader who wants to embrace innovation for your organisation, gain a competitive edge, validate ideas, and even provide feedback to innovators — get access to over 1 million innovators, from startup to scaleup and mature organizations with solutions for your business challenge.
-              </p>
+              <!-- Item 4 -->
+              <div class="why-acc-item" data-index="3">
+                <button class="why-acc-trigger" type="button" aria-expanded="false" aria-controls="whyAccContent4" id="whyAccTrigger4">
+                  <span class="why-acc-title">Anticipate issues before they impact you</span>
+                  <span class="why-acc-icon" aria-hidden="true">
+                    <svg class="why-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <svg class="why-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="why-acc-content" id="whyAccContent4" role="region" aria-labelledby="whyAccTrigger4">
+                  <div class="why-acc-body">
+                    <p>Proactive observability, automated test coverage, and continuous security audits identify anomalies and system vulnerabilities early—guaranteeing 99.9% uptime and bulletproof reliability.</p>
+                  </div>
+                </div>
+              </div>
 
-              <ul class="feature-checklist checklist-amber" role="list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  Get insights into global industry innovation capability
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  Source, analyze and guide innovators for your solutions, partnerships and more
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  Search and buy innovations — proof of concepts and trials based on your business outcomes
-                </li>
-              </ul>
+              <!-- Item 5 -->
+              <div class="why-acc-item" data-index="4">
+                <button class="why-acc-trigger" type="button" aria-expanded="false" aria-controls="whyAccContent5" id="whyAccTrigger5">
+                  <span class="why-acc-title">Reduce operational friction and cost</span>
+                  <span class="why-acc-icon" aria-hidden="true">
+                    <svg class="why-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <svg class="why-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="why-acc-content" id="whyAccContent5" role="region" aria-labelledby="whyAccTrigger5">
+                  <div class="why-acc-body">
+                    <p>Streamline workflows with automated CI/CD pipelines, modern cloud resource management, and reusable software components that eliminate redundancy and cut development expenses.</p>
+                  </div>
+                </div>
+              </div>
 
-              <a href="#services" class="btn-feature-primary" id="featureLearnMoreBtn">
-                Learn More
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+              <!-- Item 6 -->
+             
+
             </div>
           </div>
 
@@ -648,107 +1009,228 @@
       </div>
     </section>
 
+    <!-- Section 6 — Feature / About Block (HELPING YOU GROW AT A PACE YOU WANT) removed as requested -->
+
     <!-- ======================================================================
-         Section 7 — Our Process  (Image3 — Top)
+         Section 7 — Client Testimonials
          ====================================================================== -->
-    <section class="process-section" id="our-process" aria-labelledby="process-title">
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+      <!-- Ambient Geometric Web Constellation Background -->
+      <div class="testimonials-bg-accent" aria-hidden="true">
+        <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <circle cx="120" cy="180" r="3" fill="#0062FE" fill-opacity="0.25"/>
+          <circle cx="280" cy="90" r="4" fill="#38BDF8" fill-opacity="0.3"/>
+          <circle cx="420" cy="220" r="3" fill="#0062FE" fill-opacity="0.2"/>
+          <circle cx="680" cy="80" r="4" fill="#38BDF8" fill-opacity="0.25"/>
+          <circle cx="890" cy="210" r="3" fill="#0062FE" fill-opacity="0.2"/>
+          <circle cx="1120" cy="110" r="4" fill="#38BDF8" fill-opacity="0.3"/>
+          <circle cx="1320" cy="240" r="3" fill="#0062FE" fill-opacity="0.25"/>
+          <line x1="120" y1="180" x2="280" y2="90" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+          <line x1="280" y1="90" x2="420" y2="220" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+          <line x1="420" y1="220" x2="680" y2="80" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+          <line x1="680" y1="80" x2="890" y2="210" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+          <line x1="890" y1="210" x2="1120" y2="110" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+          <line x1="1120" y1="110" x2="1320" y2="240" stroke="#0062FE" stroke-opacity="0.12" stroke-width="1.2"/>
+        </svg>
+      </div>
+
       <div class="container">
 
-        <!-- Header -->
-        <div class="process-header">
-          <span class="section-eyebrow">OUR PROCESS</span>
-          <h2 class="section-title" id="process-title">Simple. Transparent. Effective.</h2>
-          <p class="section-subtitle">We follow a proven process to deliver successful digital solutions.</p>
+        <!-- Section Header -->
+        <div class="testimonials-header">
+          <span class="section-eyebrow">TESTIMONIALS</span>
+          <h2 class="section-title" id="testimonials-title">Client Testimonials</h2>
         </div>
 
-        <!-- 4-Step Horizontal Flow -->
-        <div class="process-steps-grid">
+        <!-- Testimonials Carousel / Multi-Column Wrapper -->
+        <div class="testimonials-wrapper">
 
-          <!-- Step 1: Discover -->
-          <div class="process-step-item" aria-label="Step 1: Discover">
-            <div class="process-step-icon" aria-hidden="true">
-              <!-- Search / Discovery icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                <line x1="11" y1="8" x2="11" y2="14"></line>
-                <line x1="8" y1="11" x2="14" y2="11"></line>
-              </svg>
-            </div>
-            <p class="process-step-num">1. Discover</p>
-            <h3 class="process-step-title">Discover</h3>
-            <p class="process-step-desc">We understand your business and requirements.</p>
-            <!-- Arrow to next step -->
-            <div class="process-arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
+          <!-- Left Navigation Button -->
+          <button type="button" class="testimonial-nav-btn testimonial-prev" id="testimonialPrevBtn" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Slider Viewport Window -->
+          <div class="testimonials-slider-window">
+            <!-- Testimonial Cards Track (6 Cards) -->
+            <div class="testimonials-track" id="testimonialsTrack">
+
+              <!-- Card 1: George Loyer -->
+              <article class="testimonial-card" aria-labelledby="author-1" data-index="0">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      KIBO Commerce chose WebSpire Labs for their track record of solid management and strong technical knowledge...
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-1">George Loyer</h3>
+                        <p class="testimonial-author-role">VP, Managed Services KIBO Commerce</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2: Kirby Bosch (Initial Center / Highlighted Card) -->
+              <article class="testimonial-card testimonial-card-active" aria-labelledby="author-2" data-index="1">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      Nor1 leveraged WebSpire Labs services since 2024 for our cloud operations. The cost effectiveness of 24×7 coverage and support let us focus on product development. The relationship with WebSpire Labs was invaluable as we progressed through multiple transformations of IT and tech stack, migrating to AWS from bare metal servers, and adopting application containers.
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-2">Kirby Bosch</h3>
+                        <p class="testimonial-author-role">VP of Technology, Nor1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3: Robert Stewart -->
+              <article class="testimonial-card" aria-labelledby="author-3" data-index="2">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      As we evolve our technical architecture, WebSpire Labs has been very willing to learn about new technologies and assist us in rolling them out safely in our data centers. They are always eager to sharpen their skills and continuously improve their processes and procedures.
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-3">Robert Stewart</h3>
+                        <p class="testimonial-author-role">CTO - Castlight Health</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 4: Sarah Jenkins -->
+              <article class="testimonial-card" aria-labelledby="author-4" data-index="3">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      WebSpire Labs transformed our legacy patient portals into high-performance web applications with zero downtime. Their attention to detail, robust engineering standards, and agile sprint delivery made our complex digital transition remarkably seamless.
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-4">Sarah Jenkins</h3>
+                        <p class="testimonial-author-role">Director of Digital Strategy, Elevate Health</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5: David Chen -->
+              <article class="testimonial-card" aria-labelledby="author-5" data-index="4">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      The cross-platform mobile application delivered by WebSpire Labs exceeded our strict benchmarks in execution speed, UX clarity, and regulatory compliance. We achieved a 45% increase in active user retention within the first quarter of deployment.
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-5">David Chen</h3>
+                        <p class="testimonial-author-role">Head of Engineering, FinTech Pulse</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6: Elena Rostova -->
+              <article class="testimonial-card" aria-labelledby="author-6" data-index="5">
+                <div class="testimonial-card-inner">
+                  <div class="testimonial-quote-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-quote">
+                      Partnering with WebSpire Labs provided us with an ultra-scalable e-commerce infrastructure that easily manages massive flash-sale traffic surges. Their technical team is proactive, knowledgeable, and a truly indispensable technology partner.
+                    </p>
+                    <div class="testimonial-author-block">
+                      <div class="testimonial-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                      </div>
+                      <div class="testimonial-author-info">
+                        <h3 class="testimonial-author-name" id="author-6">Elena Rostova</h3>
+                        <p class="testimonial-author-role">Chief Product Officer, OmniRetail Solutions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
             </div>
           </div>
 
-          <!-- Step 2: Plan -->
-          <div class="process-step-item" aria-label="Step 2: Plan">
-            <div class="process-step-icon" aria-hidden="true">
-              <!-- Clipboard / Plan icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
-                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
-                <path d="M9 12h6"></path>
-                <path d="M9 16h4"></path>
-              </svg>
-            </div>
-            <p class="process-step-num">2. Plan</p>
-            <h3 class="process-step-title">Plan</h3>
-            <p class="process-step-desc">We create a strategy and roadmap.</p>
-            <!-- Arrow -->
-            <div class="process-arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </div>
-          </div>
-
-          <!-- Step 3: Develop -->
-          <div class="process-step-item" aria-label="Step 3: Develop">
-            <div class="process-step-icon" aria-hidden="true">
-              <!-- Laptop / Code icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-                <polyline points="9 9 7 12 9 15"></polyline>
-                <polyline points="15 9 17 12 15 15"></polyline>
-              </svg>
-            </div>
-            <p class="process-step-num">3. Develop</p>
-            <h3 class="process-step-title">Develop</h3>
-            <p class="process-step-desc">We build, test and refine the solution.</p>
-            <!-- Arrow -->
-            <div class="process-arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </div>
-          </div>
-
-          <!-- Step 4: Deliver -->
-          <div class="process-step-item process-step-amber" aria-label="Step 4: Deliver">
-            <div class="process-step-icon" aria-hidden="true">
-              <!-- Paper plane / Deliver icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </div>
-            <p class="process-step-num">4. Deliver</p>
-            <h3 class="process-step-title">Deliver</h3>
-            <p class="process-step-desc">We deploy and provide ongoing support.</p>
-          </div>
+          <!-- Right Navigation Button -->
+          <button type="button" class="testimonial-nav-btn testimonial-next" id="testimonialNextBtn" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
 
         </div>
+
       </div>
     </section>
 
@@ -1017,8 +1499,20 @@
   <!-- Bootstrap 5 Bundle JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  <!-- Custom Main JS -->
+  <!-- Custom Main JS (Site-Wide) -->
   <script src="js/main.js"></script>
+
+  <!-- Header & Mega Menu Interactions -->
+  <script src="js/header.js"></script>
+
+  <!-- Homepage Features: Interactive Ecosystem Hero Carousel -->
+  <script src="js/hero-carousel.js"></script>
+
+  <!-- Homepage Features: Why Choose Us Interactive Accordion -->
+  <script src="js/why-choose-accordion.js"></script>
+
+  <!-- Homepage Features: Client Testimonials Infinite Carousel -->
+  <script src="js/testimonials-slider.js"></script>
 
   <!-- Auto Dynamic Year Script -->
   <script>

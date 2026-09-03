@@ -144,24 +144,70 @@
 
 /* --------------------------------------------------------------------------
    7. Our Process Steps
-   - Process step card translateY(-4px) elevation
-   - Process step icon background color solid inversion
-   - Process step icon SVG stroke color inversion
+   - Process step card translateY(-5px) elevation & shadow
+   - Process step top gradient accent line reveal
+   - Stage badge background color inversion & glow
+   - Stage icon background color swap & scale
+   - Deliverable tag border & background color highlight
    -------------------------------------------------------------------------- */
 
-/* Process Step Card Lift */
+/* Process Step Top Accent Line Reveal */
+.process-step-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-cyan));
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.process-step-item:hover::before {
+  opacity: 1;
+}
+
+/* Process Step Card Lift & Shadow */
 .process-step-item:hover {
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-primary);
+  transform: translateY(-5px);
 }
 
-/* Process Step Icon Background Color Inversion */
-.process-step-item:hover .process-step-icon {
+/* Stage Number Badge Inversion */
+.process-step-item:hover .process-step-badge {
   background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 98, 254, 0.3);
 }
 
-/* Process Step Icon SVG Stroke Inversion */
-.process-step-item:hover .process-step-icon svg {
-  stroke: var(--color-white);
+.process-step-item:hover .process-badge-amber {
+  background-color: #D97706;
+  color: #FFFFFF;
+  border-color: #D97706;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3);
+}
+
+/* Icon Highlight & Scale */
+.process-step-item:hover .process-step-icon {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: scale(1.04);
+}
+
+.process-step-item:hover .process-icon-amber {
+  background: #FEF3C7;
+  border-color: #D97706;
+}
+
+/* Deliverables Tag Highlight */
+.process-step-item:hover .process-tag {
+  border-color: rgba(0, 98, 254, 0.2);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
 }
 
 

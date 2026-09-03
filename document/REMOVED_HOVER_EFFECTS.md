@@ -37,9 +37,12 @@ The following 10 hover effects and micro-interactions have been removed from the
 * **CTA Button Hover Micro-lift & Glow**: Removed `transform: translateY(-2px);` and `box-shadow: 0 12px 24px rgba(0, 98, 254, 0.38);` from `.btn-feature-primary:hover`.
 * **CTA Button Arrow Motion**: Removed `.btn-feature-primary:hover svg { transform: translateX(4px); }`.
 
-### 7. Process Steps
-* **Step Elevation (`-4px`)**: Removed `transform: translateY(-4px);` from `.process-step-item:hover`.
-* **Solid Icon Inversion**: Removed `.process-step-item:hover .process-step-icon` (`background-color: var(--color-primary)`) and `.process-step-item:hover .process-step-icon svg` (`stroke: var(--color-white)`).
+### 7. Process Steps (Our Process)
+* **Card Lift & Shadow (`-5px`)**: Removed `transform: translateY(-5px);` and `box-shadow: var(--shadow-card-hover);` from `.process-step-item:hover`.
+* **Top Accent Reveal**: Removed `.process-step-item::before` and `.process-step-item:hover::before` gradient line reveal.
+* **Stage Badge Inversion & Glow**: Removed `.process-step-item:hover .process-step-badge` color flip and glow shadow.
+* **Icon Glow & Scale**: Removed `.process-step-item:hover .process-step-icon` background color swap and `scale(1.04)`.
+* **Tag Highlight**: Removed `.process-step-item:hover .process-tag` active border and color highlight.
 
 ### 8. Portfolio Grid
 * **3D Card Lift (`-6px`)**: Removed `transform: translateY(-6px);` from `.portfolio-card:hover`.

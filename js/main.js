@@ -1,6 +1,8 @@
 /**
- * WebSpire Labs - Main JavaScript Interactions
- * Handles animations, navbar behavior, counters, and accessibility.
+ * WebSpire Labs - Core Site-Wide JavaScript Interactions
+ * Handles global navbar behavior, stat counters, smooth scrolling, and accessibility.
+ * Active across all pages (Home, About Us, Contact).
+ * Homepage-specific feature modules (e.g. Testimonials Carousel) are maintained separately in js/testimonials-slider.js
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,5 +159,5 @@ function initAccessibility() {
         dropdown.toggle();
       }
     });
-  });
+  })
 }

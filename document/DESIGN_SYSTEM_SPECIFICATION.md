@@ -1,18 +1,93 @@
-# WebSpire Labs — Website Design System & UI Specification Guide
+# WebSpire Labs — Master Website Architecture & Design System Specification Guide
 
 ---
 
-## 1. Executive Overview & Brand Identity
+## 1. Executive Overview & Codebase Architecture
 
-**WebSpire Labs** is positioned as an enterprise-grade, high-performance IT solutions and software engineering company. The visual identity communicated in both the logo and UI mockup strikes a balance between **modern technological innovation, corporate reliability, and high-energy digital transformation**.
+**WebSpire Labs** is an enterprise-grade, high-performance IT solutions and software engineering company website. The codebase is engineered using modern HTML5 semantic architecture, CSS3 custom property design tokens, client-side vanilla JavaScript micro-interactions, and **Bootstrap 5.3.3** for foundational grid scaffolding and responsive navigation behavior.
 
 * **Brand Name:** WebSpire Labs
 * **Core Tagline:** *"Building Digital Solutions, Empowering Businesses."*
-* **Design Philosophy:** Minimalist, geometric, crisp contrast, high-tech blue dynamism with clean corporate whitespace.
+* **Architecture Model:** Static Multi-Page Application (MPA) with Modular Hybrid Styling (Bootstrap 5 Grid + Custom Vanilla CSS Design System).
+
+```
+d:\St_website\Web_spire\
+├── index.html                           # Homepage (9 Major Sections, 1,061 lines)
+├── about.html                           # About Us Page (10 Major Sections, 1,083 lines)
+├── contact.html                         # Contact Us Page (4 Major Sections + Form, 855 lines)
+├── robots.txt                           # Search Engine Crawler Directives
+├── sitemap.xml                          # Search Engine XML Sitemap
+│
+├── css/
+│   └── style.css                        # Master Design System & Component Stylesheet (3,923 lines, ~80KB)
+│
+├── js/
+│   └── main.js                          # Core Interactive Logic (Sticky Nav, Observers, Counter, Testimonials Slider, A11y)
+│
+├── asstes/                              # Production Brand Media & Imagery
+│   ├── logo.jpg                         # Official WebSpire Labs Monogram & Wordmark
+│   ├── hero-placeholder.svg             # Scalable Vector Graphics Placeholder
+│   └── contact-hero.jpg                 # Contact Page Showcase Image
+│
+└── document/                            # Design Blueprints & Documentation
+    ├── DESIGN_SYSTEM_SPECIFICATION.md   # Master Architectural & Technical Documentation (This Document)
+    ├── REMOVED_HOVER_EFFECTS.md         # Audit of Refined/Removed Hover Interactions
+    ├── trash_hover_effects.css          # Isolated CSS Archive of Legacy Hover Effects
+    ├── optimized.md                     # Checklist for SEO, Performance & Business Best Practices
+    ├── About_US_Page_images/            # High-Resolution Design Mockups (About Page)
+    ├── Home_page_images/                # UI Design Assets (Home Page)
+    └── contact_us/                      # UI Design Mockups (Contact Us Page)
+```
 
 ---
 
-## 2. Brand Logo Analysis & Assets
+## 2. Technology Stack & Framework Analysis: Bootstrap Usage (`{BS}`)
+
+### 🔍 Did You Use Bootstrap?
+**YES, Bootstrap 5.3.3 is actively integrated and utilized across the entire project.**
+
+### A. Bootstrap Integration Points
+
+1. **CDN Style Sheets (Loaded in `<head>` of all pages):**
+   ```html
+   <!-- Bootstrap 5 CSS CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   ```
+   * Present in: [`index.html:L40`](file:///d:/St_website/Web_spire/index.html#L40), [`about.html:L41`](file:///d:/St_website/Web_spire/about.html#L41), [`contact.html:L36`](file:///d:/St_website/Web_spire/contact.html#L36).
+
+2. **CDN JavaScript Bundles (Loaded before `</body>` on all pages):**
+   ```html
+   <!-- Bootstrap 5 Bundle JS CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   ```
+   * Present in: [`index.html:L1057`](file:///d:/St_website/Web_spire/index.html#L1057), [`about.html:L1078`](file:///d:/St_website/Web_spire/about.html#L1078), [`contact.html:L849`](file:///d:/St_website/Web_spire/contact.html#L849).
+
+3. **Bootstrap Core Components & Utilities in HTML:**
+   * **Responsive Navigation:** `.navbar`, `.navbar-expand-lg`, `.navbar-brand`, `.navbar-toggler`, `.navbar-toggler-icon`, `.navbar-collapse`, `.navbar-nav`, `.nav-item`, `.nav-link`, `data-bs-toggle="collapse"`, `data-bs-target="#navbarMainContent"`.
+   * **Grid & Scaffolding System:** `.container`, `.row`, `.col-lg-6`, `.col-lg-7`, `.col-lg-5`, `.col-lg-3`, `.col-lg-2`, `.col-lg-4`, `.col-md-6`, `.col-6`, `.gy-4`, `.gy-5`, `.g-3`, `.g-4`.
+   * **Display & Alignment Utilities:** `.d-none`, `.d-lg-none`, `.d-lg-flex`, `.align-items-center`, `.align-items-stretch`, `.justify-content-center`, `.position-relative`, `.position-absolute`, `.mx-auto`, `.text-center`.
+   * **Form Elements (`contact.html`):** `.form-control`, `.form-label`, `.form-select`.
+
+4. **Bootstrap JavaScript API Consumption in [`js/main.js`](file:///d:/St_website/Web_spire/js/main.js):**
+   * Programmatic Mobile Navbar Collapse Closure on anchor link navigation:
+     ```javascript
+     const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+     if (bsCollapse) bsCollapse.hide();
+     ```
+   * Accessible Dropdown Keyboard Triggering:
+     ```javascript
+     const dropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
+     dropdown.toggle();
+     ```
+
+### B. Architectural Relationship (Bootstrap vs Custom CSS)
+The project utilizes a **Bespoke Hybrid Pattern**:
+* **Bootstrap 5** handles base fluid grid scaffolding (`.container`, `.row`, `.col-*`) and offcanvas/collapse event toggles.
+* **Custom CSS ([`css/style.css`](file:///d:/St_website/Web_spire/css/style.css))** handles all visual styling, brand color tokens, custom CSS Grid cards (`.services-grid`, `.why-pillars-grid`, `.values-grid`, `.work-cards-grid`, `.help-grid-*`), SVG geometric rotations (diamond polygon backdrops), floating badges, and animations. Custom CSS takes full precedence over standard Bootstrap components.
+
+---
+
+## 3. Brand Identity & Logo Specification
 
 ### A. Logo Anatomy & Visual Elements
 1. **Geometric Monogram (Icon):**
@@ -37,9 +112,9 @@
 
 ---
 
-## 3. Color Palette & Token Architecture
+## 4. Color Palette & Token Architecture
 
-The color system uses a high-contrast triad of **Electric Cobalt Blue** (action & energy), **Deep Midnight Navy** (stability & enterprise trust), and **Pristine White / Slate Neutrals** (clarity & legibility).
+The color system uses a high-contrast triad of **Electric Cobalt Blue** (action & energy), **Deep Midnight Navy** (stability & enterprise trust), and **Pristine White / Slate Neutrals** (clarity & legibility), augmented with subtle Amber and Cyan accent states.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -71,271 +146,173 @@ The color system uses a high-contrast triad of **Electric Cobalt Blue** (action 
 
 ---
 
-## 4. Typography System
+## 5. Typography System
 
-The typography is clean, modern, and high-tech corporate. The recommended font pairing is **Plus Jakarta Sans** (or **Inter** / **Poppins**) from Google Fonts.
-
-### Google Fonts Import
-```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
-```
+The typography is built around **Plus Jakarta Sans** with clean proportional scaling and geometric weights from `400` to `800`.
 
 ### Type Scale & Hierarchy
 
-| Element | Font Weight | Size (Desktop) | Size (Mobile) | Line Height | Letter Spacing | Color |
+| Element | Font Weight | Size (Desktop) | Size (Mobile) | Line Height | Letter Spacing | Color Token |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Hero Heading (H1)** | 800 (ExtraBold) | `54px – 60px` | `36px – 40px` | `1.15 – 1.2` | `-0.025em` | `#0B1B32` / `#0062FE` |
-| **Section Title (H2)** | 700 (Bold) | `36px – 40px` | `28px – 32px` | `1.25` | `-0.02em` | `#0B1B32` |
-| **Section Eyebrow** | 700 (Bold) | `13px – 14px` | `12px` | `1.4` | `+0.12em` (UPPERCASE) | `#0062FE` |
-| **Card Title (H3)** | 700 (Bold) | `19px – 21px` | `18px` | `1.35` | `-0.01em` | `#0B1B32` |
-| **Metric Stat Number** | 800 (ExtraBold) | `30px – 34px` | `26px` | `1.1` | `-0.02em` | `#0062FE` / `#0B1B32` |
-| **Metric Stat Label** | 500 (Medium) | `13px – 14px` | `12px` | `1.3` | `0` | `#64748B` |
-| **Hero Lead Paragraph**| 400 (Regular) | `17px – 18px` | `15px` | `1.65` | `0` | `#555D6E` |
-| **Card Body Copy** | 400 (Regular) | `14px – 15px` | `14px` | `1.6` | `0` | `#64748B` |
-| **Nav Links** | 500 (Medium) | `15px – 16px` | `15px` | `1.5` | `0` | `#0B1B32` / `#0062FE` |
-| **CTA Button Text** | 600 (SemiBold) | `15px – 16px` | `14px` | `1` | `0` | `#FFFFFF` / `#0B1B32` |
-| **Card Action Link** | 600 (SemiBold) | `14px – 15px` | `14px` | `1.2` | `0` | `#0062FE` |
+| **Hero Heading (H1)** | 800 (ExtraBold) | `54px – 60px` | `36px – 40px` | `1.15 – 1.2` | `-0.025em` | `--color-heading` / `#0062FE` |
+| **Section Title (H2)** | 700 (Bold) | `36px – 40px` | `28px – 32px` | `1.25` | `-0.02em` | `--color-heading` |
+| **Section Eyebrow** | 700 (Bold) | `13px – 14px` | `12px` | `1.4` | `+0.12em` (UPPERCASE) | `--color-primary` |
+| **Card Title (H3)** | 700 (Bold) | `19px – 21px` | `18px` | `1.35` | `-0.01em` | `--color-heading` |
+| **Metric Stat Number** | 800 (ExtraBold) | `30px – 34px` | `26px` | `1.1` | `-0.02em` | `--color-primary` / `--color-heading` |
+| **Metric Stat Label** | 500 (Medium) | `13px – 14px` | `12px` | `1.3` | `0` | `--color-muted` |
+| **Hero Lead Paragraph**| 400 (Regular) | `17px – 18px` | `15px` | `1.65` | `0` | `--color-body` |
+| **Card Body Copy** | 400 (Regular) | `14px – 15px` | `14px` | `1.6` | `0` | `--color-muted` |
+| **Nav Links** | 500 (Medium) | `15px – 16px` | `15px` | `1.5` | `0` | `--color-heading` / `--color-primary` |
+| **CTA Button Text** | 600 (SemiBold) | `15px – 16px` | `14px` | `1` | `0` | `--color-white` / `--color-heading` |
+| **Card Action Link** | 600 (SemiBold) | `14px – 15px` | `14px` | `1.2` | `0` | `--color-primary` |
 
 ---
 
-## 5. UI Layout & Component Specifications
+## 6. Page-by-Page Architectural Specification
 
-### A. Navigation Header
-* **Layout:** Full width with `max-width: 1280px` container, `display: flex; justify-content: space-between; align-items: center`.
-* **Height:** `80px – 90px`.
-* **Sticky State:** Backdrop blur (`backdrop-filter: blur(12px)`), semi-transparent white background (`rgba(255, 255, 255, 0.9)`), subtle bottom border (`1px solid rgba(226, 232, 240, 0.8)`).
-* **Navigation Items:**
-  - `Home` (Active - `#0062FE` with subtle indicator)
-  - `About Us ⌵` (Dropdown chevron `#64748B`)
-  - `Services ⌵` (Dropdown chevron `#64748B`)
-  - `Contact Us`
-  - `Blogs`
-* **Header Actions:**
-  - **"Get In Touch" Button:** Pill shape (`border-radius: 9999px`), `border: 1.5px solid #0062FE`, background `transparent`, color `#0062FE`. On hover: background `#0062FE`, color `#FFFFFF`.
-  - **Menu Trigger:** Circular container (`40px x 40px`, `border-radius: 50%`, background `#071C35`), containing 3 white horizontal bars.
-
----
-
-### B. Hero Section
-* **Grid Structure:** 2-Column asymmetric grid (50% text content / 50% visual graphic).
-* **Left Column:**
-  - **H1 Headline:**
-    ```html
-    <h1>
-      Building Digital<br>
-      <span class="text-electric-blue">Solutions.</span><br>
-      Empowering Businesses.
-    </h1>
-    ```
-  - **Description Paragraph:** Max width `480px`, comfortable line height (`1.65`).
-  - **Button Group:** Flexbox with `gap: 16px`.
-    - Primary CTA: *"Explore Services"* — Background `#0062FE`, Color `#FFFFFF`, padding `14px 28px`, `border-radius: 12px`, subtle hover lift (`translateY(-2px)`), box shadow `0 8px 20px rgba(0, 98, 254, 0.25)`.
-    - Secondary CTA: *"Get In Touch"* — Background `#FFFFFF`, border `1.5px solid #0062FE`, color `#0B1B32`, padding `14px 28px`, `border-radius: 12px`.
-* **Right Column (Hero Visual Artwork):**
-  - **Dynamic Polygon Backdrop:** Sliced geometric shape covering the right viewport with Electric Blue (`#0057E7` / `#0062FE`).
-  - **Rotated Image Container:**
-    - Diamond-angled square (`transform: rotate(45deg); border-radius: 24px; overflow: hidden;`) with inner image counter-rotated (`transform: rotate(-45deg) scale(1.4);`).
-    - Depicts IT engineering team collaborating around holographic AI/network visualization.
-  - **Floating Layered Geometric Accents:**
-    - Rotated 45° translucent cyan / sky-blue diamond shapes (`#38BDF8`, `#93C5FD`) layered behind and around the focal image.
-    - Fine diagonal guideline accents (`1px solid rgba(0, 98, 254, 0.15)`) connecting the visual elements.
+### 📄 1. Homepage (`index.html` — 1,145 Lines)
+The homepage establishes the primary brand presentation and converts prospective clients:
+1. **Header & Navigation Bar:** Responsive sticky glassmorphism navbar with brand logo, nav links (`Home`, `About Us`, `Services`, `Contact Us`, `Blogs`), mobile toggle button.
+2. **Hero Section:** Asymmetric 2-column layout (50/50 split), H1 headline with highlighted accents, dual action CTAs (*"Explore Services"* & *"Get In Touch"*), rotated 45° diamond image artwork with 4 layered floating cyan diamond accents.
+3. **Key Performance Metrics Strip:** 4-column counter strip (100+ Projects Delivered, 50+ Happy Clients, 10+ Countries Served, 5+ Years Experience) located directly below the Hero section (matching `about.html`), driven by IntersectionObserver count-up animation.
+4. **Our Services (3×2 Minimalist Frameless Grid):** 6 service columns (Web Development, Mobile Application, Digital Marketing, SEO, Branding, Video Editing) in an open, borderless enterprise layout with raw linear SVG icons, bold headings, descriptive copy, and *"Learn More →"* links.
+5. **Why Choose Us (4-Pillar Minimalist Flex Layout):** 4 feature pillars (Expert Team, Quality Focused, Customer First, On-Time Delivery) styled with raw linear SVG icons, left-aligned typography, and ambient hover elevation matching the Services layout.
+6. **Feature / About Block:** 2-column layout: left dual overlapping photo collage with Satisfied Clients badge (`515,178+`) and floating SVG donut ring; right copy, 3 checkmark points, *"Learn More"* CTA.
+7. **Client Testimonials Carousel:** 6-card sliding viewport displaying 3 cards at a time with constellation web background, cyan quote marks, default client profile avatars, dynamically highlighted center card (hover removed on non-active cards), and interactive chevron navigation arrows.
+8. **Our Work / Portfolio Grid:** 4-column portfolio showcase (Corporate Website, E-commerce Platform, Business Dashboard, Mobile Application) with image zoom cards.
+9. **Full-Bleed CTA Banner:** Royal blue gradient section *"Ready to Build Your Next Digital Breakthrough?"* with trajectory paper plane SVG and target bullseye illustration.
+10. **Site Footer & WhatsApp Floating Button:** 4-column dark midnight footer with company bio, socials, quick links, service catalog, and contact metadata, plus persistent floating WhatsApp button.
 
 ---
 
-### C. Stats & Trust Metric Counter Strip
-* **Position:** Located immediately under the hero section, spanning the content width.
-* **Layout:** 4-Column responsive flex/grid (`repeat(auto-fit, minmax(200px, 1fr))`).
-* **Metrics Included:**
-  1. **100+** — Projects Delivered (Calendar / Milestone outline icon)
-  2. **50+** — Happy Clients (Team / Customer collaboration outline icon)
-  3. **10+** — Countries Served (Global location pin outline icon)
-  4. **5+** — Years Experience (Quality award ribbon badge outline icon)
-* **Visual Style:**
-  - Icons: Minimalist dual-line / outline style in `#0062FE` with `size: 32px x 32px`.
-  - Numbers: `font-size: 30px; font-weight: 800; color: #0062FE;`.
-  - Separators: Optional subtle vertical divider lines (`1px solid #E2E8F0`).
+### 📄 2. About Us Page (`about.html` — 1,083 Lines)
+The about page builds corporate trust, institutional depth, and explains company history:
+1. **Header & Navigation Bar:** Common unified header with active state on *About Us*.
+2. **Section 01: About Hero:** 2-column layout with H1 (*"Technology Built Around Your Business"*), rotated diamond image, 4 layered geometric accents, and dual CTA buttons.
+3. **Stats Counter Strip:** 4-stat animated counter strip matching homepage metrics.
+4. **Section 02: Who We Are:** 2-column company introduction (*"Building Technology With Purpose"*), dual overlapping image collage with dual-tone floating donut ring.
+5. **Section 04: What We Do (Core Capabilities Strip):** 4-column horizontal capability strip (Technology Driven, Business Focused, Quality Mindset, Long-Term Partnership).
+6. **Section 03: Our Journey / Timeline:** 5 milestone cards (2021 Founding, 2022 Expanded Services, 2024 Custom Software, 2025 Mobile Solutions, 2026 Building What's Next) connected by a horizontal timeline track and end paper plane icon.
+7. **Section 05: Mission & Vision:** 2 side-by-side gradient panels with a central floating 3D donut emblem featuring the royal blue & cyan WebSpire "W" monogram.
+8. **Section 06: Core Values:** 5-card grid (Innovation, Integrity, Quality, Customer Success, Continuous Improvement) with blue underline indicators.
+9. **Section 07: Our Approach:** 4-step execution cards (01 Understand, 02 Collaborate, 03 Build, 04 Improve & Support) with blue circular number badges and directional arrows.
+10. **Section 08: Our Commitment & Full-Bleed About CTA:** 3 mini-cards (Transparent Communication, Reliable Delivery, Long-Term Support), collaboration photo, and full-bleed CTA banner (*"Let's Build Something Great Together"*).
+11. **Site Footer & WhatsApp Floating Button:** Reusable common 4-column footer and floating WhatsApp widget.
 
 ---
 
-### D. "Our Services" Section
-* **Section Header:** Centered layout.
-  - Eyebrow: `OUR SERVICES` in uppercase `#0062FE` with pill background or wide letter spacing.
-  - Main Title: `Comprehensive IT Solutions` (`#0B1B32`, `font-size: 38px`).
-  - Description: Centered subtitle (`#64748B`, max width `620px`).
-* **Service Cards Grid:** 3 Columns x 2 Rows (6 Core Services).
-  1. **Web Development**
-     - *Icon:* Code monitor screen (`#0062FE`)
-     - *Description:* "Modern, responsive and high-performance websites built for your business."
-  2. **Mobile App Development**
-     - *Icon:* Smartphone with UI wireframe (`#0062FE`)
-     - *Description:* "Custom mobile applications that deliver seamless user experiences."
-  3. **Software Development**
-     - *Icon:* Interlocking cog wheels / gears (`#0062FE`)
-     - *Description:* "Scalable and secure software solutions tailored to your business needs."
-  4. **Cloud Solutions**
-     - *Icon:* Cloud with sync / transfer arrows (`#0062FE`)
-     - *Description:* "Reliable cloud infrastructure to ensure performance, security and scalability."
-  5. **IT Consulting**
-     - *Icon:* Strategy target with arrow (`#0062FE`)
-     - *Description:* "Expert guidance to transform ideas into powerful digital strategies."
-  6. **Maintenance & Support**
-     - *Icon:* Customer support specialist with headset (`#0062FE`)
-     - *Description:* "Ongoing support and maintenance to keep your systems running smoothly."
-
-* **Card Component Specifications:**
-  - **Background:** `#FFFFFF`
-  - **Border:** `1px solid #E2E8F0`
-  - **Border Radius:** `16px`
-  - **Padding:** `32px 28px`
-  - **Shadow (Rest):** `0 2px 8px rgba(11, 27, 50, 0.04)`
-  - **Shadow (Hover):** `0 16px 32px rgba(0, 98, 254, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03)`
-  - **Hover Transformation:** `translateY(-6px)` with smooth cubic-bezier transition (`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`).
-  - **Interactive Action:** "Learn More →" in `#0062FE` font-weight 600, with arrow translating `4px` to the right on card hover.
+### 📄 3. Contact Us Page (`contact.html` — 855 Lines)
+The contact page focuses on lead capture, consultation scheduling, and comprehensive service discovery:
+1. **Header & Navigation Bar:** Common unified header with active state on *Contact Us*.
+2. **Section 1: Contact Hero (Unified Master Hero Design):**
+   - 2-column asymmetric layout with angled polygon backdrop (`.hero-bg-accent`), grid overlay, and diagonal accent line.
+   - H1 (*"Let's Talk About Your Next Digital Project"*), section eyebrow, and lead copy.
+   - Dual action CTAs (*"Send an Enquiry"* & *"Explore Services"* via `.btn-primary-hero` & `.btn-secondary-hero`).
+   - Right-side rotated 45° diamond container (`contact-hero.jpg`) surrounded by 4 layered floating cyan/sky diamond accents (`.accent-diamond-1` through `4`).
+3. **Section 2: Let's Connect & Interactive Form:**
+   - Left *Let's Connect* Card: Direct Email, Phone (+91 89056 43210), Office Location (Coimbatore, Tamil Nadu, India), and Working Hours (Mon-Sat 9 AM - 6 PM).
+   - Right *Send Us A Message* Card: Validated interactive form featuring fields for Full Name, Email Address, Phone Number, Company Name, Service Dropdown (8 options: Web Dev, Mobile App, Digital Marketing, SEO, Branding, Video Editing, Poster Editing, IT Consulting), Message Textarea, and Submit Button.
+4. **Section 3: Why Work With Us:**
+   - 4-pillar cards (Business Focused, Clear Communication, Creative & Technical, Long-Term Support) flanked by floating background glass diamonds.
+5. **Section 4: How Can We Help? (7-Service Grid):**
+   - 4-card top row: Web Development, Mobile App Development, Digital Marketing, SEO.
+   - 3-card centered bottom row: Video Editing, Poster Editing, Branding.
+6. **Site Footer & WhatsApp Floating Button:** Complete footer with direct contact links and dynamic copyright script.
 
 ---
 
-## 6. Ready-to-Use CSS Design Tokens (`variables.css`)
+## 7. JavaScript Architecture & Micro-Interactions (`js/main.js`)
 
-```css
-:root {
-  /* ==========================================================================
-     Brand Color Tokens
-     ========================================================================== */
-  --color-primary: #0062FE;
-  --color-primary-hover: #004ED2;
-  --color-primary-light: #EBF3FF;
-  --color-primary-glow: rgba(0, 98, 254, 0.25);
-  
-  --color-navy: #071C35;
-  --color-midnight: #0B1B32;
-  --color-cyan: #38BDF8;
-  --color-sky: #93C5FD;
-  
-  /* Text Tokens */
-  --color-text-heading: #0B1B32;
-  --color-text-body: #555D6E;
-  --color-text-muted: #64748B;
-  --color-text-inverse: #FFFFFF;
-  
-  /* Surface & Backgrounds */
-  --color-bg-page: #FFFFFF;
-  --color-bg-subtle: #F8FAFC;
-  --color-bg-card: #FFFFFF;
-  --color-hero-accent: #0057E7;
-  
-  /* Border & Dividers */
-  --color-border: #E2E8F0;
-  --color-border-hover: #CBD5E1;
-  --color-border-primary: rgba(0, 98, 254, 0.3);
+[`js/main.js`](file:///d:/St_website/Web_spire/js/main.js) is lightweight (~195 lines, 6KB), zero-dependency (other than optional Bootstrap hooks), and executes 5 core interaction systems on `DOMContentLoaded`:
 
-  /* ==========================================================================
-     Typography Tokens
-     ========================================================================== */
-  --font-family-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  --font-size-xs: 0.75rem;    /* 12px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;     /* 16px */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
-  --font-size-3xl: 2rem;      /* 32px */
-  --font-size-4xl: 2.5rem;    /* 40px */
-  --font-size-5xl: 3.5rem;    /* 56px */
-
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-
-  /* ==========================================================================
-     Spacers & Radii
-     ========================================================================== */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 9999px;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(11, 27, 50, 0.05);
-  --shadow-md: 0 4px 12px rgba(11, 27, 50, 0.06);
-  --shadow-lg: 0 12px 28px rgba(11, 27, 50, 0.08);
-  --shadow-card-hover: 0 16px 36px rgba(0, 98, 254, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-cta: 0 8px 20px rgba(0, 98, 254, 0.3);
-
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
-}
+```mermaid
+graph TD
+    A[DOMContentLoaded] --> B[initStickyNavbar]
+    A --> C[initStatsCounter]
+    A --> D[initSmoothScroll]
+    A --> E[initAccessibility]
+    A --> F[initTestimonialsSlider]
+    
+    B --> B1[Scroll Threshold 630px]
+    B1 --> B2[Toggle .scrolled on .header-navbar]
+    B1 --> B3[Toggle .show on .floating-whatsapp-btn]
+    
+    C --> C1[IntersectionObserver Threshold 0.2]
+    C1 --> C2[Ease-Out-Cubic 60fps Number Interpolation]
+    
+    D --> D1[Smooth Anchor Scroll with Offset]
+    D1 --> D2[Bootstrap Collapse Auto-Close]
+    
+    E --> E1[Keyboard Space/Enter Dropdown Accessibility]
+    
+    F --> F1[Click Left/Right Chevron Buttons]
+    F1 --> F2[Cycle Active Card Elevation & Highlight]
 ```
 
----
-
-## 7. Recommended Icon Library & Assets
-
-To reproduce the crisp linear iconography seen in the cards and metric counters:
-* **Recommended Library:** **Lucide Icons** or **Tabler Icons** (Stroke width: `1.75px` – `2px`).
-* **Icon Mapping:**
-  - *Projects Delivered:* `lucide-calendar-check` or `lucide-layers`
-  - *Happy Clients:* `lucide-users-2` or `lucide-smile`
-  - *Countries Served:* `lucide-map-pin` or `lucide-globe-2`
-  - *Years Experience:* `lucide-award` or `lucide-badge-check`
-  - *Web Development:* `lucide-monitor-smartphone` or `lucide-code-2`
-  - *Mobile App Development:* `lucide-smartphone`
-  - *Software Development:* `lucide-cog` or `lucide-cpu`
-  - *Cloud Solutions:* `lucide-cloud` with sync arrows
-  - *IT Consulting:* `lucide-target` or `lucide-trending-up`
-  - *Maintenance & Support:* `lucide-headset` or `lucide-life-buoy`
+### Core Functions:
+1. **`initStickyNavbar()`**: Listens to passive window scroll events. When `scrollY > 630px`, adds `.scrolled` to `.header-navbar` (adding glassmorphic backdrop filter and border) and adds `.show` to `.floating-whatsapp-btn`. Compensates document body padding dynamically.
+2. **`initStatsCounter()`**: Uses `IntersectionObserver` (threshold: 0.2) to detect when stat cards enter the viewport. Performs ease-out cubic numerical interpolation over 1,800ms at 60 FPS, appending the configured suffix (e.g. `+`).
+3. **`initSmoothScroll()`**: Intercepts internal `#` hash links, computes target bounding rectangle subtracting navbar height, smoothly scrolls the window, and programmatically collapses the Bootstrap mobile navigation menu via `bootstrap.Collapse.getInstance()`.
+4. **`initAccessibility()`**: Enhances keyboard navigation by binding `Enter` and `Space` keypresses on dropdown toggles to `bootstrap.Dropdown.getOrCreateInstance()`.
+5. **`initTestimonialsSlider()`**: Powers interactive navigation on the Client Testimonials carousel, cycling active highlight and elevation states across cards on chevron click.
 
 ---
 
-## 8. Implementation Checklist for Development
+## 8. CSS Architecture & Design Token Engine (`css/style.css`)
 
-### ✅ Phase 1 — Initial Sections (Image1) — COMPLETED
-1. `Header / Navigation Bar` with logo, pill CTA, hamburger toggle, glassmorphism scroll
-2. `Hero Section` with 2-column split, 45° geometric backdrop, diamond rotated image, 4 layered diamond accents
-3. `Stats Counter Strip` — 100+ Projects, 50+ Clients, 10+ Countries, 5+ Years (animated count-up)
-4. `Services Grid` — 6 cards (3×2), hover lift, gradient top bar, icon color transition, "Learn More →" animated arrow
+[`css/style.css`](file:///d:/St_website/Web_spire/css/style.css) contains 3,923 lines organized into distinct architectural layers:
 
-### ✅ Phase 2 — Extended Sections (Image2 & Image3) — COMPLETED
-5. `Why Choose Us` — 4-pillar cards (Expert Team, Quality Focused, Customer First, On-Time Delivery) with hover gradient bottom bar + dot-grid accents
-6. `Feature / About Block` — 2-column: left stacked photo collage with Satisfied Clients badge (515,178+) + floating SVG donut ring; right: eyebrow, feature title, body, 3 checkmark bullet points, "Learn More" CTA pill
-7. `Our Process` — 4-step horizontal flowchart with connecting arrows (Discover → Plan → Develop → Deliver)
-8. `Our Work / Portfolio Grid` — 4-column portfolio with image zoom overlay on hover + "View All Projects" CTA
-9. `CTA Banner` — Full-width royal blue gradient banner "Have a Project in Mind?" + "Get In Touch" white pill button + decorative pixel pattern (SVG)
-10. `Full 4-Column Footer` — Logo + tagline + socials | Quick Links | Our Services | Contact (email, phone, address) | Legal copyright bar
+```
+┌────────────────────────────────────────────────────────────┐
+│                  CSS ARCHITECTURE LAYERS                   │
+├──────────────────────────┬─────────────────────────────────┤
+│ 1. Design Tokens         │ :root variables, colors, radii  │
+│ 2. Reset & Global Base   │ Box sizing, smooth scroll, body │
+│ 3. Typography Hierarchy  │ Headings, subtitles, eyebrows   │
+│ 4. Shared UI Components  │ Buttons, pills, badges, cards   │
+│ 5. Header & Navigation   │ Sticky header, mobile toggler   │
+│ 6. Section Specifics     │ Hero, stats, services, why-us   │
+│ 7. Testimonials Layout   │ Multi-card carousel, quotes     │
+│ 8. About Page Specs      │ Timeline, mission/vision, values│
+│ 9. Contact Page Specs    │ Form inputs, connect card, grid │
+│ 10. Footer & WhatsApp    │ 4-col footer, floating button   │
+│ 11. Responsive Media     │ 1200px, 992px, 768px, 480px     │
+└──────────────────────────┴─────────────────────────────────┘
+```
 
-### ✅ Phase 3 — About Us Page (about.html) — COMPLETED
-11. `01. About Hero` — 2-column asymmetric hero, H1 headline (*"Technology Built Around Your Business."*), diamond container + 4 layered accents, 4-stat counter strip (image4.png)
-12. `02. Who We Are` — 2-column text block (*"Building Technology With Purpose"*), dual overlapping image collage, floating SVG donut ring, pixel dot accents (image5.png)
-13. `03. Our Journey / Timeline` — 6 milestone cards (2021–2026), horizontal timeline track line with node dots and paper plane SVG (image5.png)
-14. `04. What We Do` — 4-column inline feature strip (Technology Driven, Business Focused, Quality Mindset, Long-Term Partnership) (image5.png)
-15. `05. Mission & Vision` — 2-panel side-by-side gradient layout with center floating W emblem donut ring (half blue / half cyan) (image7.png)
-16. `06. Core Values` — 5-card grid (Innovation, Integrity, Quality, Customer Success, Continuous Improvement) with blue underline bars (image6.png)
-17. `07. Our Approach` — 4-card outcome flow (Understand, Collaborate, Build, Improve & Support) with filled blue number badges + connecting arrows (image6.png)
-18. `08. Our Commitment & About CTA Banner` — 3 mini-cards (Transparent Communication, Reliable Delivery, Long-Term Support), partnership photo with blue arrow accent, and full-bleed CTA banner (*"Let's Build Something Great Together"*) with paper plane & target bullseye SVGs (image8.png)
-19. `09. Full 4-Column Footer` — Reusable common footer matching index.html
+### Key Reusable Component Classes:
+* **Buttons:** `.btn-primary-hero`, `.btn-secondary-hero`, `.btn-feature-primary`, `.btn-contact-primary`, `.btn-contact-outline`, `.btn-send-message`, `.btn-about-cta`, `.btn-portfolio-cta`, `.testimonial-nav-btn`.
+* **Cards:** `.service-card`, `.pillar-card`, `.testimonial-card`, `.portfolio-card`, `.timeline-card`, `.value-card`, `.approach-card`, `.work-card`, `.help-service-card`, `.connect-info-card`, `.contact-form-card`.
+* **Accents:** `.accent-diamond`, `.dot-grid-accent`, `.pixel-cube-accent`, `.floating-glass-diamonds`, `.testimonials-bg-accent`, `.highlight-blue`, `.highlight-amber`, `.highlight-cyan`.
 
-### Interactivity & Micro-Animations (All Applied)
-- Card hover lift (`translateY(-6px)`) + blue shadow enhancement
-- Icon background color swap on card hover
-- Arrow translation on "Learn More →" links
-- Animated count-up number counters (IntersectionObserver trigger)
-- Sticky navbar glassmorphism on scroll
-- Smooth scroll for all anchor links
-- Social link hover: background fills blue, icon turns white
+---
 
-### Responsive Breakpoints Applied
-| Breakpoint | Layout Change |
-|---|---|
-| `≥1200px` | All 4/5/6-column grids, 2-column hero & feature blocks |
-| `992–1199px` | Why Choose Us, Process, Portfolio, Timeline collapse to 2/3 cols |
-| `768–991px` | Hero stacks vertically, Feature blocks stack, CTA banners stack, Timeline 2 cols |
-| `<768px` | Single column everything, 2×2 stats grid, mobile navbar offcanvas |
-| `<480px` | Core Values & Pillars go fully single column |
+## 9. Responsive Breakpoints & Device Adaptation Map
 
+| Viewport Width | Screen Tier | Structural Layout Adjustments |
+| :--- | :--- | :--- |
+| **`≥ 1200px`** | Large Desktop | Full 4-col/5-col/6-col grids, 50/50 hero splits, horizontal process flowchart, side-by-side mission/vision panels. |
+| **`992px – 1199px`** | Desktop / Small Laptop | Service grid drops to 3 cols, timeline adjusts card widths, contact form and info card maintain side-by-side layout. |
+| **`768px – 991px`** | Tablet | Hero sections stack vertically (text on top, graphic below), feature collages stack, timeline wraps into 2-column cards, contact layout stacks vertically. |
+| **`480px – 767px`** | Mobile Landscape / Phablet | Stats grid collapses to 2×2, service and work grids collapse to single column, mobile offcanvas navigation active. |
+| **`< 480px`** | Mobile Portrait | Single-column everything, full-width inputs, stats 2×2 tight layout, font sizes scale via clamp/responsive rem units. |
+
+---
+
+## 10. SEO, Accessibility & Structured Data (JSON-LD)
+
+### A. Meta Tags & Canonical Links
+Every page includes:
+- Explicit `<title>` and `<meta name="description">` tags tailored to page intent.
+- OpenGraph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`) and Twitter Card tags.
+- `<meta name="robots" content="index, follow">`.
+- Canonical links referencing standard domain endpoints.
+
+### B. Schema.org JSON-LD Structured Data
+* **[`index.html`](file:///d:/St_website/Web_spire/index.html):** `Organization` Schema + `OfferCatalog` cataloging 7 service offerings (Web Dev, Mobile App, Digital Marketing, SEO, Branding, Video Editing).
+* **[`about.html`](file:///d:/St_website/Web_spire/about.html):** `AboutPage` Schema referencing founding date (`2021`), corporate organization, and mission.
+* **[`contact.html`](file:///d:/St_website/Web_spire/contact.html):** `ContactPage` Schema containing `PostalAddress` (Coimbatore, Tamil Nadu), telephone (`+91 89056 43210`), and email.
+
+### C. Crawl Optimization
+* [`robots.txt`](file:///d:/St_website/Web_spire/robots.txt): Configured to allow all user agents with direct link to `sitemap.xml`.
+* [`sitemap.xml`](file:///d:/St_website/Web_spire/sitemap.xml): XML sitemap listing `index.html`, `about.html`, and `contact.html` with priority weights.
