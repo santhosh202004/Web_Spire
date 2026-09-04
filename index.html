@@ -19,17 +19,17 @@
   <meta property="og:url" content="https://www.webspirelabs.com/">
   <meta property="og:title" content="WebSpire Labs | Building Digital Solutions, Empowering Businesses">
   <meta property="og:description" content="We deliver innovative and scalable IT solutions that help businesses streamline operations, accelerate growth, and achieve lasting success.">
-  <meta property="og:image" content="asstes/logo.jpg">
+  <meta property="og:image" content="asstes/logo_1.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.webspirelabs.com/">
   <meta name="twitter:title" content="WebSpire Labs | Building Digital Solutions, Empowering Businesses">
   <meta name="twitter:description" content="We deliver innovative and scalable IT solutions that help businesses streamline operations, accelerate growth, and achieve lasting success.">
-  <meta name="twitter:image" content="asstes/logo.jpg">
+  <meta name="twitter:image" content="asstes/logo_1.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="asstes/logo.jpg">
+  <link rel="icon" type="image/png" href="asstes/favicon.png">
 
   <!-- Google Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,9 @@
   <!-- Homepage Specific Stylesheet (Hero, Services, Why Choose Us, Testimonials, Portfolio) -->
   <link rel="stylesheet" href="css/home.css">
 
+  <!-- Dynamic Constellation & Particle Network Background -->
+  <link rel="stylesheet" href="css/constellation.css">
+
   <!-- Schema.org JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
   {
@@ -52,7 +55,7 @@
     "@type": "Organization",
     "name": "WebSpire Labs",
     "url": "https://www.webspirelabs.com",
-    "logo": "asstes/logo.jpg",
+    "logo": "asstes/logo_1.png",
     "slogan": "Building Digital Solutions, Empowering Businesses",
     "description": "We deliver innovative and scalable IT solutions that help businesses streamline operations, accelerate growth, and achieve lasting success.",
     "sameAs": [],
@@ -118,25 +121,6 @@
   <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-  <!-- ==========================================================================
-       Top Announcement Strip (Cognisive Layout Inspired)
-       ========================================================================== -->
-  <div class="announcement-strip" id="announcementStrip">
-    <div class="container announcement-inner">
-      <div class="announcement-content">
-        <span class="announcement-text">
-          🚀 <strong>WebSpire Labs:</strong> Transforming Ideas into Scalable Digital Realities — Web Development, Mobile Apps &amp; Digital Solutions.
-        </span>
-        <a href="contact.html" class="announcement-link">
-          Get Free Consultation
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-      </div>
-      <button class="announcement-dismiss-btn" id="announcementDismissBtn" type="button" aria-label="Dismiss Announcement">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-  </div>
 
   <!-- ==========================================================================
        Header & Navigation Bar
@@ -147,7 +131,7 @@
         
         <!-- Brand Logo -->
         <a class="navbar-brand brand-logo-container" href="index.html" aria-label="WebSpire Labs Home">
-          <img src="asstes/logo.jpg" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img">
+          <img src="asstes/logo_1.png" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img" width="174" height="42">
         </a>
 
         <!-- Mobile Toggler -->
@@ -156,17 +140,12 @@
         </button>
 
         <!-- Navbar Menu Items -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarMainContent">
-          <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 my-3 my-lg-0">
             
             <!-- Home -->
             <li class="nav-item">
               <a class="nav-link nav-link-custom active" aria-current="page" href="index.html">Home</a>
-            </li>
-
-            <!-- Services Link -->
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#services">Services</a>
             </li>
 
             <!-- About Us -->
@@ -174,44 +153,22 @@
               <a class="nav-link nav-link-custom" href="about.html">About Us</a>
             </li>
 
-            <!-- Our Work / Portfolio -->
+            <!-- Service -->
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#our-work">Our Work</a>
+              <a class="nav-link nav-link-custom" href="services.html">Service</a>
             </li>
 
-            <!-- Blogs -->
+            <!-- Contact Us -->
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#services">Blogs</a>
-            </li>
-
-            <!-- Contact Us (visible on mobile in drawer) -->
-            <li class="nav-item d-lg-none">
               <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
             </li>
 
+            <!-- Blog -->
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#our-work">Blog</a>
+            </li>
+
           </ul>
-
-          <!-- Mobile Drawer CTA Button -->
-          <div class="d-lg-none header-nav-actions">
-            <a href="contact.html" class="btn-nav-pill">
-              <span>Contact Us</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Header Actions (Right on Desktop: Deep Navy Pill CTA) -->
-        <div class="d-none d-lg-flex align-items-center">
-          <a href="contact.html" class="btn-nav-pill" id="headerCtaBtn">
-            <span>Contact Us</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
         </div>
 
       </nav>
@@ -242,6 +199,8 @@
           <rect width="100%" height="100%" fill="url(#heroGlow)" />
           <rect width="100%" height="100%" fill="url(#dotGrid)" />
         </svg>
+        <!-- Interactive Animated Constellation & Particle Network Canvas -->
+        <canvas id="heroConstellationCanvas" class="hero-constellation-canvas"></canvas>
       </div>
 
       <div class="container hero-container">
@@ -251,9 +210,9 @@
           
           <!-- Slide 1: Web & Cloud Solutions (Active by default) -->
           <div class="hero-slide active" id="heroSlide1" data-slide="0">
-            <div class="row align-items-center gy-5">
-              <!-- Left Content -->
-              <div class="col-lg-6 hero-text-col">
+            <div class="row align-items-center justify-content-center">
+              <!-- Center Content -->
+              <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto hero-text-col text-center">
                 <span class="hero-slide-badge">
                   ENTERPRISE WEB &amp; CLOUD
                 </span>
@@ -274,104 +233,14 @@
                   <span class="hero-action-label">Explore Web &amp; Cloud Architecture</span>
                 </a>
               </div>
-
-              <!-- Right Visual Artwork (Line-Art Digital Ecosystem) -->
-              <div class="col-lg-6 hero-visual-col">
-                <div class="hero-artwork-card">
-                  <!-- Vector Line Art SVG: Web, Cloud, Code, Servers -->
-                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Tech Grid Mesh -->
-                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
-                      <line x1="40" y1="60" x2="500" y2="60" />
-                      <line x1="40" y1="190" x2="500" y2="190" />
-                      <line x1="40" y1="320" x2="500" y2="320" />
-                      <line x1="120" y1="20" x2="120" y2="360" />
-                      <line x1="270" y1="20" x2="270" y2="360" />
-                      <line x1="420" y1="20" x2="420" y2="360" />
-                    </g>
-                    
-                    <!-- Center Code & Cloud Container Window -->
-                    <rect x="130" y="80" width="280" height="190" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 12px 28px rgba(11,27,50,0.08))" />
-                    <!-- Browser Window Header -->
-                    <rect x="130" y="80" width="280" height="34" rx="14" fill="#F8FAFC" stroke="#0B1B32" stroke-width="2" />
-                    <line x1="130" y1="114" x2="410" y2="114" stroke="#E2E8F0" stroke-width="1.5" />
-                    <circle cx="152" cy="97" r="4" fill="#EF4444" />
-                    <circle cx="166" cy="97" r="4" fill="#F59E0B" />
-                    <circle cx="180" cy="97" r="4" fill="#10B981" />
-                    <rect x="200" y="90" width="140" height="14" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
-                    
-                    <!-- Code & Architecture lines inside window -->
-                    <rect x="155" y="132" width="70" height="8" rx="4" fill="#00A3C4" />
-                    <rect x="235" y="132" width="110" height="8" rx="4" fill="#E2E8F0" />
-                    <rect x="155" y="152" width="130" height="8" rx="4" fill="#E2E8F0" />
-                    <rect x="175" y="172" width="85" height="8" rx="4" fill="#38BDF8" opacity="0.6" />
-                    <rect x="175" y="192" width="160" height="8" rx="4" fill="#E2E8F0" />
-                    <rect x="155" y="212" width="60" height="8" rx="4" fill="#0062FE" />
-                    <rect x="225" y="212" width="90" height="8" rx="4" fill="#E2E8F0" />
-
-                    <!-- Floating Node 1: Cloud Architecture (Top Left) -->
-                    <g class="float-node-1">
-                      <circle cx="85" cy="110" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(0,163,196,0.15))" />
-                      <circle cx="85" cy="110" r="28" fill="rgba(0,163,196,0.06)" />
-                      <!-- Cloud Icon -->
-                      <path d="M74 116a8 8 0 0 1-1-16 11 11 0 0 1 20-3 9 9 0 0 1 8 9 7 7 0 0 1-7 10h-20z" fill="none" stroke="#00A3C4" stroke-width="2" stroke-linejoin="round" />
-                    </g>
-                    <!-- Connector line to window -->
-                    <path d="M117 110 L 130 110" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Floating Node 2: Server Stack / DevOps (Bottom Left) -->
-                    <g class="float-node-2">
-                      <circle cx="95" cy="270" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(11,27,50,0.1))" />
-                      <!-- Server Icon -->
-                      <rect x="83" y="258" width="24" height="7" rx="2" stroke="#0B1B32" stroke-width="1.8" fill="none" />
-                      <rect x="83" y="268" width="24" height="7" rx="2" stroke="#0B1B32" stroke-width="1.8" fill="none" />
-                      <circle cx="88" cy="261.5" r="1.5" fill="#00A3C4" />
-                      <circle cx="88" cy="271.5" r="1.5" fill="#00A3C4" />
-                    </g>
-                    <!-- Connector curve -->
-                    <path d="M127 270 Q 140 270 150 240 L 150 215" fill="none" stroke="#0B1B32" stroke-width="1.8" stroke-dasharray="4 3" />
-
-                    <!-- Floating Node 3: AI & Microservices (Top Right) -->
-                    <g class="float-node-3">
-                      <circle cx="455" cy="100" r="34" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 20px rgba(0,98,254,0.14))" />
-                      <circle cx="455" cy="100" r="30" fill="rgba(0,98,254,0.06)" />
-                      <!-- Circuit / AI Node Icon -->
-                      <circle cx="455" cy="100" r="6" fill="#0062FE" />
-                      <circle cx="442" cy="90" r="3" fill="#00A3C4" />
-                      <circle cx="468" cy="90" r="3" fill="#00A3C4" />
-                      <circle cx="455" cy="116" r="3" fill="#00A3C4" />
-                      <line x1="455" y1="94" x2="455" y2="106" stroke="#0B1B32" stroke-width="1.5" />
-                      <line x1="444" y1="92" x2="451" y2="98" stroke="#0B1B32" stroke-width="1.5" />
-                      <line x1="466" y1="92" x2="459" y2="98" stroke="#0B1B32" stroke-width="1.5" />
-                    </g>
-                    <!-- Connector line -->
-                    <path d="M410 120 L 425 110" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Floating Node 4: Security Shield (Bottom Right) -->
-                    <g class="float-node-4">
-                      <circle cx="445" cy="275" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
-                      <circle cx="445" cy="275" r="28" fill="rgba(0,163,196,0.08)" />
-                      <!-- Shield Icon -->
-                      <path d="M445 261 L 434 265 v 10 c0 7 11 12 11 12 s 11 -5 11 -12 v -10 z" fill="none" stroke="#00A3C4" stroke-width="2" stroke-linejoin="round" />
-                      <path d="M441 275 l 3 3 6 -6" fill="none" stroke="#0B1B32" stroke-width="2" stroke-linecap="round" />
-                    </g>
-                    <!-- Connector curve -->
-                    <path d="M410 240 Q 425 255 425 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
-
-                    <!-- Decorative Cyan Accent Rings -->
-                    <circle cx="475" cy="180" r="14" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.4" />
-                    <circle cx="65" cy="200" r="10" fill="none" stroke="#00A3C4" stroke-width="2" opacity="0.3" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
 
           <!-- Slide 2: Mobile Applications -->
           <div class="hero-slide" id="heroSlide2" data-slide="1" aria-hidden="true">
-            <div class="row align-items-center gy-5">
-              <!-- Left Content -->
-              <div class="col-lg-6 hero-text-col">
+            <div class="row align-items-center justify-content-center">
+              <!-- Center Content -->
+              <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto hero-text-col text-center">
                 <span class="hero-slide-badge">
                   NATIVE &amp; CROSS-PLATFORM APPS
                 </span>
@@ -392,85 +261,14 @@
                   <span class="hero-action-label">Explore Mobile App Development</span>
                 </a>
               </div>
-
-              <!-- Right Visual Artwork (Line-Art Mobile Ecosystem) -->
-              <div class="col-lg-6 hero-visual-col">
-                <div class="hero-artwork-card">
-                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Tech Grid Mesh -->
-                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
-                      <line x1="40" y1="60" x2="500" y2="60" />
-                      <line x1="40" y1="190" x2="500" y2="190" />
-                      <line x1="40" y1="320" x2="500" y2="320" />
-                    </g>
-                    
-                    <!-- Center Smartphone Frame -->
-                    <rect x="200" y="45" width="140" height="270" rx="22" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2.5" filter="drop-shadow(0 14px 32px rgba(11,27,50,0.12))" />
-                    <!-- Dynamic Island / Speaker Notch -->
-                    <rect x="245" y="55" width="50" height="8" rx="4" fill="#0B1B32" />
-                    
-                    <!-- App UI Elements inside Phone -->
-                    <rect x="214" y="75" width="112" height="42" rx="8" fill="rgba(0,163,196,0.1)" stroke="#00A3C4" stroke-width="1.2" />
-                    <circle cx="230" cy="96" r="10" fill="#00A3C4" />
-                    <rect x="248" y="90" width="54" height="5" rx="2" fill="#0B1B32" />
-                    <rect x="248" y="98" width="38" height="4" rx="2" fill="#64748B" />
-
-                    <!-- App Card 2 -->
-                    <rect x="214" y="125" width="112" height="60" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-                    <rect x="224" y="137" width="50" height="6" rx="3" fill="#0B1B32" />
-                    <rect x="224" y="148" width="90" height="4" rx="2" fill="#94A3B8" />
-                    <rect x="224" y="156" width="70" height="4" rx="2" fill="#CBD5E1" />
-                    <circle cx="298" cy="140" r="6" fill="#38BDF8" />
-
-                    <!-- App Card 3: Metrics -->
-                    <rect x="214" y="193" width="112" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-                    <!-- Mini Graph curve inside app -->
-                    <path d="M224 245 C 240 230, 260 250, 280 220 S 310 205, 314 210" fill="none" stroke="#0062FE" stroke-width="2" stroke-linecap="round" />
-                    <circle cx="314" cy="210" r="3" fill="#00A3C4" />
-
-                    <!-- Home Indicator Bar -->
-                    <rect x="245" y="300" width="50" height="4" rx="2" fill="#94A3B8" />
-
-                    <!-- Left Satellite Device: Tablet Wireframe -->
-                    <g class="float-node-1">
-                      <rect x="65" y="110" width="105" height="150" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(11,27,50,0.09))" />
-                      <rect x="75" y="125" width="85" height="120" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-                      <circle cx="117" cy="185" r="14" fill="rgba(0,163,196,0.12)" />
-                      <path d="M112 185 l 4 4 8 -8" stroke="#00A3C4" stroke-width="2" fill="none" stroke-linecap="round" />
-                    </g>
-                    <!-- Connector line -->
-                    <path d="M170 185 L 200 185" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Right Satellite Device: Smart Watch & Touch Node -->
-                    <g class="float-node-3">
-                      <rect x="375" y="120" width="90" height="90" rx="24" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 10px 24px rgba(0,98,254,0.12))" />
-                      <circle cx="420" cy="165" r="32" fill="rgba(0,98,254,0.06)" />
-                      <circle cx="420" cy="165" r="22" stroke="#0062FE" stroke-width="2" stroke-dasharray="2 2" fill="none" />
-                      <text x="420" y="170" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0B1B32">iOS/APK</text>
-                    </g>
-                    <!-- Connector line -->
-                    <path d="M340 165 L 375 165" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Floating Sync Cloud Node (Bottom Right) -->
-                    <g class="float-node-4">
-                      <circle cx="430" cy="275" r="30" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
-                      <!-- Sync Arrows Icon -->
-                      <path d="M422 268 a9 9 0 0 1 15 2 l 3-3 v 8 h-8 l 3-3 a6 6 0 0 0-10-1" fill="none" stroke="#00A3C4" stroke-width="1.8" />
-                      <path d="M438 282 a9 9 0 0 1-15-2 l-3 3 v-8 h 8 l-3 3 a6 6 0 0 0 10 1" fill="none" stroke="#0B1B32" stroke-width="1.8" />
-                    </g>
-                    <!-- Connector line -->
-                    <path d="M340 250 Q 380 275 400 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
 
           <!-- Slide 3: Growth & Branding -->
           <div class="hero-slide" id="heroSlide3" data-slide="2" aria-hidden="true">
-            <div class="row align-items-center gy-5">
-              <!-- Left Content -->
-              <div class="col-lg-6 hero-text-col">
+            <div class="row align-items-center justify-content-center">
+              <!-- Center Content -->
+              <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto hero-text-col text-center">
                 <span class="hero-slide-badge">
                   DIGITAL MARKETING &amp; IDENTITY
                 </span>
@@ -491,111 +289,14 @@
                   <span class="hero-action-label">Explore Marketing &amp; Brand Solutions</span>
                 </a>
               </div>
-
-              <!-- Right Visual Artwork (Line-Art Growth & Analytics Ecosystem) -->
-              <div class="col-lg-6 hero-visual-col">
-                <div class="hero-artwork-card">
-                  <svg class="hero-tech-svg" viewBox="0 0 540 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Tech Grid Mesh -->
-                    <g opacity="0.12" stroke="#0B1B32" stroke-width="1" stroke-dasharray="3 3">
-                      <line x1="40" y1="60" x2="500" y2="60" />
-                      <line x1="40" y1="190" x2="500" y2="190" />
-                      <line x1="40" y1="320" x2="500" y2="320" />
-                    </g>
-                    
-                    <!-- Center Analytics Growth Dashboard -->
-                    <rect x="130" y="80" width="280" height="190" rx="14" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 12px 28px rgba(11,27,50,0.08))" />
-                    <!-- Header -->
-                    <rect x="130" y="80" width="280" height="34" rx="14" fill="#F8FAFC" stroke="#0B1B32" stroke-width="2" />
-                    <line x1="130" y1="114" x2="410" y2="114" stroke="#E2E8F0" stroke-width="1.5" />
-                    <circle cx="152" cy="97" r="4" fill="#00A3C4" />
-                    <rect x="166" y="93" width="70" height="8" rx="3" fill="#0B1B32" />
-                    <rect x="340" y="91" width="50" height="12" rx="6" fill="rgba(16,185,129,0.15)" />
-                    <text x="365" y="100" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#10B981">+240%</text>
-
-                    <!-- Chart Grid inside Dashboard -->
-                    <line x1="160" y1="140" x2="380" y2="140" stroke="#F1F5F9" stroke-width="1" />
-                    <line x1="160" y1="180" x2="380" y2="180" stroke="#F1F5F9" stroke-width="1" />
-                    <line x1="160" y1="220" x2="380" y2="220" stroke="#F1F5F9" stroke-width="1" />
-                    
-                    <!-- Gradient Area Fill under Curve -->
-                    <defs>
-                      <linearGradient id="growthArea" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00A3C4" stop-opacity="0.25" />
-                        <stop offset="100%" stop-color="#00A3C4" stop-opacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M165 220 Q 200 215 230 185 T 310 160 T 375 135 L 375 220 Z" fill="url(#growthArea)" />
-                    <!-- Bold Growth Line -->
-                    <path d="M165 220 Q 200 215 230 185 T 310 160 T 375 135" fill="none" stroke="#00A3C4" stroke-width="3" stroke-linecap="round" />
-                    <!-- Data Points -->
-                    <circle cx="230" cy="185" r="5" fill="#FFFFFF" stroke="#00A3C4" stroke-width="2.5" />
-                    <circle cx="310" cy="160" r="5" fill="#FFFFFF" stroke="#0062FE" stroke-width="2.5" />
-                    <circle cx="375" cy="135" r="6" fill="#00A3C4" stroke="#FFFFFF" stroke-width="2" />
-
-                    <!-- Floating Node 1: Target / SEO Keyword Acquisition (Left) -->
-                    <g class="float-node-1">
-                      <circle cx="85" cy="130" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(0,163,196,0.15))" />
-                      <circle cx="85" cy="130" r="28" fill="rgba(0,163,196,0.06)" />
-                      <!-- Target Icon -->
-                      <circle cx="85" cy="130" r="14" stroke="#0B1B32" stroke-width="1.8" fill="none" />
-                      <circle cx="85" cy="130" r="8" stroke="#00A3C4" stroke-width="2" fill="none" />
-                      <circle cx="85" cy="130" r="3" fill="#00A3C4" />
-                    </g>
-                    <path d="M117 130 L 130 130" stroke="#00A3C4" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Floating Node 2: Brand Star / Creative Sparkle (Top Right) -->
-                    <g class="float-node-3">
-                      <circle cx="455" cy="100" r="34" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 20px rgba(0,98,254,0.14))" />
-                      <circle cx="455" cy="100" r="30" fill="rgba(0,98,254,0.06)" />
-                      <!-- 4-point Star -->
-                      <path d="M455 86 L 458 96 L 468 100 L 458 104 L 455 114 L 452 104 L 442 100 L 452 96 Z" fill="#0062FE" />
-                    </g>
-                    <path d="M410 115 L 425 105" stroke="#0062FE" stroke-width="2" stroke-dasharray="3 3" />
-
-                    <!-- Floating Node 3: Conversion Bar Chart (Bottom Right) -->
-                    <g class="float-node-4">
-                      <circle cx="445" cy="275" r="32" fill="#FFFFFF" stroke="#0B1B32" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(0,163,196,0.18))" />
-                      <!-- Bar chart icon -->
-                      <rect x="432" y="274" width="5" height="12" rx="1.5" fill="#CBD5E1" />
-                      <rect x="442" y="266" width="5" height="20" rx="1.5" fill="#38BDF8" />
-                      <rect x="452" y="258" width="5" height="28" rx="1.5" fill="#00A3C4" />
-                    </g>
-                    <path d="M410 240 Q 425 255 425 275" fill="none" stroke="#00A3C4" stroke-width="1.8" stroke-dasharray="3 3" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
 
         </div>
 
-        <!-- ==========================================================================
-             Bottom Tab Switcher (Cognisive Inspired 3-Pillar Tabs)
-             ========================================================================== -->
-        <div class="hero-tabs-bar" role="tablist" aria-label="Hero Service Solutions">
-          <button class="hero-tab-btn active" role="tab" aria-selected="true" aria-controls="heroSlide1" data-slide-target="0">
-            <span class="hero-tab-num">01</span>
-            <span class="hero-tab-title">Web &amp; Cloud Solutions</span>
-            <span class="hero-tab-line"></span>
-          </button>
-
-          <button class="hero-tab-btn" role="tab" aria-selected="false" aria-controls="heroSlide2" data-slide-target="1" tabindex="-1">
-            <span class="hero-tab-num">02</span>
-            <span class="hero-tab-title">Mobile Applications</span>
-            <span class="hero-tab-line"></span>
-          </button>
-
-          <button class="hero-tab-btn" role="tab" aria-selected="false" aria-controls="heroSlide3" data-slide-target="2" tabindex="-1">
-            <span class="hero-tab-num">03</span>
-            <span class="hero-tab-title">Brand &amp; Growth</span>
-            <span class="hero-tab-line"></span>
-          </button>
-        </div>
 
       </div>
     </section>
-
 
 
     <!-- ==========================================================================
@@ -770,6 +471,15 @@
          ====================================================================== -->
     <section class="why-choose-section" id="why-choose-us" aria-labelledby="why-title">
       <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-header why-choose-header">
+          <span class="section-eyebrow">WHY CHOOSE US</span>
+          <h2 class="section-title" id="why-title">Why Choose WebSpire Labs</h2>
+          <p class="section-subtitle">
+            We combine cutting-edge technology, agile execution, and enterprise engineering to build scalable digital solutions that drive measurable business impact.
+          </p>
+        </div>
 
         <!-- 2-Column Split Layout (Screenshot 1 Alignment: Left 4-Petal Emblem + Right Interactive Accordion) -->
         <div class="why-layout-grid">
@@ -1253,7 +963,7 @@
           <!-- Project 1 -->
           <article class="portfolio-card" aria-labelledby="project-1-title">
             <div class="portfolio-card-img">
-              <img src="asstes/hero-placeholder.svg" alt="Corporate Website project — professional web development by WebSpire Labs" loading="lazy" width="320" height="180">
+              <img src="asstes/project-corporate-website.jpg" alt="Corporate Website project — professional web development by WebSpire Labs" loading="lazy" width="320" height="180">
               <div class="portfolio-card-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="portfolio-card-body">
@@ -1265,7 +975,7 @@
           <!-- Project 2 -->
           <article class="portfolio-card" aria-labelledby="project-2-title">
             <div class="portfolio-card-img">
-              <img src="asstes/hero-placeholder.svg" alt="E-commerce Platform — scalable online store developed by WebSpire Labs" loading="lazy" width="320" height="180">
+              <img src="asstes/project-ecommerce-platform.jpg" alt="E-commerce Platform — scalable online store developed by WebSpire Labs" loading="lazy" width="320" height="180">
               <div class="portfolio-card-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="portfolio-card-body">
@@ -1277,7 +987,7 @@
           <!-- Project 3 -->
           <article class="portfolio-card" aria-labelledby="project-3-title">
             <div class="portfolio-card-img">
-              <img src="asstes/hero-placeholder.svg" alt="Business Dashboard — enterprise analytics dashboard by WebSpire Labs" loading="lazy" width="320" height="180">
+              <img src="asstes/project-business-dashboard.jpg" alt="Business Dashboard — enterprise analytics dashboard by WebSpire Labs" loading="lazy" width="320" height="180">
               <div class="portfolio-card-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="portfolio-card-body">
@@ -1289,7 +999,7 @@
           <!-- Project 4 -->
           <article class="portfolio-card" aria-labelledby="project-4-title">
             <div class="portfolio-card-img">
-              <img src="asstes/hero-placeholder.svg" alt="Mobile Application — cross-platform mobile app developed by WebSpire Labs" loading="lazy" width="320" height="180">
+              <img src="asstes/project-mobile-app.jpg" alt="Mobile Application — cross-platform mobile app developed by WebSpire Labs" loading="lazy" width="320" height="180">
               <div class="portfolio-card-img-overlay" aria-hidden="true"></div>
             </div>
             <div class="portfolio-card-body">
@@ -1300,7 +1010,16 @@
 
         </div>
 
-        
+        <!-- View All Projects CTA -->
+        <div class="portfolio-cta-wrap">
+          <a href="#contact" class="btn-portfolio-cta" id="viewAllProjectsBtn" aria-label="View all projects by WebSpire Labs">
+            View All Projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
 
       </div>
     </section>
@@ -1373,7 +1092,7 @@
         <!-- Column 1: Logo + Tagline + Socials -->
         <div class="col-lg-3 col-md-6 footer-logo-col">
           <a href="#" aria-label="WebSpire Labs Home">
-            <img src="asstes/logo.jpg" alt="WebSpire Labs logo" class="footer-logo-img" width="160" height="44">
+            <img src="asstes/logo-footer.png" alt="WebSpire Labs logo" class="footer-logo-img" width="174" height="42">
           </a>
           <p class="footer-tagline">
             We build digital solutions that empower businesses to grow, innovate and succeed in a digital world.
@@ -1414,10 +1133,10 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h3 class="footer-col-title">Quick Links</h3>
           <ul class="footer-nav-list" role="list">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#our-work">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -1426,12 +1145,12 @@
         <div class="col-lg-3 col-md-6 col-6">
           <h3 class="footer-col-title">Our Services</h3>
           <ul class="footer-nav-list" role="list">
-            <li><a href="#services">Web Development</a></li>
-            <li><a href="#services">Mobile Application</a></li>
-            <li><a href="#services">Digital Marketing</a></li>
-            <li><a href="#services">SEO</a></li>
-            <li><a href="#services">Branding</a></li>
-            <li><a href="#services">Video Editing</a></li>
+            <li><a href="services.html#web-development">Web Development</a></li>
+            <li><a href="services.html#mobile-apps">Mobile Application</a></li>
+            <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="services.html#seo">SEO</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#video-editing">Video Editing</a></li>
           </ul>
         </div>
 
@@ -1507,6 +1226,9 @@
 
   <!-- Homepage Features: Interactive Ecosystem Hero Carousel -->
   <script src="js/hero-carousel.js"></script>
+
+  <!-- Homepage Background: Dynamic Constellation & Particle Network Canvas -->
+  <script src="js/constellation-bg.js"></script>
 
   <!-- Homepage Features: Why Choose Us Interactive Accordion -->
   <script src="js/why-choose-accordion.js"></script>

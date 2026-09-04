@@ -107,14 +107,51 @@ function initTestimonialsSlider() {
 
   track.addEventListener('transitionend', handleTransitionEnd);
 
+  // Automatic Scroll (Right to Left every 4 seconds)
+  let autoplayTimer = null;
+  const AUTOPLAY_DELAY = 4000; // 4 seconds
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => {
+      currentIndex++;
+      moveTo(currentIndex, true);
+    }, AUTOPLAY_DELAY);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  };
+
   nextBtn.addEventListener('click', () => {
     currentIndex++;
     moveTo(currentIndex, true);
+    startAutoplay(); // Reset 4s timer after manual navigation
   });
 
   prevBtn.addEventListener('click', () => {
     currentIndex--;
     moveTo(currentIndex, true);
+    startAutoplay(); // Reset 4s timer after manual navigation
+  });
+
+  // Pause on hover over testimonials wrapper or touch interaction
+  const wrapper = document.querySelector('.testimonials-wrapper') || track;
+  wrapper.addEventListener('mouseenter', stopAutoplay);
+  wrapper.addEventListener('mouseleave', startAutoplay);
+  wrapper.addEventListener('touchstart', stopAutoplay, { passive: true });
+  wrapper.addEventListener('touchend', startAutoplay, { passive: true });
+
+  // Pause when browser tab is hidden to save resources
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
   });
 
   // Re-align smoothly on window resize
@@ -126,8 +163,9 @@ function initTestimonialsSlider() {
     }, 80);
   }, { passive: true });
 
-  // Initial positioning at original card 1
+  // Initial positioning at original card 1 and start autoplay
   moveTo(currentIndex, false);
+  startAutoplay();
 }
 
 // Auto-initialize when DOM is ready

@@ -17,7 +17,7 @@ function initHeroCarousel() {
   const slides = document.querySelectorAll('.hero-slide');
   const tabs = document.querySelectorAll('.hero-tab-btn');
 
-  if (!heroSection || slides.length === 0 || tabs.length === 0) return;
+  if (!heroSection || slides.length === 0) return;
 
   let currentIndex = 0;
   const slideCount = slides.length;
@@ -43,13 +43,15 @@ function initHeroCarousel() {
       slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
     });
 
-    // Update tabs
-    tabs.forEach((tab, idx) => {
-      const isActive = idx === targetIndex;
-      tab.classList.toggle('active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      tab.setAttribute('tabindex', isActive ? '0' : '-1');
-    });
+    // Update tabs if present
+    if (tabs && tabs.length > 0) {
+      tabs.forEach((tab, idx) => {
+        const isActive = idx === targetIndex;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        tab.setAttribute('tabindex', isActive ? '0' : '-1');
+      });
+    }
 
     currentIndex = targetIndex;
   }

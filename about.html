@@ -20,17 +20,17 @@
   <meta property="og:url" content="https://www.webspirelabs.com/about.html">
   <meta property="og:title" content="About Us | WebSpire Labs — Technology Built Around Your Business">
   <meta property="og:description" content="We build reliable, scalable and innovative digital solutions that help businesses transform ideas into meaningful technology.">
-  <meta property="og:image" content="asstes/logo.jpg">
+  <meta property="og:image" content="asstes/logo_1.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.webspirelabs.com/about.html">
   <meta name="twitter:title" content="About Us | WebSpire Labs — Technology Built Around Your Business">
   <meta name="twitter:description" content="We build reliable, scalable and innovative digital solutions that help businesses transform ideas into meaningful technology.">
-  <meta name="twitter:image" content="asstes/logo.jpg">
+  <meta name="twitter:image" content="asstes/logo_1.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="asstes/logo.jpg">
+  <link rel="icon" type="image/png" href="asstes/favicon.png">
 
   <!-- Google Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +58,7 @@
       "@type": "Organization",
       "name": "WebSpire Labs",
       "url": "https://www.webspirelabs.com",
-      "logo": "asstes/logo.jpg",
+      "logo": "asstes/logo_1.png",
       "slogan": "Building Digital Solutions, Empowering Businesses",
       "foundingDate": "2021"
     }
@@ -73,13 +73,13 @@
   <!-- ==========================================================================
        Header & Navigation Bar (Common)
        ========================================================================== -->
-  <header class="header-navbar">
+  <header class="header-navbar" id="siteHeader">
     <div class="container">
       <nav class="navbar navbar-expand-lg p-0" aria-label="Main Navigation">
         
         <!-- Brand Logo -->
         <a class="navbar-brand brand-logo-container" href="index.html" aria-label="WebSpire Labs Home">
-          <img src="asstes/logo.jpg" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img">
+          <img src="asstes/logo_1.png" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img" width="174" height="42">
         </a>
 
         <!-- Mobile Toggler -->
@@ -88,8 +88,8 @@
         </button>
 
         <!-- Navbar Menu Items -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarMainContent">
-          <ul class="navbar-nav align-items-lg-center gap-lg-2 my-3 my-lg-0">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 my-3 my-lg-0">
             <li class="nav-item">
               <a class="nav-link nav-link-custom" href="index.html">Home</a>
             </li>
@@ -97,26 +97,16 @@
               <a class="nav-link nav-link-custom active" aria-current="page" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="index.html#services">Services</a>
+              <a class="nav-link nav-link-custom" href="services.html">Service</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="index.html#our-work">Blogs</a>
+              <a class="nav-link nav-link-custom" href="index.html#our-work">Blog</a>
             </li>
           </ul>
         </div>
-
-        <!-- Header Actions (Right) -->
-        <!-- <div class="d-none d-lg-flex align-items-center gap-3">
-          <a href="#about-cta" class="btn-nav-outline" id="headerCtaBtn">Get In Touch</a>
-          <button class="btn-nav-hamburger" type="button" aria-label="Toggle Side Menu" title="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div> -->
 
       </nav>
     </div>
@@ -128,133 +118,51 @@
   <main id="main-content">
 
     <!-- ==========================================================================
-         Section 01: About Hero (image4.png)
+         Section 01: About Hero Banner (Cognisive-Inspired / Home Page Aesthetic)
          ========================================================================== -->
     <section class="hero-section" id="about-hero" aria-labelledby="about-hero-title">
-      <!-- Angled Blue Polygon Graphic Backdrop (Right) -->
-      <div class="hero-bg-accent" aria-hidden="true"></div>
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-diagonal-line" aria-hidden="true"></div>
+      <!-- High-Tech Constellation & Network Mesh Backdrop (Matches Home Page) -->
+      <div class="hero-network-backdrop" aria-hidden="true">
+        <svg class="hero-constellation-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="heroGlow" cx="50%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="rgba(0, 163, 196, 0.10)" />
+              <stop offset="55%" stop-color="rgba(0, 163, 196, 0.03)" />
+              <stop offset="100%" stop-color="rgba(244, 245, 247, 0)" />
+            </radialGradient>
+            <pattern id="dotGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.2" fill="rgba(11, 27, 50, 0.045)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#heroGlow)" />
+          <rect width="100%" height="100%" fill="url(#dotGrid)" />
+        </svg>
+      </div>
 
-      <div class="container hero-content">
-        <div class="row align-items-center gy-5">
-          
-          <!-- Left Column: Typography & CTAs -->
-          <div class="col-lg-6">
-            <span class="section-eyebrow">ABOUT WEBSPIRE LABS</span>
+      <div class="container hero-container">
+        <div class="row align-items-center justify-content-center">
+          <!-- Center Content (Compact Inner-Page Banner) -->
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto hero-text-col text-center">
+            <span class="hero-slide-badge">
+              ABOUT WEBSPIRE LABS
+            </span>
             <h1 class="hero-headline" id="about-hero-title">
               Technology Built<br>
-              Around Your<br>
-              <span class="highlight-blue">Business.</span>
+              <span class="highlight-cyan">Around Your Business.</span>
             </h1>
-
             <p class="hero-description">
-              We build reliable, scalable and innovative digital solutions that help businesses transform ideas into meaningful technology.
+              We build reliable, scalable, and innovative digital solutions that help businesses transform ideas into meaningful technology and measurable growth.
             </p>
-
-            <div class="hero-cta-group">
-              <a href="#our-journey" class="btn-primary-hero" id="heroJourneyBtn">
-                Our Journey
-                <svg class="ms-2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <a href="#about-cta" class="btn-secondary-hero" id="heroContactBtn">Get In Touch</a>
-            </div>
-          </div>
-
-          <!-- Right Column: Geometric Diamond Visual Artwork -->
-          <div class="col-lg-6">
-            <div class="hero-visual-wrapper" aria-hidden="true">
-              
-              <!-- Floating Layered Diamond Accents -->
-              <div class="accent-diamond accent-diamond-1"></div>
-              <div class="accent-diamond accent-diamond-2"></div>
-              <div class="accent-diamond accent-diamond-3"></div>
-              <div class="accent-diamond accent-diamond-4"></div>
-
-              <!-- Main Diamond Rotated Container (Placeholder Image) -->
-              <div class="diamond-image-frame">
-                <img 
-                  src="asstes/hero-placeholder.svg" 
-                  alt="WebSpire Labs team reviewing analytics and developing technology solutions" 
-                  class="diamond-image-inner"
-                  width="500" 
-                  height="500"
-                  loading="eager"
-                >
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- ==========================================================================
-         Section 02: Who We Are (image5.png - Top)
-         ========================================================================== -->
-    <section class="who-we-are-section" id="who-we-are" aria-labelledby="who-we-are-title">
-      <div class="container">
-        <div class="row align-items-center gy-5">
           
-          <!-- Left Column: Content -->
-          <div class="col-lg-6">
-            <span class="section-eyebrow">WHO WE ARE</span>
-            <h2 class="section-title" id="who-we-are-title">
-              Building Technology With <span class="highlight-blue">Purpose</span>
-            </h2>
-            <p class="hero-description mb-3">
-              WEBSPIRE LABS is a technology-driven company dedicated to building digital solutions that solve real business challenges. We partner with businesses to design, develop and deliver websites, mobile applications, software and other technology solutions tailored to their needs.
-            </p>
-            <p class="hero-description mb-4">
-              Our approach combines technical expertise, creative thinking and an understanding of business requirements to create solutions that are practical, scalable and built for long-term value.
-            </p>
-            <a href="#our-journey" class="btn-feature-primary" id="knowMoreBtn">
-              Know More About Us
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </div>
-
-          <!-- Right Column: Dual Overlapping Image Collage -->
-          <div class="col-lg-6">
-            <div class="who-img-collage">
-              
-              <!-- Floating Donut Ring SVG Accent -->
-              <div class="who-donut-ring" aria-hidden="true">
-                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="60" cy="60" r="48" stroke="#E2E8F0" stroke-width="14"/>
-                  <circle cx="60" cy="60" r="48" stroke="#0062FE" stroke-width="14" stroke-dasharray="240 70" stroke-dashoffset="20" stroke-linecap="round"/>
-                  <circle cx="60" cy="60" r="48" stroke="#38BDF8" stroke-width="14" stroke-dasharray="80 230" stroke-dashoffset="180" stroke-linecap="round"/>
-                </svg>
-              </div>
-
-              <!-- Main Image Placeholder -->
-              <div class="who-img-main">
-                <img src="asstes/hero-placeholder.svg" alt="WebSpire Labs software development team collaboration" loading="lazy" width="500" height="280">
-              </div>
-
-              <!-- Secondary Overlapping Image Placeholder -->
-              <div class="who-img-secondary">
-                <img src="asstes/hero-placeholder.svg" alt="Developer coding responsive application interfaces" loading="lazy" width="380" height="200">
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
+
+
     <!-- ==========================================================================
-         Section 04: What We Do (Inline Feature Strip — image5.png)
+         Section 02: What We Do (Inline Feature Strip — Core Capabilities)
          ========================================================================== -->
     <section class="what-we-do-strip" id="what-we-do" aria-label="Core Capabilities">
       <div class="container">
@@ -325,6 +233,100 @@
             <div>
               <h3 class="wwdo-title">Long-Term Partnership</h3>
               <p class="wwdo-desc">We believe in building lasting relationships and providing support beyond project delivery.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 03: Who We Are (image5.png - Top)
+         ========================================================================== -->
+    <section class="who-we-are-section" id="who-we-are" aria-labelledby="who-we-are-title">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          
+          <!-- Left Column: Content -->
+          <div class="col-lg-6">
+            <span class="section-eyebrow">WHO WE ARE</span>
+            <h2 class="section-title" id="who-we-are-title">
+              Building Technology With <span class="highlight-cyan">Purpose.</span>
+            </h2>
+            <p class="hero-description mb-3">
+              WEBSPIRE LABS is a technology-driven company dedicated to building digital solutions that solve real business challenges. We partner with businesses to design, develop and deliver websites, mobile applications, software and other technology solutions tailored to their needs.
+            </p>
+            <p class="hero-description mb-4">
+              Our approach combines technical expertise, creative thinking and an understanding of business requirements to create solutions that are practical, scalable and built for long-term value.
+            </p>
+
+            <!-- Key Feature Checkpoints -->
+            <div class="who-checkpoints-grid mb-4">
+              <div class="who-checkpoint-item">
+                <span class="who-check-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="who-checkpoint-text">Innovative &amp; Scalable Engineering</span>
+              </div>
+              <div class="who-checkpoint-item">
+                <span class="who-check-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="who-checkpoint-text">Client-First Long-Term Partnership</span>
+              </div>
+              <div class="who-checkpoint-item">
+                <span class="who-check-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="who-checkpoint-text">Modern UI/UX &amp; High Performance</span>
+              </div>
+              <div class="who-checkpoint-item">
+                <span class="who-check-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="who-checkpoint-text">Agile &amp; Transparent Delivery</span>
+              </div>
+            </div>
+
+            <a href="#our-journey" class="btn-feature-primary" id="knowMoreBtn">
+              Know More About Us
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Right Column: Single High-Definition Visual Showcase -->
+          <div class="col-lg-6">
+            <div class="who-single-visual-wrap">
+              <!-- Ambient Glow Accent behind image -->
+              <div class="who-glow-backdrop" aria-hidden="true"></div>
+              
+              <!-- Main Single Image Card -->
+              <div class="who-main-image-card">
+                <img src="asstes/contact-hero.jpg" alt="WebSpire Labs engineering workspace and technology solutions team" class="who-single-img" loading="lazy" width="600" height="420">
+                <div class="who-img-overlay" aria-hidden="true"></div>
+              </div>
+
+              <!-- Floating Stat/Trust Badge -->
+              <div class="who-floating-badge">
+                <div class="who-badge-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                
+              </div>
             </div>
           </div>
 
@@ -736,15 +738,20 @@
          Section 08: Our Commitment Block (image8.png - Top)
          ========================================================================== -->
     <section class="commitment-section" id="our-commitment" aria-labelledby="commitment-title">
+      <!-- Decorative Dotted Grid Accent (Top-Left) -->
+      <div class="commitment-dots-left" aria-hidden="true"></div>
+      <!-- Decorative Dotted Grid Accent (Bottom-Right) -->
+      <div class="commitment-dots-right" aria-hidden="true"></div>
+
       <div class="container">
         <div class="row align-items-center gy-5">
           
           <!-- Left Column: Text Content & 3 Mini Cards -->
-          <div class="col-lg-6">
+          <div class="col-lg-7">
             <span class="section-eyebrow">OUR COMMITMENT</span>
             <h2 class="section-title" id="commitment-title">
               Committed to Your<br>
-              <span class="highlight-blue">Digital Success</span>
+              <span class="highlight-cyan">Digital Success</span>
             </h2>
             <p class="hero-description mb-4">
               We go beyond delivering solutions &mdash; we build lasting relationships. From planning to launch and beyond, we're committed to your growth at every step.
@@ -797,11 +804,20 @@
             </div>
           </div>
 
-          <!-- Right Column: Handshake Image Placeholder -->
-          <div class="col-lg-6">
-            <div class="commitment-img-wrapper">
-              <img src="asstes/hero-placeholder.svg" alt="WebSpire Labs partnership handshake and collaboration" loading="lazy" width="560" height="400">
-              <div class="commitment-right-accent" aria-hidden="true"></div>
+          <!-- Right Column: Handshake Collaboration Image -->
+          <div class="col-lg-5">
+            <div class="commitment-visual-container">
+              <div class="commitment-img-wrapper">
+                <img src="asstes/commitment-handshake.jpg" alt="WebSpire Labs partnership handshake and collaboration" loading="lazy" width="502" height="576">
+                <!-- Blue pointer arrow accent from image8.png -->
+                <div class="commitment-right-accent" aria-hidden="true"></div>
+                <!-- Layered mosaic squares from image8.png -->
+                <div class="commitment-mosaic-accents" aria-hidden="true">
+                  <span class="mosaic-sq sq-1"></span>
+                  <span class="mosaic-sq sq-2"></span>
+                  <span class="mosaic-sq sq-3"></span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -877,7 +893,7 @@
         <!-- Column 1: Logo + Tagline + Socials -->
         <div class="col-lg-3 col-md-6 footer-logo-col">
           <a href="index.html" aria-label="WebSpire Labs Home">
-            <img src="asstes/logo.jpg" alt="WebSpire Labs logo" class="footer-logo-img" width="160" height="44">
+            <img src="asstes/logo-footer.png" alt="WebSpire Labs logo" class="footer-logo-img" width="174" height="42">
           </a>
           <p class="footer-tagline">
             We build digital solutions that empower businesses to grow, innovate and succeed in a digital world.
@@ -920,7 +936,7 @@
           <ul class="footer-nav-list" role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="index.html#services">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="index.html#our-work">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -930,12 +946,12 @@
         <div class="col-lg-3 col-md-6 col-6">
           <h3 class="footer-col-title">Our Services</h3>
           <ul class="footer-nav-list" role="list">
-            <li><a href="index.html#services">Web Development</a></li>
-            <li><a href="index.html#services">Mobile Application</a></li>
-            <li><a href="index.html#services">Digital Marketing</a></li>
-            <li><a href="index.html#services">SEO</a></li>
-            <li><a href="index.html#services">Branding</a></li>
-            <li><a href="index.html#services">Video Editing</a></li>
+            <li><a href="services.html#web-development">Web Development</a></li>
+            <li><a href="services.html#mobile-apps">Mobile Application</a></li>
+            <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="services.html#seo">SEO</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#video-editing">Video Editing</a></li>
           </ul>
         </div>
 

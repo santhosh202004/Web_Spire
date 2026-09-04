@@ -25,7 +25,9 @@ d:\St_website\Web_spire\
 │   └── main.js                          # Core Interactive Logic (Sticky Nav, Observers, Counter, Testimonials Slider, A11y)
 │
 ├── asstes/                              # Production Brand Media & Imagery
-│   ├── logo.jpg                         # Official WebSpire Labs Monogram & Wordmark
+│   ├── logo_1.png                       # Official WebSpire Labs Horizontal Logo (Transparent Alpha, 1820x440)
+│   ├── logo-footer.png                  # White-Wordmark Variant for Dark Footers
+│   ├── favicon.png                      # Isolated Monogram Icon (512x512)
 │   ├── hero-placeholder.svg             # Scalable Vector Graphics Placeholder
 │   └── contact-hero.jpg                 # Contact Page Showcase Image
 │
@@ -105,10 +107,11 @@ The project utilizes a **Bespoke Hybrid Pattern**:
    - **Tagline Banner:** *"BUILDING DIGITAL SOLUTIONS, EMPOWERING BUSINESSES"* set between horizontal anchor rules in uppercase with generous tracking (`letter-spacing: 0.18em`).
 
 ### B. Logo Usage Guidelines
-* **Primary (Light Backgrounds):** Full color logo as provided in `asstes/logo.jpg`.
-* **Header Navigation Size:** Height: `38px – 44px` (proportional width).
+* **Primary (Light Backgrounds):** Full color transparent horizontal lockup (`asstes/logo_1.png`).
+* **Dark Backgrounds / Footer:** High-contrast white-wordmark variant (`asstes/logo-footer.png`).
+* **Header Navigation Size:** Height: `42px` desktop / `32px` mobile (proportional width).
 * **Clear Space Rule:** Maintain a minimum clear zone equal to the height of the letter "W" around the entire logo mark.
-* **Favicon / App Icon:** Use isolated "W" monogram centered on a pure white or deep midnight navy background.
+* **Favicon / App Icon:** Use isolated "W" monogram centered on a transparent canvas (`asstes/favicon.png`).
 
 ---
 
