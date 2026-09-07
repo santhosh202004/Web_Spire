@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building High-Throughput Modern Web Architectures with Next.js &amp; Edge Runtime | WebSpire Labs</title>
+  <meta name="description" content="Explore how modern enterprise web applications achieve sub-100ms global response times, perfect Core Web Vitals, and scalable architecture with Next.js and Edge Computing.">
+  <meta name="keywords" content="Next.js edge runtime, web architecture, high throughput web apps, serverless, Core Web Vitals, WebSpire Labs">
+  <meta name="author" content="Santhosh M., WebSpire Labs">
+  <link rel="canonical" href="https://www.webspirelabs.com/blog-detail.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.webspirelabs.com/blog-detail.html">
+  <meta property="og:title" content="Building High-Throughput Modern Web Architectures with Next.js & Edge Runtime">
+  <meta property="og:description" content="A comprehensive technical guide to modern decoupled web architectures, edge caching layers, and enterprise performance engineering.">
+  <meta property="og:image" content="asstes/project-corporate-website.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="asstes/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Master Site CSS & Dedicated Blog Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body class="blog-detail-page">
+
+  <!-- Real-time Reading Progress Indicator Bar -->
+  <div id="readingProgressBar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar (Matches About Us, Services & Home)
+       ========================================================================== -->
+  <header class="header-navbar" id="siteHeader">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0" aria-label="Main Navigation">
+        
+        <!-- Brand Logo -->
+        <a class="navbar-brand brand-logo-container" href="index.html" aria-label="WebSpire Labs Home">
+          <img src="asstes/logo_1.png" alt="WebSpire Labs - Building Digital Solutions, Empowering Businesses" class="brand-logo-img" width="174" height="42">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler d-lg-none border-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu Items -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMainContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="services.html">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom active" aria-current="page" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Main Content Landmark
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         Article Header & Metadata Banner
+         ========================================================================== -->
+    <header class="article-header-section">
+      <div class="container">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="blog.html">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="blog.html?category=web-cloud">Web &amp; Cloud</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current" aria-current="page">Building High-Throughput Modern Web Architectures</span>
+        </nav>
+
+        <div class="mb-3">
+          <span class="category-tag-pill">FULL-STACK ARCHITECTURE</span>
+        </div>
+
+        <h1 class="article-title-h1">
+          Building High-Throughput Modern Web Architectures with Next.js &amp; Edge Runtime: Best Practices for 2026
+        </h1>
+
+        <p class="article-subtitle-lead">
+          How modern enterprise web apps achieve sub-100ms global response times, perfect 100/100 Core Web Vitals, and seamless scalability without infrastructure overhead or monolithic maintenance bloat.
+        </p>
+
+        <!-- Author Byline & Social Actions -->
+        <div class="article-author-meta-bar">
+          <div class="article-author-group">
+            <div class="author-large-avatar" aria-hidden="true">SM</div>
+            <div class="author-detail-text">
+              <h4>Santhosh M.</h4>
+              <p>Principal Solutions Architect • WebSpire Labs</p>
+            </div>
+          </div>
+
+          <div class="article-meta-tags-group">
+            <span>Published: <time datetime="2026-09-04">September 4, 2026</time></span>
+            <span>•</span>
+            <span>6 min read</span>
+            <span>•</span>
+            <!-- Share Icon Actions -->
+            <button type="button" class="btn-share-icon btn-copy-article-link" aria-label="Copy article link" title="Copy Link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         Hero Showcase Media
+         ========================================================================== -->
+    <div class="article-hero-media-wrap">
+      <div class="article-hero-img-box">
+        <img src="asstes/project-corporate-website.jpg" alt="High-Throughput Web Architecture Diagram and Dashboard" width="1200" height="480" loading="eager">
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         Article Body & Sticky Utility Sidebar (2 Columns)
+         ========================================================================== -->
+    <div class="container mb-5">
+      <div class="row gx-lg-5">
+
+        <!-- Main Editorial Column (8 Cols) -->
+        <article class="col-12 col-lg-8 article-main-content">
+          
+          <p class="article-lead-p">
+            In modern commercial software engineering, performance is no longer a peripheral optimization—it is directly correlated with user retention, algorithmic search rankings, and enterprise revenue. When global users expect instant interactions, traditional server-rendered monolithic stacks hosted in a single regional datacenter inevitably introduce latency bottlenecks and operational drag.
+          </p>
+
+          <!-- Executive Summary Callout Box -->
+          <div class="article-takeaways-box">
+            <div class="takeaways-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Key Architectural Takeaways</span>
+            </div>
+            <ul class="takeaways-list">
+              <li><strong>Edge Computing Paradigm:</strong> Moving compute logic from centralized data centers to geographically distributed edge points of presence cuts Time-to-First-Byte (TTFB) to under 80ms worldwide.</li>
+              <li><strong>Selective Hydration &amp; Streaming:</strong> Leveraging React Server Components (RSC) eliminates megabytes of client JavaScript, drastically reducing Interaction to Next Paint (INP).</li>
+              <li><strong>Stale-While-Revalidate Caching:</strong> Incremental Static Regeneration (ISR) ensures high-velocity page revalidation without triggering expensive full-application builds.</li>
+              <li><strong>Resilient Database Pooling:</strong> Implementing serverless connection pooling (e.g. Prisma Accelerate, Neon, or Supabase Pooler) prevents database connection exhaustion during traffic spikes.</li>
+            </ul>
+          </div>
+
+          <!-- Section 1 -->
+          <h2 id="section-evolution">1. The Transition from Monolith to Edge-First Architectures</h2>
+          <p>
+            Historically, web applications followed a predictable pattern: every incoming HTTP request traveled across oceans to a centralized server cluster running in `us-east-1` or `eu-central-1`. The server queried an SQL database, synthesized an HTML string, and returned it back across thousands of network hops. For users in Singapore, Tokyo, or Sydney, round-trip network latency alone introduced a 400ms to 800ms penalty before rendering even began.
+          </p>
+          <p>
+            By contrasting this with an <em>Edge-First Architecture</em>, requests are intercepted at the nearest Content Delivery Network (CDN) edge node. Static assets and pre-rendered pages are served instantaneously from disk cache, while dynamic logic—such as personalization, geolocation routing, and AB testing—executes within ultra-lightweight V8 isolate runtimes with near-zero cold starts.
+          </p>
+
+          <!-- Section 2 -->
+          <h2 id="section-code-implementation">2. Code Implementation: Next.js Edge Middleware &amp; Streaming</h2>
+          <p>
+            The Next.js Edge Runtime utilizes standard Web APIs (`fetch`, `Request`, `Response`, `TransformStream`) rather than Node.js native primitives. This allows handler functions to bootstrap within 5 milliseconds without the container startup overhead associated with traditional AWS Lambda or Docker instances.
+          </p>
+
+          <!-- Interactive Code Snippet Block -->
+          <div class="article-code-block">
+            <div class="code-header-bar">
+              <span class="code-lang-label">TypeScript • middleware.ts (Next.js Edge)</span>
+              <button type="button" class="btn-copy-code" aria-label="Copy code to clipboard">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Code
+              </button>
+            </div>
+            <pre class="article-code-content"><code>import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export const config = {
+  matcher: ['/api/catalog/:path*', '/dashboard/:path*'],
+  runtime: 'edge', // Runs on V8 edge isolates globally
+};
+
+export async function middleware(request: NextRequest) {
+  const start = performance.now();
+  const country = request.geo?.country || 'US';
+  const response = NextResponse.next();
+
+  // Edge-computed cache control header with Stale-While-Revalidate
+  response.headers.set(
+    'Cache-Control',
+    'public, s-maxage=300, stale-while-revalidate=86400'
+  );
+  response.headers.set('X-Edge-Region', request.headers.get('x-vercel-id') || 'edge-node');
+  response.headers.set('X-Response-Time', `${(performance.now() - start).toFixed(2)}ms`);
+
+  return response;
+}</code></pre>
+          </div>
+
+          <!-- Section 3 -->
+          <h2 id="section-database-optimization">3. Database Optimization: Serverless Connection Pooling &amp; Redis Caching</h2>
+          <p>
+            While edge runtimes solve compute proximity, the primary failure mode for naive edge architectures is database connection exhaustion. In a traditional Node.js environment, a long-running process maintains a steady pool of 20 to 50 TCP connections. Conversely, an edge application running hundreds of ephemeral isolates can inadvertently open 5,000 concurrent database connections in a matter of seconds, crashing relational database instances.
+          </p>
+          <p>
+            To resolve this dilemma, WebSpire Labs deploys a tiered data-access pattern:
+          </p>
+          <ul>
+            <li><strong>Distributed Read Replica Caching:</strong> Frequently accessed catalog and configuration records are cached at the edge using Redis or Upstash with sub-15ms lookup speeds.</li>
+            <li><strong>Transaction Poolers:</strong> All transactional database writes pass through proxy poolers (PgBouncer or cloud-native connection multiplexers) which maintain steady socket connections to the primary PostgreSQL database regardless of client spikes.</li>
+          </ul>
+
+          <!-- Stylized Pull Quote -->
+          <div class="article-pullquote">
+            <p class="pullquote-text">
+              "Architecting for edge computing isn't merely about physical proximity; it's about executing business logic at the lowest latency threshold possible without sacrificing data integrity or developer velocity."
+            </p>
+            <span class="pullquote-author">— Santhosh M., Solutions Architect at WebSpire Labs</span>
+          </div>
+
+          <!-- Section 4 -->
+          <h2 id="section-benchmarks">4. Performance Benchmarks: Architecture Comparison</h2>
+          <p>
+            Below is a comparative breakdown of empirical production metrics observed across enterprise web deployments architected by our engineering team:
+          </p>
+
+          <!-- Responsive Comparison Table -->
+          <div class="article-table-responsive">
+            <table class="article-benchmark-table" aria-label="Web Architecture Performance Comparison">
+              <thead>
+                <tr>
+                  <th>Architecture Model</th>
+                  <th>Global TTFB (Avg)</th>
+                  <th>INP (Interaction Latency)</th>
+                  <th>Cold Start Latency</th>
+                  <th>Infrastructure Cost Efficiency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Traditional Monolith (Node/Express)</strong></td>
+                  <td>380ms – 720ms</td>
+                  <td>140ms</td>
+                  <td>3,000ms – 8,000ms</td>
+                  <td>Baseline ($$$)</td>
+                </tr>
+                <tr>
+                  <td><strong>Standard Serverless (Lambda SSR)</strong></td>
+                  <td>220ms – 450ms</td>
+                  <td>95ms</td>
+                  <td>450ms – 1,200ms</td>
+                  <td>+35% Improvement</td>
+                </tr>
+                <tr>
+                  <td><strong>Next.js + Edge Runtime + ISR</strong></td>
+                  <td><span class="badge-metric-green">45ms – 85ms</span></td>
+                  <td><span class="badge-metric-green">&lt; 40ms</span></td>
+                  <td><span class="badge-metric-green">&lt; 5ms</span></td>
+                  <td><span class="badge-metric-blue">+68% Cost Reduction</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Section 5 -->
+          <h2 id="section-checklist">5. Engineering Checklist for Production Deployments</h2>
+          <p>
+            Before migrating enterprise web platforms to an edge-first paradigm, ensure your engineering team has verified these essential readiness criteria:
+          </p>
+          <ul class="takeaways-list">
+            <li><strong>Audit Web API Compatibility:</strong> Verify that critical third-party dependencies do not rely on Node.js-specific modules (e.g. `fs`, `child_process`, or native C++ addons).</li>
+            <li><strong>Enforce Strict Payload Limits:</strong> Keep edge function bundles under 1MB to preserve instantaneous cold-start characteristics.</li>
+            <li><strong>Telemetry &amp; Distributed Tracing:</strong> Integrate OpenTelemetry headers to trace incoming requests seamlessly across edge middleware, caching layers, and backend microservices.</li>
+            <li><strong>Automated Core Web Vitals CI Gates:</strong> Implement Lighthouse CI in your deployment pipeline to prevent client bundle regressions before code reaches staging.</li>
+          </ul>
+
+          <!-- Article Tags -->
+          <div class="article-footer-tags">
+            <span class="article-tag-label">Related Topics:</span>
+            <a href="blog.html?category=web-cloud" class="article-tag-item">#NextJS</a>
+            <a href="blog.html?category=web-cloud" class="article-tag-item">#EdgeComputing</a>
+            <a href="blog.html?category=software" class="article-tag-item">#CloudArchitecture</a>
+            <a href="blog.html?category=web-cloud" class="article-tag-item">#WebPerformance</a>
+            <a href="blog.html?category=software" class="article-tag-item">#Serverless</a>
+          </div>
+
+          <!-- Author Biography Box -->
+          <div class="author-bio-card">
+            <div class="author-bio-avatar-large" aria-hidden="true">SM</div>
+            <div class="author-bio-content">
+              <h4>About Santhosh M.</h4>
+              <p class="author-bio-role">Principal Solutions Architect • WebSpire Labs</p>
+              <p class="author-bio-text">
+                Santhosh leads digital transformation, custom software engineering, and high-performance cloud architecture initiatives at WebSpire Labs. With over 8 years of production experience in scalable web systems, he collaborates directly with enterprises and high-growth startups to build robust digital products that scale.
+              </p>
+              <div>
+                <a href="https://www.linkedin.com/company/webspire-labs/" target="_blank" rel="noopener noreferrer" class="btn-read-featured" style="padding: 6px 16px; font-size: 0.8rem;">
+                  Connect on LinkedIn &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Pagination Row -->
+          <div class="post-pagination-row">
+            <a href="blog.html" class="post-nav-card">
+              <span class="post-nav-label">&larr; Previous Insight</span>
+              <p class="post-nav-title">Cross-Platform vs Native: Why Flutter Wins for Enterprise Mobile Delivery in 2026</p>
+            </a>
+            <a href="blog.html" class="post-nav-card text-end">
+              <span class="post-nav-label">Next Insight &rarr;</span>
+              <p class="post-nav-title">Scalable REST &amp; GraphQL APIs: Designing Resilient Microservices</p>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sticky Sidebar Column (4 Cols) -->
+        <aside class="col-12 col-lg-4">
+          <div class="article-sidebar-sticky">
+
+            <!-- Sticky Table of Contents Card -->
+            <div class="toc-sticky-card">
+              <h3 class="toc-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                Table of Contents
+              </h3>
+              <nav class="toc-nav-list" aria-label="Table of Contents">
+                <a href="#section-evolution" class="toc-link active">1. Monolith to Edge-First</a>
+                <a href="#section-code-implementation" class="toc-link">2. Edge Middleware &amp; Streaming</a>
+                <a href="#section-database-optimization" class="toc-link">3. Database Pooling &amp; Caching</a>
+                <a href="#section-benchmarks" class="toc-link">4. Performance Benchmarks</a>
+                <a href="#section-checklist" class="toc-link">5. Production Checklist</a>
+              </nav>
+            </div>
+
+            <!-- Project Consultation Sidebar Card -->
+            <div class="sidebar-cta-card">
+              <h3 class="sidebar-cta-title">Planning a High-Performance Web Application?</h3>
+              <p class="sidebar-cta-desc">
+                Partner directly with WebSpire Labs to architect custom websites, web portals, and scalable cloud applications engineered for maximum speed and commercial growth.
+              </p>
+              <a href="contact.html?service=web-development" class="btn-sidebar-cta">
+                Talk to an Architect
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Share Article Card -->
+            <div class="sidebar-share-card">
+              <h4 class="share-card-title">Share This Technical Guide</h4>
+              <div class="share-buttons-group">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.webspirelabs.com/blog-detail.html" target="_blank" rel="noopener noreferrer" class="btn-share-icon" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=Building%20High-Throughput%20Modern%20Web%20Architectures%20with%20Next.js&url=https://www.webspirelabs.com/blog-detail.html" target="_blank" rel="noopener noreferrer" class="btn-share-icon" aria-label="Share on X (Twitter)" title="Share on X">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <button type="button" class="btn-share-icon btn-copy-article-link" aria-label="Copy article link to clipboard" title="Copy Link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         Section: Related Engineering Insights
+         ========================================================================== -->
+    <section class="related-articles-section" aria-labelledby="relatedArticlesTitle">
+      <div class="container">
+        
+        <div class="related-section-header">
+          <div>
+            <h2 class="related-title" id="relatedArticlesTitle">Related Engineering Insights</h2>
+            <p class="related-subtitle">Continue exploring real-world case studies and tech methodologies</p>
+          </div>
+          <a href="blog.html" class="btn-all-articles">
+            View All Articles &rarr;
+          </a>
+        </div>
+
+        <div class="row gy-4">
+          <!-- Related 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="blog-card" data-category="mobile">
+              <div class="blog-card-thumbnail-wrap">
+                <div class="blog-card-badge">
+                  <span class="category-tag-pill">MOBILE APPS</span>
+                </div>
+                <img src="asstes/project-mobile-app.jpg" alt="Mobile App Architecture" class="blog-card-img" width="400" height="240" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>August 28, 2026</span>
+                  <span>•</span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog-detail.html">Cross-Platform vs Native: Why Flutter Wins for Enterprise Mobile Delivery in 2026</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  An objective breakdown of Flutter performance, native bridge overhead, and cross-platform production lifecycles.
+                </p>
+                <div class="blog-card-footer">
+                  <span class="blog-card-author">J. Daniel</span>
+                  <a href="blog-detail.html" class="blog-card-link">Read &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Related 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="blog-card" data-category="software">
+              <div class="blog-card-thumbnail-wrap">
+                <div class="blog-card-badge">
+                  <span class="category-tag-pill">CUSTOM SOFTWARE</span>
+                </div>
+                <img src="asstes/project-business-dashboard.jpg" alt="Custom Software Cloud API" class="blog-card-img" width="400" height="240" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>August 19, 2026</span>
+                  <span>•</span>
+                  <span>7 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog-detail.html">Scalable REST &amp; GraphQL APIs: Designing Resilient Microservices</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  Practical engineering strategies for rate limiting, Redis caching, and schema federation under heavy load.
+                </p>
+                <div class="blog-card-footer">
+                  <span class="blog-card-author">A. Kumar</span>
+                  <a href="blog-detail.html" class="blog-card-link">Read &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Related 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="blog-card" data-category="growth">
+              <div class="blog-card-thumbnail-wrap">
+                <div class="blog-card-badge">
+                  <span class="category-tag-pill">TECHNICAL SEO</span>
+                </div>
+                <img src="asstes/contact-hero.jpg" alt="Technical SEO Strategy" class="blog-card-img" width="400" height="240" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>August 11, 2026</span>
+                  <span>•</span>
+                  <span>4 min read</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog-detail.html">The 2026 Technical SEO Blueprint: Core Web Vitals &amp; Search Intent</a>
+                </h3>
+                <p class="blog-card-excerpt">
+                  How structured schema, Interaction to Next Paint (INP), and search intent clustering dominate rankings.
+                </p>
+                <div class="blog-card-footer">
+                  <span class="blog-card-author">R. Verma</span>
+                  <a href="blog-detail.html" class="blog-card-link">Read &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Full-Bleed Call to Action Banner
+         ========================================================================== -->
+ 
+
+  </main>
+
+  <!-- ==========================================================================
+       Section 09: Full 4-Column Footer (Common - Matches About Us & Services)
+       ========================================================================== -->
+  <footer class="site-footer" id="contact" role="contentinfo" aria-label="Site Footer">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Column 1: Logo + Tagline + Socials -->
+        <div class="col-lg-3 col-md-6 footer-logo-col">
+          <a href="index.html" aria-label="WebSpire Labs Home">
+            <img src="asstes/logo-footer.png" alt="WebSpire Labs logo" class="footer-logo-img" width="174" height="42">
+          </a>
+          <p class="footer-tagline">
+            We build digital solutions that empower businesses to grow, innovate and succeed in a digital world.
+          </p>
+          <nav class="footer-socials" aria-label="Social Media Links">
+            <!-- Facebook -->
+            <a href="#" class="footer-social-link" aria-label="Follow WebSpire Labs on Facebook" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" class="footer-social-link" aria-label="Connect with WebSpire Labs on LinkedIn" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="footer-social-link" aria-label="Follow WebSpire Labs on Twitter / X" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="footer-social-link" aria-label="Follow WebSpire Labs on Instagram" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-nav-list" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h3 class="footer-col-title">Our Services</h3>
+          <ul class="footer-nav-list" role="list">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="services.html#mobile-apps">Mobile Application</a></li>
+            <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+            <li><a href="services.html#seo">SEO</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+            <li><a href="services.html#video-editing">Video Editing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="col-lg-4 col-md-6">
+          <h3 class="footer-col-title">Contact Us</h3>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <a href="mailto:webspirelabs@gmail.com">webspirelabs@gmail.com</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17z"></path>
+            </svg>
+            <a href="tel:+919360716573">+91 93607 16573</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Coimbatore, Tamil Nadu, India</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Divider + Copyright Bar -->
+      <div class="footer-divider">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-copyright">&copy; <span id="currentYear">2026</span> WebSpire Labs. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/919360716573?text=Hello%20WebSpire%20Labs%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with WebSpire Labs on WhatsApp"
+     title="Chat with us on WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149 1.98 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- Toast Notification for Link Copying -->
+  <div id="blogToast" class="blog-toast" role="status" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Article link copied to clipboard!</span>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Site Master & Blog Interaction Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/blog.js"></script>
+  <!-- Dynamic Year Script (Matches About Us & Services) -->
+  <script>
+    const currentYearEl = document.getElementById('currentYear');
+    if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

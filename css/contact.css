@@ -518,30 +518,13 @@
   right: -30px;
 }
 
-/* Decorative Dot Grids & Pixel Cubes */
+/* Decorative Dot Grids & Pixel Cubes (Hidden as requested) */
 .dot-grid-accent {
-  display: grid;
-  grid-template-columns: repeat(6, 6px);
-  gap: 12px;
-  pointer-events: none;
-}
-
-.dot-grid-accent span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #CBD5E1;
-}
-
-.dot-grid-accent.dot-grid-blue span {
-  background-color: rgba(255, 255, 255, 0.45);
+  display: none !important;
 }
 
 .pixel-cube-accent {
-  position: relative;
-  width: 36px;
-  height: 36px;
-  pointer-events: none;
+  display: none !important;
 }
 
 .pixel-cube-accent div {
@@ -574,7 +557,7 @@
    -------------------------------------------------------------------------- */
 .contact-main-section {
   padding: 80px 0 90px 0;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
 
@@ -870,7 +853,7 @@
    -------------------------------------------------------------------------- */
 .how-can-we-help-section {
   padding: 90px 0 110px 0;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
 }
@@ -987,19 +970,9 @@
   stroke: var(--color-cyan-accent-hover);
 }
 
-/* Background floating translucent glass diamonds */
+/* Background floating translucent glass diamonds (Hidden as requested) */
 .floating-glass-diamonds {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.glass-diamond {
-  position: absolute;
-  transform: rotate(45deg);
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(0, 98, 254, 0.08) 0%, rgba(56, 189, 248, 0.04) 100%);
-  border: 1.5px solid rgba(0, 98, 254, 0.12);
+  display: none !important;
 }
 
 /* ==========================================================================

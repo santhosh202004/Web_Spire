@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initSmoothScroll();
   initAccessibility();
+  initServiceFilter();
+  initContactServicePreselect();
+  initTechStackCarousel();
 });
 
 /**
@@ -159,5 +162,141 @@ function initAccessibility() {
         dropdown.toggle();
       }
     });
-  })
+  });
+}
+
+/**
+ * Interactive Service Catalog Category Filter
+ * Filters .service-detail-card based on data-category attribute
+ */
+function initServiceFilter() {
+  const filterBtns = document.querySelectorAll('.services-filter-btn');
+  const serviceCards = document.querySelectorAll('.service-detail-card');
+  if (!filterBtns.length || !serviceCards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-filter');
+
+      // Update active state on buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show/hide cards with smooth transition
+      serviceCards.forEach((card) => {
+        const cardCategory = card.getAttribute('data-category') || '';
+        if (category === 'all' || cardCategory === category || cardCategory.includes(category)) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(8px)';
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/**
+ * Auto-select service in Contact form based on URL parameter (?service=...)
+ */
+function initContactServicePreselect() {
+  const selectService = document.getElementById('selectService');
+  if (!selectService) return;
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get('service');
+  if (serviceParam) {
+    const matchingOption = Array.from(selectService.options).find(opt => opt.value.toLowerCase() === serviceParam.toLowerCase());
+    if (matchingOption) {
+      selectService.value = matchingOption.value;
+    }
+  }
+}
+
+/**
+ * Interactive Technology Expertise Section
+ * Handles category tab switching and horizontal carousel navigation with swipe & drag support
+ */
+function initTechStackCarousel() {
+  const tabsNav = document.querySelector('.tech-tabs-nav');
+  if (!tabsNav) return;
+
+  const tabBtns = tabsNav.querySelectorAll('.tech-tab-btn');
+  const panels = document.querySelectorAll('.tech-tab-panel');
+
+  // Tab switching
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetPanel = document.getElementById(targetId);
+      tabBtns.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      if (targetPanel) {
+        panels.forEach((p) => {
+          p.classList.remove('active');
+        });
+        targetPanel.classList.add('active');
+      }
+    });
+  });
+
+  // Carousel arrow controls & mouse drag
+  panels.forEach((panel) => {
+    const track = panel.querySelector('.tech-carousel-track');
+    const prevBtn = panel.querySelector('.tech-carousel-arrow.prev');
+    const nextBtn = panel.querySelector('.tech-carousel-arrow.next');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const scrollDistance = 260;
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+    });
+
+    // Mouse drag scrolling
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+      track.style.cursor = 'grabbing';
+      track.style.userSelect = 'none';
+    });
+
+    const stopDragging = () => {
+      if (!isDown) return;
+      isDown = false;
+      track.style.cursor = '';
+      track.style.removeProperty('user-select');
+    };
+
+    track.addEventListener('mouseleave', stopDragging);
+    track.addEventListener('mouseup', stopDragging);
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      track.scrollLeft = scrollLeft - walk;
+    });
+  });
 }

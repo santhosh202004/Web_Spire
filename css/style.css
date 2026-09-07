@@ -593,9 +593,10 @@ img {
   font-size: 2.35rem;
   font-weight: 800;
   color: var(--color-heading);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
   margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .section-subtitle {
@@ -1285,6 +1286,7 @@ img {
   pointer-events: none;
   z-index: 0;
   opacity: 0.8;
+  display: none !important;
 }
 
 .testimonials-bg-accent svg {
@@ -1312,9 +1314,10 @@ img {
   font-size: 2.35rem;
   font-weight: 800;
   color: var(--color-heading);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
   margin: 0;
+  text-transform: uppercase;
 }
 
 /* Carousel / Multi-Column Wrapper */
@@ -1929,6 +1932,7 @@ img {
 }
 
 @media (max-width: 767px) {
+
   .testimonials-section .container,
   .why-choose-section .container {
     padding-left: 18px;

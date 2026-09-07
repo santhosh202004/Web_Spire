@@ -213,7 +213,7 @@ The contact page focuses on lead capture, consultation scheduling, and comprehen
    - Dual action CTAs (*"Send an Enquiry"* & *"Explore Services"* via `.btn-primary-hero` & `.btn-secondary-hero`).
    - Right-side rotated 45° diamond container (`contact-hero.jpg`) surrounded by 4 layered floating cyan/sky diamond accents (`.accent-diamond-1` through `4`).
 3. **Section 2: Let's Connect & Interactive Form:**
-   - Left *Let's Connect* Card: Direct Email, Phone (+91 89056 43210), Office Location (Coimbatore, Tamil Nadu, India), and Working Hours (Mon-Sat 9 AM - 6 PM).
+   - Left *Let's Connect* Card: Direct Email, Phone (+91 93607 16573), Office Location (Coimbatore, Tamil Nadu, India), and Working Hours (Mon-Sat 9 AM - 6 PM).
    - Right *Send Us A Message* Card: Validated interactive form featuring fields for Full Name, Email Address, Phone Number, Company Name, Service Dropdown (8 options: Web Dev, Mobile App, Digital Marketing, SEO, Branding, Video Editing, Poster Editing, IT Consulting), Message Textarea, and Submit Button.
 4. **Section 3: Why Work With Us:**
    - 4-pillar cards (Business Focused, Clear Communication, Creative & Technical, Long-Term Support) flanked by floating background glass diamonds.
@@ -314,7 +314,7 @@ Every page includes:
 ### B. Schema.org JSON-LD Structured Data
 * **[`index.html`](file:///d:/St_website/Web_spire/index.html):** `Organization` Schema + `OfferCatalog` cataloging 7 service offerings (Web Dev, Mobile App, Digital Marketing, SEO, Branding, Video Editing).
 * **[`about.html`](file:///d:/St_website/Web_spire/about.html):** `AboutPage` Schema referencing founding date (`2021`), corporate organization, and mission.
-* **[`contact.html`](file:///d:/St_website/Web_spire/contact.html):** `ContactPage` Schema containing `PostalAddress` (Coimbatore, Tamil Nadu), telephone (`+91 89056 43210`), and email.
+* **[`contact.html`](file:///d:/St_website/Web_spire/contact.html):** `ContactPage` Schema containing `PostalAddress` (Coimbatore, Tamil Nadu), telephone (`+91 93607 16573`), and email.
 
 ### C. Crawl Optimization
 * [`robots.txt`](file:///d:/St_website/Web_spire/robots.txt): Configured to allow all user agents with direct link to `sitemap.xml`.

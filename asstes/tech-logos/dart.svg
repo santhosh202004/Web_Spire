@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 48" fill="none">
+  <!-- Dart Logo -->
+  <g transform="translate(10, 8)">
+    <path d="M7 2L0 13L15 28L28 28L30 18L18 2H7Z" fill="#0175C2"/>
+    <path d="M15 28L28 28L30 18L18 18L15 28Z" fill="#02569B"/>
+    <path d="M7 2L18 2L18 18L7 18V2Z" fill="#29B6F6"/>
+    <path d="M0 13L7 18L18 18L15 28L0 13Z" fill="#00B0FF"/>
+  </g>
+  <text x="48" y="29" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" fill="#0B1B32">Dart</text>
+</svg>

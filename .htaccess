@@ -1,0 +1,159 @@
+# ==============================================================================
+# WebSpire Labs — Master Apache Server Configuration (.htaccess)
+# ==============================================================================
+# Features:
+# 1. Clean URLs (Removes .html extension from all URLs)
+# 2. 301 Permanent Redirect from /page.html to /page (Prevents duplicate content)
+# 3. Canonical Root Redirect (/index and /index.html -> /)
+# 4. Internal Rewrite to serve .html seamlessly in background
+# 5. Security Headers, Directory Browsing Protection & MIME Types
+# 6. GZIP Compression (mod_deflate) & Browser Caching (mod_expires)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. SERVER OPTIONS & ENCODING
+# ------------------------------------------------------------------------------
+# Disable directory browsing for security
+Options -Indexes +FollowSymLinks
+
+# Set default character encoding
+AddDefaultCharset UTF-8
+
+# ------------------------------------------------------------------------------
+# 2. URL REWRITING & CLEAN URLS (REMOVE .HTML EXTENSION)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --------------------------------------------------------------------------
+  # A. Canonical redirect for index.html / index -> /
+  # Works both at domain root and in localhost subfolders (e.g. /Web_spire/)
+  # --------------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} \s/+(.*?/)?index(?:\.html)?[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L,NE]
+
+  # --------------------------------------------------------------------------
+  # B. External 301 Redirect: /page.html -> /page
+  # If someone visits /about.html, permanently redirect to /about.
+  # Automatically preserves folder paths if hosted in a subfolder.
+  # --------------------------------------------------------------------------
+  # Alias /service and /service.html -> services
+  RewriteCond %{THE_REQUEST} \s/+(.*?/)?service(?:\.html)?[\s?] [NC]
+  RewriteRule ^ /%1services [R=301,L,NE]
+
+  RewriteCond %{THE_REQUEST} \s/+(.*?/)?([^/\s]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1%2 [R=301,L,NE]
+
+  # --------------------------------------------------------------------------
+  # C. Internal Rewrite: /page -> /page.html
+  # Checks if the matching .html file exists and serves it behind the scenes
+  # without changing the clean URL in the browser address bar.
+  # --------------------------------------------------------------------------
+  # 1. Do not rewrite if the request is already a real directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # 2. Do not rewrite if the request is an existing physical file (css, js, images, etc.)
+  RewriteCond %{REQUEST_FILENAME} !-f
+
+  # 3. Check if matching .html file exists on the server
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 3. SECURITY HEADERS
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Protect against clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Cross-site scripting (XSS) filter
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Control referrer information sent on navigation
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions policy
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. BLOCK ACCESS TO SENSITIVE FILES & DIRECTORIES
+# ------------------------------------------------------------------------------
+# Deny access to hidden files (e.g. .git, .env) except .htaccess itself
+<FilesMatch "^\.(?!htaccess)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# 5. GZIP COMPRESSION (MOD_DEFLATE)
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. BROWSER CACHING (MOD_EXPIRES)
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Default expiration: 1 hour
+  ExpiresDefault "access plus 1 hour"
+
+  # HTML pages (keep short for updates)
+  ExpiresByType text/html "access plus 10 minutes"
+
+  # CSS and JavaScript: 1 year (with cache busting) or 1 month
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Images and Media: 1 year
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
+
+  # Web Fonts: 1 year
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>

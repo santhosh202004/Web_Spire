@@ -1,7 +1,96 @@
 /* ==========================================================================
    WEBSPIRE LABS — SERVICES PAGE STYLESHEET (services.css)
-   Clean, Modern & High-Tech Service Showcase Layout
+   Dedicated Component Styles for services.html
+   Sections:
+     S0. Header & Navigation Bar (Home & About Us Match)
+     S1. Services Hero Banner (Cognisive-Inspired, Centered, Constellation Mesh)
+     S2. Core Capabilities Feature Strip (4 Enterprise Pillars)
+     S3. Comprehensive Services Catalog (Interactive Filter & 8 Service Cards)
+     S4. Technology Stack Ecosystem Matrix (Modern Architecture & Frameworks)
+     S5. 5-Stage Agile Delivery Pipeline (Methodology & Milestones)
+     S6. Why Partner With WebSpire Labs (Client Value Proposition)
+     S7. Frequently Asked Questions (FAQ Accordion)
+     S8. High-Impact Call to Action Banner
+     S9. Site Footer & Social Links Layout Fixes
+     S10. Responsive Media Queries
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   S0. Header & Navigation Bar (Matches About Us & Home Page Seamless Look)
+   -------------------------------------------------------------------------- */
+.header-navbar {
+  background-color: #F4F5F7;
+  border-bottom: none;
+  padding: 16px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-navbar .container {
+  max-width: 1240px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.header-navbar .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header-navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .header-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+}
+
+.header-navbar.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 0;
+  background-color: rgba(244, 245, 247, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(11, 27, 50, 0.08);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  animation: slideDownNav 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDownNav {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.brand-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
 
 .brand-logo-container:hover .brand-logo-img {
   transform: scale(1.02);
@@ -19,6 +108,7 @@
   gap: 6px;
   background: transparent;
   border: none;
+  text-decoration: none;
 }
 
 .nav-link-custom:hover,
@@ -30,155 +120,313 @@
   color: var(--color-primary, #0062FE) !important;
 }
 
-/* Services Hero Banner */
+/* --------------------------------------------------------------------------
+   S1. Services Hero Banner (Cognisive-Inspired, Centered, Constellation Mesh)
+   -------------------------------------------------------------------------- */
 .hero-section#services-hero {
   position: relative;
   z-index: 1;
   min-height: 380px;
   background-color: #F4F5F7;
   overflow: hidden;
+  padding: 44px 0 52px 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 80px 0 70px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
-.hero-section#services-hero .hero-bg-accent {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 58%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(235, 241, 248, 0.9) 0%, rgba(224, 235, 247, 0.7) 100%);
-  clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
-  z-index: -1;
-  pointer-events: none;
-}
-
-.hero-section#services-hero .hero-diagonal-line {
-  position: absolute;
-  top: 0;
-  right: 47%;
-  width: 2.5px;
-  height: 130%;
-  background: linear-gradient(180deg, rgba(0, 98, 254, 0.4) 0%, rgba(0, 163, 196, 0.6) 50%, transparent 100%);
-  transform: rotate(18deg);
-  transform-origin: top right;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.hero-section#services-hero .hero-grid-pattern {
+/* Background Constellation & Grid Mesh Overlay */
+.hero-network-backdrop {
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(0, 98, 254, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 98, 254, 0.045) 1px, transparent 1px);
-  background-size: 36px 36px;
-  z-index: -2;
   pointer-events: none;
+  z-index: 0;
 }
 
-.services-hero-content {
-  max-width: 780px;
+.hero-constellation-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.services-hero-content .section-eyebrow {
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 820px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-slide-badge {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #64748B;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: clamp(2.3rem, 3.2vw, 3.15rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  color: var(--color-heading, #0B1B32);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.hero-headline .highlight-cyan {
+  color: var(--color-cyan-accent, #00A3C4);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.62;
+  color: #64748B;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Quick Jump Chips */
+.services-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.hero-chip-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary, #0062FE);
-  margin-bottom: 12px;
+  font-weight: 600;
+  color: #334155;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(11, 27, 50, 0.03);
 }
 
-.services-hero-content .section-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
+.hero-chip-link:hover {
+  color: var(--color-primary, #0062FE);
+  border-color: var(--color-primary, #0062FE);
+  background: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 98, 254, 0.12);
+}
+
+.hero-chip-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: var(--color-cyan-accent, #00A3C4);
 }
 
-.services-hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  color: var(--color-heading, #0B1B32);
-  line-height: 1.18;
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
+/* --------------------------------------------------------------------------
+   S2. Core Capabilities Feature Strip (4 Enterprise Pillars)
+   -------------------------------------------------------------------------- */
+.capabilities-strip {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 34px 0;
+  position: relative;
+  z-index: 2;
 }
 
-.services-hero-desc {
-  font-size: 1.08rem;
-  color: #475569;
-  line-height: 1.65;
-  margin-bottom: 24px;
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-/* Quick Jump Chips */
-.services-quick-chips {
+.capability-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 8px 12px;
+  transition: transform 0.2s ease;
 }
 
-.service-chip-btn {
-  display: inline-flex;
+.capability-item:hover {
+  transform: translateY(-2px);
+}
+
+.capability-icon-wrap {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background-color: rgba(0, 98, 254, 0.07);
+  display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #334155;
-  background: #FFFFFF;
-  border: 1px solid rgba(203, 213, 225, 0.8);
-  padding: 7px 16px;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(11, 27, 50, 0.04);
-}
-
-.service-chip-btn:hover {
+  justify-content: center;
   color: var(--color-primary, #0062FE);
-  border-color: var(--color-primary, #0062FE);
-  background: rgba(0, 98, 254, 0.04);
-  transform: translateY(-1px);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-/* Services Detailed Catalog Grid */
+.capability-item:hover .capability-icon-wrap {
+  background-color: var(--color-primary, #0062FE);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.capability-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.capability-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  margin-bottom: 4px;
+}
+
+.capability-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   S3. Comprehensive Services Catalog (Interactive Filter & 8 Cards)
+   -------------------------------------------------------------------------- */
 .services-catalog-section {
-  padding: 90px 0 80px 0;
-  background-color: #F8FAFC;
+  padding: 80px 0 90px 0;
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
 
-.services-catalog-header {
+.section-header-center {
   text-align: center;
-  max-width: 680px;
-  margin: 0 auto 55px auto;
+  max-width: 760px;
+  margin: 0 auto 40px auto;
 }
 
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan-accent, #00A3C4);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-heading, #0B1B32);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #64748B;
+  margin: 0 auto;
+}
+
+/* Interactive Filter Bar */
+.services-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.services-filter-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 5px rgba(11, 27, 50, 0.03);
+}
+
+.services-filter-btn:hover {
+  color: var(--color-primary, #0062FE);
+  border-color: rgba(0, 98, 254, 0.4);
+  background: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.services-filter-btn.active {
+  background: var(--color-primary, #0062FE);
+  color: #FFFFFF;
+  border-color: var(--color-primary, #0062FE);
+  box-shadow: 0 4px 14px rgba(0, 98, 254, 0.25);
+}
+
+/* Services Catalog Grid (3-column responsive) */
 .services-catalog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 28px;
 }
 
 .service-detail-card {
   background: #FFFFFF;
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 22px;
-  padding: 34px 28px 28px 28px;
+  border-radius: 20px;
+  padding: 32px 28px 26px 28px;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(11, 27, 50, 0.04);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .service-detail-card::before {
@@ -188,15 +436,15 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #0062FE, #00A3C4);
+  background: linear-gradient(90deg, #0062FE 0%, #00A3C4 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .service-detail-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0, 98, 254, 0.25);
-  box-shadow: 0 22px 48px -10px rgba(0, 98, 254, 0.14);
+  transform: translateY(-6px);
+  border-color: rgba(0, 98, 254, 0.3);
+  box-shadow: 0 20px 42px -10px rgba(0, 98, 254, 0.12);
 }
 
 .service-detail-card:hover::before {
@@ -207,13 +455,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .service-card-icon-box {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
   background: rgba(0, 98, 254, 0.08);
   display: flex;
   align-items: center;
@@ -226,20 +474,15 @@
 .service-detail-card:hover .service-card-icon-box {
   background: var(--color-primary, #0062FE);
   color: #FFFFFF;
-  transform: scale(1.06);
-  box-shadow: 0 8px 20px rgba(0, 98, 254, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 98, 254, 0.22);
 }
 
 .service-card-icon-box svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--color-primary, #0062FE);
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
   stroke-width: 1.8;
-  transition: stroke 0.2s ease;
-}
-
-.service-detail-card:hover .service-card-icon-box svg {
-  stroke: #FFFFFF;
 }
 
 .service-badge-pill {
@@ -247,7 +490,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: #F1F5F9;
   color: #475569;
@@ -257,31 +500,41 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-heading, #0B1B32);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.3;
 }
 
+.service-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.service-card-title a:hover {
+  color: var(--color-primary, #0062FE);
+}
+
 .service-card-desc {
-  font-size: 0.92rem;
+  font-size: 0.91rem;
   color: #475569;
   line-height: 1.62;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .service-features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 0 0 22px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .service-feature-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: #334155;
 }
@@ -302,7 +555,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .tech-tag {
@@ -317,7 +570,7 @@
 
 .service-card-action {
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 16px;
   border-top: 1px solid #F1F5F9;
   display: flex;
   align-items: center;
@@ -328,7 +581,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--color-primary, #0062FE);
   text-decoration: none;
@@ -343,6 +596,8 @@
 .btn-service-action svg {
   width: 16px;
   height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
   transition: transform 0.2s ease;
 }
 
@@ -350,34 +605,262 @@
   transform: translateX(3px);
 }
 
-/* Delivery Pipeline */
-.services-process-section {
+/* --------------------------------------------------------------------------
+   S4. Technology Stack Expertise (Interactive Tabbed Slider)
+   -------------------------------------------------------------------------- */
+.tech-stack-section {
   padding: 85px 0 90px 0;
   background-color: #FFFFFF;
-  border-top: 1px solid rgba(226, 232, 240, 0.85);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
 }
 
-.process-header {
+.tech-expertise-header {
   text-align: center;
-  max-width: 640px;
-  margin: 0 auto 50px auto;
+  margin-bottom: 36px;
+}
+
+.tech-expertise-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-heading, #0B1B32);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Horizontal Category Tabs Navigation */
+.tech-tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  border-bottom: 1.5px solid #E2E8F0;
+  margin-bottom: 45px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 10px;
+}
+
+.tech-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-tab-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 6px 14px 6px;
+  font-family: inherit;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.tech-tab-btn:hover {
+  color: var(--color-heading, #0B1B32);
+}
+
+.tech-tab-btn.active {
+  color: var(--color-heading, #0B1B32);
+  font-weight: 700;
+}
+
+.tech-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #64748B;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.25s ease;
+}
+
+/* Tab Panels */
+.tech-panels-container {
+  position: relative;
+  min-height: 100px;
+}
+
+.tech-tab-panel {
+  display: none;
+  opacity: 0;
+}
+
+.tech-tab-panel.active {
+  display: block;
+  opacity: 1;
+  animation: techPanelFadeIn 0.3s ease forwards;
+}
+
+@keyframes techPanelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Carousel Container & Controls */
+.tech-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+
+.tech-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38BDF8;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.tech-carousel-arrow.prev {
+  left: 0;
+}
+
+.tech-carousel-arrow.next {
+  right: 0;
+}
+
+.tech-carousel-arrow:hover {
+  color: #0284C7;
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.tech-carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.tech-carousel-arrow svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+/* Carousel Track */
+.tech-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px 10px;
+  width: 100%;
+}
+
+.tech-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tech Items */
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: transparent;
+  flex-shrink: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.tech-icon-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tech-icon-box svg {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.tech-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Empty State */
+.tech-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94A3B8;
+  background: #F8FAFC;
+  border-radius: 14px;
+  border: 1px dashed #CBD5E1;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.tech-empty-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   S5. 5-Stage Agile Delivery Pipeline (Methodology & Milestones)
+   -------------------------------------------------------------------------- */
+.services-process-section {
+  padding: 85px 0 90px 0;
+  background-color: var(--color-bg-page, #FFFFFF);
+  position: relative;
 }
 
 .process-pipeline-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .process-step-card {
-  background: #FAFBFC;
+  background: #FFFFFF;
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 18px;
-  padding: 30px 22px 24px 22px;
+  padding: 28px 20px 22px 20px;
   position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .process-step-card:hover {
@@ -386,13 +869,30 @@
   border-color: rgba(0, 98, 254, 0.3);
 }
 
+.process-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
 .process-step-number {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  color: rgba(0, 98, 254, 0.18);
+  color: var(--color-primary, #0062FE);
   line-height: 1;
-  margin-bottom: 12px;
   font-family: var(--font-heading, 'Inter', sans-serif);
+}
+
+.process-step-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-cyan-accent, #00A3C4);
+  background: rgba(0, 163, 196, 0.1);
+  padding: 3px 8px;
+  border-radius: 999px;
 }
 
 .process-step-title {
@@ -400,108 +900,350 @@
   font-weight: 700;
   color: var(--color-heading, #0B1B32);
   margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .process-step-desc {
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.process-step-output {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed #E2E8F0;
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.process-step-output span {
+  color: var(--color-primary, #0062FE);
+}
+
+/* --------------------------------------------------------------------------
+   S6. Why Partner With WebSpire Labs (Client Value Proposition)
+   -------------------------------------------------------------------------- */
+.why-partner-section {
+  padding: 85px 0 90px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.why-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.why-partner-card {
+  background: #FAFBFC;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  padding: 30px 24px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-partner-card:hover {
+  background: #FFFFFF;
+  transform: translateY(-5px);
+  border-color: rgba(0, 98, 254, 0.3);
+  box-shadow: 0 14px 34px rgba(11, 27, 50, 0.08);
+}
+
+.why-partner-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(0, 98, 254, 0.08);
+  color: var(--color-primary, #0062FE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.why-partner-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.why-partner-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  margin-bottom: 10px;
+}
+
+.why-partner-desc {
   font-size: 0.88rem;
   color: #64748B;
   line-height: 1.6;
   margin: 0;
 }
 
-/* Call to Action Banner */
-.services-cta-banner {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #0052D4 0%, #0062FE 50%, #00A3C4 100%);
+/* --------------------------------------------------------------------------
+   S7. Frequently Asked Questions (Accordion)
+   -------------------------------------------------------------------------- */
+.services-faq-section {
+  padding: 85px 0 90px 0;
+  background-color: var(--color-bg-page, #FFFFFF);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.faq-accordion-wrap {
+  max-width: 820px;
+  margin: 40px auto 0 auto;
+}
+
+.faq-accordion-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  border-radius: 14px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(11, 27, 50, 0.03);
+  transition: all 0.2s ease;
+}
+
+.faq-accordion-item:hover {
+  border-color: rgba(0, 98, 254, 0.3) !important;
+  box-shadow: 0 6px 16px rgba(11, 27, 50, 0.06);
+}
+
+.faq-accordion-button {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--color-heading, #0B1B32) !important;
+  background-color: #FFFFFF !important;
+  padding: 20px 24px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.faq-accordion-button:not(.collapsed) {
+  color: var(--color-primary, #0062FE) !important;
+  background-color: #F8FAFC !important;
+}
+
+.faq-accordion-body {
+  padding: 16px 24px 22px 24px !important;
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: #555D6E;
+  background-color: #F8FAFC;
+}
+
+/* --------------------------------------------------------------------------
+   S8. High-Impact Call to Action Banner
+   -------------------------------------------------------------------------- */
+.about-cta-banner-section {
+  padding: 0;
+  background-color: var(--color-bg-page, #FFFFFF);
+}
+
+.about-cta-banner-inner {
+  background: linear-gradient(135deg, #0047C8 0%, #0062FE 55%, #1A74FF 100%);
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
 
-.services-cta-content {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.services-cta-title {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+.about-cta-title {
+  font-size: 2.3rem;
   font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 16px;
-  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
 }
 
-.services-cta-desc {
+.about-cta-title .highlight-cyan {
+  color: #38BDF8;
+}
+
+.about-cta-subtitle {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.65;
-  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  text-align: justify;
 }
 
-.btn-services-cta-white {
+.btn-about-cta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #FFFFFF;
-  color: var(--color-primary, #0062FE);
+  padding: 14px 34px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
   font-size: 1rem;
   font-weight: 700;
-  padding: 14px 34px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base);
   text-decoration: none;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-  transition: all 0.25s ease;
 }
 
-.btn-services-cta-white:hover {
-  background: #0B1B32;
-  color: #FFFFFF;
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
-}
-
-.btn-services-cta-white svg {
+.btn-about-cta svg {
   width: 18px;
   height: 18px;
-  stroke: currentColor;
-  transition: transform 0.2s ease;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  transition: transform var(--transition-fast);
 }
 
-.btn-services-cta-white:hover svg {
+.btn-about-cta:hover {
+  background-color: var(--color-midnight);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-about-cta:hover svg {
+  stroke: var(--color-white);
   transform: translateX(4px);
 }
 
-/* Responsive Media Queries */
+.about-cta-art-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-cta-svg-art {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.btn-services-cta-outline svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   S10. Responsive Media Queries
+   -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .services-catalog-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  }
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .process-pipeline-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .why-partner-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section#services-hero {
+    min-height: auto;
+    padding: 36px 0 42px 0;
   }
 }
 
 @media (max-width: 767px) {
-  .services-catalog-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .hero-section#services-hero {
+    min-height: auto;
+    padding: 28px 0 34px 0;
   }
-  .process-pipeline-grid {
+  .hero-headline {
+    font-size: clamp(1.8rem, 6.5vw, 2.2rem);
+    line-height: 1.18;
+    margin-bottom: 12px;
+  }
+  .hero-slide-badge {
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+  }
+  .hero-description {
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+  .capabilities-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .hero-section#services-hero {
-    min-height: auto;
-    padding: 60px 0 50px 0;
+  .services-catalog-grid {
+    grid-template-columns: 1fr;
   }
-  .services-hero-title {
-    font-size: 2rem;
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
   }
-  .services-hero-desc {
-    font-size: 0.98rem;
+  .process-pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-partner-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-legal-links {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  .services-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-services-cta-white,
+  .btn-services-cta-outline {
+    justify-content: center;
+  }
+  .tech-expertise-title {
+    font-size: 1.8rem;
+  }
+  .tech-tabs-nav {
+    justify-content: flex-start;
+    gap: 18px;
+    padding-bottom: 2px;
+  }
+  .tech-tab-btn {
+    font-size: 0.92rem;
+    padding: 10px 4px 12px 4px;
+  }
+  .tech-carousel-wrapper {
+    padding: 0 32px;
+  }
+  .tech-carousel-arrow {
+    width: 32px;
+    height: 32px;
+  }
+  .tech-carousel-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+  .tech-item {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+  .tech-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+  .tech-icon-box svg {
+    width: 28px;
+    height: 28px;
+  }
+  .tech-name {
+    font-size: 0.92rem;
   }
 }

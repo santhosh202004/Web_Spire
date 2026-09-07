@@ -315,7 +315,7 @@
    -------------------------------------------------------------------------- */
 .who-we-are-section {
   padding: 85px 0 75px 0;
-  background-color: var(--color-bg-page, #F8FAFC);
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
 }
@@ -550,7 +550,7 @@
    -------------------------------------------------------------------------- */
 .journey-section {
   padding: 90px 0 100px 0;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
 }
@@ -809,7 +809,7 @@
    -------------------------------------------------------------------------- */
 .core-values-section {
   padding: 90px 0 100px 0;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
 }
@@ -1016,7 +1016,7 @@
    -------------------------------------------------------------------------- */
 .commitment-section {
   padding: 95px 0 95px 0;
-  background-color: #FAFBFC;
+  background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
 }

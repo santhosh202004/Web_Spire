@@ -1,4 +1,4 @@
-﻿# WebSpire Labs — Home Page Complete Specification & Documentation
+# WebSpire Labs — Home Page Complete Specification & Documentation
 
 > **Document Type:** Dedicated Page Architecture, UI/UX & Design Specification  
 > **Target Page:** `index.html` (Homepage)
@@ -482,8 +482,8 @@ Also serves as the #contact anchor target for CTA buttons.
 **Social Icons:** Facebook, LinkedIn, Twitter/X, Instagram
 
 **Contact Details:**
-- Email: info@webspirelabs.com
-- Phone: +91 89056 43210
+- Email: webspirelabs@gmail.com
+- Phone: +91 93607 16573
 - Location: Coimbatore, Tamil Nadu, India
 
 **Visual:**
@@ -521,7 +521,7 @@ Also serves as the #contact anchor target for CTA buttons.
 | Shadow | 0 6px 20px rgba(37,211,102,0.4) |
 | Visibility | Hidden by default; shown after 630px scroll via .show class |
 | Tooltip | .whatsapp-tooltip — "Chat with us", appears on hover |
-| Link Target | https://wa.me/918905643210 |
+| Link Target | https://wa.me/919360716573 |
 | Hover Scale | scale(1.1) |
 
 ---

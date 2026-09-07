@@ -1,0 +1,42 @@
+# ==============================================================================
+# WebSpire Labs — Netlify Deployment & Build Configuration
+# ==============================================================================
+
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# ------------------------------------------------------------------------------
+# Security Headers
+# ------------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# ------------------------------------------------------------------------------
+# Cache Control for Static Assets
+# ------------------------------------------------------------------------------
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/asstes/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1077,10 +1077,11 @@
 .testimonials-header .section-title {
   font-size: 2.35rem;
   font-weight: 800;
-  color: var(--color-cyan-accent);
-  letter-spacing: -0.025em;
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
   line-height: 1.2;
   margin: 0;
+  text-transform: uppercase;
 }
 
 /* Carousel / Multi-Column Wrapper */
