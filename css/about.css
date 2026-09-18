@@ -2,319 +2,26 @@
    WebSpire Labs - About Us Stylesheet (about.css)
    Dedicated Component Styles for about.html
    Sections:
-     A0. Header & Navigation Bar (Home Page Match)
-     A0.1 About Hero Banner (Cognisive-Inspired, Shorter Height, High-Tech Grid)
-     A1. Who We Are Section (Image Collage, Donut Ring, Feature List)
+     A1. About Hero Banner (Cognisive-Inspired, Shorter Height, High-Tech Grid)
      A2. What We Do Inline Feature Strip (4 Core Capabilities)
-     A3. Our Journey / Timeline (5 Milestones & Paper Plane Track)
-     A4. Mission & Vision Section (Dual Cards & 3D Center Donut)
-     A5. Core Values Section (5 Value Cards)
-     A6. Our Approach Section (4-Step Agile Flow)
-     A7. Our Commitment Block (Checklist & Mini Cards)
-     A8. About Page Full-Bleed CTA Banner (Blue Gradient & SVG Art)
-     A9. About Page Responsive Media Queries
+     A3. Who We Are Section (Single Image Card, Feature Checkpoints)
+     A4. Our Journey / Timeline (5 Milestones & Paper Plane Track)
+     A5. Mission & Vision Section (Dual Cards & 3D Center Donut)
+     A6. Core Values Section (5 Value Cards)
+     A7. Our Approach Section (4-Step Agile Flow)
+     A8. Our Commitment Block (Checklist & Mini Cards)
+     A9. About Page Full-Bleed CTA Banner (Blue Gradient & SVG Art)
+     A10. About Page Responsive Media Queries
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   A0. Header & Navigation Bar (Matches Home Page Seamless Look)
-   -------------------------------------------------------------------------- */
-.header-navbar {
-  background-color: #F4F5F7;
-  border-bottom: none;
-  padding: 16px 0;
-  position: relative;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
-}
+/* Note: Hero Banner (A0.1) is styled by unified .subpage-hero in style.css */
 
-.header-navbar .container {
-  max-width: 1240px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.header-navbar .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  .header-navbar .navbar-collapse {
-    display: flex !important;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-  }
-
-  .header-navbar .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    margin-left: auto;
-  }
-}
-
-.header-navbar.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 12px 0;
-  background-color: rgba(244, 245, 247, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px rgba(11, 27, 50, 0.08);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  animation: slideDownNav 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.brand-logo-img {
-  height: 42px;
-  width: auto;
-  max-width: 175px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.brand-logo-container:hover .brand-logo-img {
-  transform: scale(1.02);
-}
-
-.nav-link-custom {
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: #0F172A !important;
-  padding: 8px 16px !important;
-  border-radius: 8px;
-  transition: color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: none;
-}
-
-.nav-link-custom:hover,
-.nav-link-custom:focus {
-  color: var(--color-cyan-accent, #00A3C4) !important;
-}
-
-.nav-link-custom.active {
-  color: var(--color-primary, #0062FE) !important;
-}
-
-/* --------------------------------------------------------------------------
-   A0.1 About Hero Banner (Cognisive-Inspired, Shorter Height, High-Tech Grid)
-   -------------------------------------------------------------------------- */
-.hero-section#about-hero {
-  position: relative;
-  z-index: 1;
-  min-height: 380px;
-  background-color: #F4F5F7;
-  overflow: hidden;
-  padding: 44px 0 52px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
-}
-
-/* Background Constellation & Grid Mesh Overlay */
-.hero-network-backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-constellation-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.hero-container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Slide Center Content */
-.hero-text-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  max-width: 820px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-slide-badge {
-  display: inline-block;
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: #64748B;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.hero-headline {
-  font-size: clamp(2.3rem, 3.2vw, 3.15rem);
-  font-weight: 800;
-  line-height: 1.14;
-  letter-spacing: -0.035em;
-  color: var(--color-heading, #0B1B32);
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.hero-headline .highlight-cyan {
-  color: var(--color-cyan-accent, #00A3C4);
-  position: relative;
-  display: inline-block;
-}
-
-.hero-description {
-  font-size: 1rem;
-  line-height: 1.62;
-  color: #64748B;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-/* Circular Arrow CTA Row */
-.hero-action-row {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-top: 4px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-circle-cta {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-cyan-accent, #00A3C4);
-  color: #FFFFFF !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 14px rgba(0, 163, 196, 0.28);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  flex-shrink: 0;
-  text-decoration: none;
-}
-
-.hero-action-row:hover .hero-circle-cta,
-.hero-circle-cta:hover {
-  background-color: var(--color-midnight, #0B1B32);
-  transform: scale(1.08) translateY(2px);
-  box-shadow: 0 8px 20px rgba(11, 27, 50, 0.25);
-  color: #FFFFFF !important;
-}
-
-.hero-action-label {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-heading, #0B1B32);
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.hero-action-row:hover .hero-action-label {
-  color: var(--color-cyan-accent, #00A3C4);
-  transform: translateX(3px);
-}
-
-/* Neutralize legacy hero polygon elements */
-.hero-bg-accent,
-.hero-bg-grid,
-.hero-diagonal-line,
-.hero-visual-wrapper {
-  display: none !important;
-}
-
-/* Mobile & Tablet Adjustments for About Hero */
-@media (max-width: 991.98px) {
-  .hero-section#about-hero {
-    min-height: auto;
-    padding: 36px 0 42px 0;
-  }
-
-  .header-navbar {
-    padding: 12px 0;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .hero-section#about-hero {
-    padding: 28px 0 34px 0;
-  }
-
-  .hero-headline {
-    font-size: clamp(1.8rem, 6.5vw, 2.2rem);
-    line-height: 1.18;
-    margin-bottom: 12px;
-  }
-
-  .hero-slide-badge {
-    font-size: 0.72rem;
-    margin-bottom: 8px;
-  }
-
-  .hero-description {
-    font-size: 0.92rem;
-    margin-bottom: 18px;
-  }
-
-  .hero-circle-cta {
-    width: 40px;
-    height: 40px;
-  }
-
-  .hero-action-label {
-    font-size: 0.9rem;
-  }
-}
 
 /* --------------------------------------------------------------------------
    A1. Who We Are Section (image5.png - Top)
    -------------------------------------------------------------------------- */
 .who-we-are-section {
-  padding: 85px 0 75px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -417,8 +124,13 @@
 }
 
 @keyframes floatBadge {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-5px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
 }
 
 .who-badge-icon {
@@ -434,33 +146,13 @@
   box-shadow: 0 4px 12px rgba(0, 98, 254, 0.25);
 }
 
-.who-badge-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.who-badge-val {
-  font-size: 1.22rem;
-  font-weight: 800;
-  color: var(--color-heading, #0B1B32);
-  line-height: 1.1;
-  font-family: var(--font-heading, 'Inter', sans-serif);
-}
-
-.who-badge-lbl {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #64748B;
-  margin-top: 2px;
-}
 
 /* --------------------------------------------------------------------------
    A2. What We Do Inline Feature Strip (image5.png - Core Capabilities)
    -------------------------------------------------------------------------- */
 .what-we-do-strip {
-  padding: 44px 0 46px 0;
+  padding: 20px 0 0 0;
   background-color: #FFFFFF;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
   position: relative;
   z-index: 10;
   box-shadow: 0 4px 20px rgba(11, 27, 50, 0.03);
@@ -549,7 +241,7 @@
    A3. Our Journey / Timeline (image5.png - Bottom)
    -------------------------------------------------------------------------- */
 .journey-section {
-  padding: 90px 0 100px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -695,7 +387,7 @@
    A4. Mission & Vision Section (image7.png)
    -------------------------------------------------------------------------- */
 .mission-vision-section {
-  padding: 90px 0 100px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -808,7 +500,7 @@
    A5. Core Values Section (image6.png - Top)
    -------------------------------------------------------------------------- */
 .core-values-section {
-  padding: 90px 0 100px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -897,7 +589,7 @@
    A6. Our Approach Section (image6.png - Bottom)
    -------------------------------------------------------------------------- */
 .approach-section {
-  padding: 90px 0 100px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -1015,7 +707,7 @@
    A7. Our Commitment Block (image8.png - Top)
    -------------------------------------------------------------------------- */
 .commitment-section {
-  padding: 95px 0 95px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -1064,8 +756,8 @@
   align-items: center;
   box-shadow: 0 10px 28px rgba(11, 27, 50, 0.05);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.28s ease;
+    box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.28s ease;
   height: 100%;
 }
 
@@ -1222,7 +914,7 @@
    A8. About Page Full-Bleed CTA Banner (image8.png - Bottom)
    -------------------------------------------------------------------------- */
 .about-cta-banner-section {
-  padding: 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-subtle);
 }
 

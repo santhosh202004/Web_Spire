@@ -1,0 +1,1074 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused / Moved CSS Code from Web Development Page (css/web-development.css)
+   Page: web-development.html
+   Date: 2026-09-16
+   Description:
+     This file preserves legacy, decoupled, and omitted components from css/web-development.css.
+     These rules are not used in web-development.html and were cleaned up to streamline
+     production bundle size and CSS parsing speed.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page-Level Section Header Overrides (Consolidated into common style.css)
+   -------------------------------------------------------------------------- */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cyan-accent, #00A3C4);
+  background: rgba(0, 163, 196, 0.08);
+  border: 1px solid rgba(0, 163, 196, 0.22);
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 3vw, 2.45rem);
+  font-weight: 800;
+  color: #0B1B32;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Performance & Core Web Vitals Feature Strip (Omitted Component)
+   -------------------------------------------------------------------------- */
+.vitals-strip-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.vitals-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(11, 27, 50, 0.03);
+  transition: all 0.25s ease;
+}
+
+.vitals-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 163, 196, 0.5);
+  box-shadow: 0 8px 24px rgba(11, 27, 50, 0.08);
+}
+
+.vitals-icon-box {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0.1) 0%, rgba(0, 163, 196, 0.08) 100%);
+  color: var(--color-primary, #0062FE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 98, 254, 0.15);
+}
+
+.vitals-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.vitals-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.vitals-metric {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0B1B32;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.vitals-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748B;
+  margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Specialized Web Development Capabilities (Omitted Component)
+   -------------------------------------------------------------------------- */
+.capabilities-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.capabilities-section .section-header-center {
+  margin-bottom: 20px;
+}
+
+.capabilities-section .section-subtitle {
+  max-width: 720px;
+  font-size: 1.02rem;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.capability-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 30px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.capability-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #0062FE, #00A3C4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 98, 254, 0.4);
+  box-shadow: 0 16px 36px rgba(11, 27, 50, 0.09);
+}
+
+.capability-card:hover::before {
+  opacity: 1;
+}
+
+.capability-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0.1) 0%, rgba(0, 163, 196, 0.08) 100%);
+  color: var(--color-primary, #0062FE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 98, 254, 0.18);
+  margin-bottom: 20px;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.capability-card:hover .capability-icon-wrap {
+  transform: scale(1.06);
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0.18) 0%, rgba(0, 163, 196, 0.14) 100%);
+}
+
+.capability-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.capability-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.capability-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.capability-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+.capability-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.capability-checklist li svg {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  color: #00A3C4;
+}
+
+.capability-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #F1F5F9;
+  width: 100%;
+}
+
+.capability-tag {
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Real-World Project Showcase (Omitted Component)
+   -------------------------------------------------------------------------- */
+.project-showcase-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 98, 254, 0.35);
+  box-shadow: 0 16px 36px rgba(11, 27, 50, 0.09);
+}
+
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #0B1B32;
+}
+
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.project-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(11, 27, 50, 0.88);
+  backdrop-filter: blur(8px);
+  color: #00A3C4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 163, 196, 0.3);
+}
+
+.project-card-body {
+  padding: 24px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.project-card:hover .project-card-title {
+  color: var(--color-primary, #0062FE);
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #64748B;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.project-tech-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background-color: #F1F5F9;
+  color: #334155;
+  border: 1px solid #E2E8F0;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary, #0062FE);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.project-link-btn svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s ease;
+}
+
+.project-link-btn:hover {
+  color: #00A3C4;
+  gap: 12px;
+}
+
+.project-link-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   5. Technology Stack Ecosystem (Omitted Component)
+   -------------------------------------------------------------------------- */
+.tech-ecosystem-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.tech-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tech-cat-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 26px 22px;
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.03);
+  transition: all 0.25s ease;
+}
+
+.tech-cat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 98, 254, 0.35);
+  box-shadow: 0 12px 28px rgba(11, 27, 50, 0.06);
+}
+
+.tech-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.tech-cat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0.1) 0%, rgba(0, 163, 196, 0.08) 100%);
+  color: var(--color-primary, #0062FE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 98, 254, 0.15);
+}
+
+.tech-cat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tech-cat-title {
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.tech-items-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.tech-pill-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.tech-pill-badge:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 98, 254, 0.4);
+  color: var(--color-primary, #0062FE);
+  box-shadow: 0 2px 8px rgba(0, 98, 254, 0.08);
+}
+
+.tech-pill-badge svg {
+  width: 15px;
+  height: 15px;
+  color: #00A3C4;
+}
+
+/* --------------------------------------------------------------------------
+   6. 5-Stage Engineering Lifecycle (Omitted Component)
+   -------------------------------------------------------------------------- */
+.engineering-lifecycle-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.lifecycle-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.lifecycle-step-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.03);
+  transition: all 0.25s ease;
+}
+
+.lifecycle-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 98, 254, 0.4);
+  box-shadow: 0 12px 28px rgba(11, 27, 50, 0.08);
+}
+
+.lifecycle-step-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #0062FE 0%, #00A3C4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.lifecycle-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.lifecycle-step-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #64748B;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.lifecycle-deliverable {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary, #0062FE);
+  background-color: rgba(0, 98, 254, 0.06);
+  border: 1px solid rgba(0, 98, 254, 0.12);
+  border-radius: 8px;
+  padding: 5px 9px;
+  display: inline-block;
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   7. Why Choose WebSpire Labs (Omitted Component)
+   -------------------------------------------------------------------------- */
+.why-web-section {
+  padding: 20px 0 0 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.why-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-feature-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 26px 20px;
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.03);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 163, 196, 0.45);
+  box-shadow: 0 10px 26px rgba(11, 27, 50, 0.07);
+}
+
+.why-feature-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 163, 196, 0.12) 0%, rgba(0, 98, 254, 0.08) 100%);
+  color: var(--color-cyan-accent, #00A3C4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 163, 196, 0.2);
+  margin-bottom: 18px;
+}
+
+.why-feature-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.why-feature-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.why-feature-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748B;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Full-Bleed Call to Action Banner (Omitted Component)
+   -------------------------------------------------------------------------- */
+.about-cta-banner-section {
+  position: relative;
+  background: linear-gradient(135deg, #0050D0 0%, #003699 45%, #0B1B32 100%);
+  padding: 20px 0 0 0;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.about-cta-bg-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-cta-title {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.about-cta-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+
+.about-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-about-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background-color: var(--color-cyan-accent, #00A3C4);
+  color: #FFFFFF !important;
+  font-size: 0.96rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 163, 196, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-about-cta-primary:hover {
+  background-color: #008DA8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 163, 196, 0.5);
+}
+
+.btn-about-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background-color: transparent;
+  color: #FFFFFF !important;
+  font-size: 0.96rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-about-cta-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   9. Unused Industry Card Sub-Elements & Blueprint Modal
+   -------------------------------------------------------------------------- */
+.industry-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.industry-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+.industry-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748B;
+  margin-bottom: 18px;
+}
+
+.industry-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.industry-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.industry-features-list li svg {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  color: #00A3C4;
+}
+
+.industry-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #F1F5F9;
+  margin-top: auto;
+}
+
+.industry-inquire-link {
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.industry-inquire-link:hover {
+  color: #0F172A;
+}
+
+.blueprint-modal .modal-content {
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 24px 50px rgba(11, 27, 50, 0.18);
+  overflow: hidden;
+}
+
+.blueprint-modal .modal-header {
+  background-color: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 24px 28px;
+}
+
+.blueprint-modal-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #00A3C4;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.blueprint-modal .modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.blueprint-modal .modal-body {
+  padding: 28px;
+}
+
+.blueprint-summary-text {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.blueprint-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.blueprint-feature-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.blueprint-feature-box h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blueprint-feature-box h4 svg {
+  color: #0062FE;
+  width: 18px;
+  height: 18px;
+}
+
+.blueprint-feature-box p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+}
+
+.blueprint-modal .modal-footer {
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   10. Hero Constellation & Network Backdrop (Omitted Backdrop SVG)
+   -------------------------------------------------------------------------- */
+.hero-network-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-constellation-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------------
+   11. Core Engineering Standards (Wavy Connected Nodes Roadmap - Destroyed)
+   -------------------------------------------------------------------------- */
+.standards-section {
+  padding: 60px 0 85px 0;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.standards-section .section-header-center {
+  margin-bottom: 45px;
+}
+
+.standards-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+  margin-bottom: 0;
+  text-transform: none !important;
+}
+
+.standards-roadmap-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  min-height: 250px;
+}
+
+.standards-wave-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.standards-nodes-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.standards-node-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.standards-node-item.node-seo {
+  margin-top: 50px;
+}
+
+.standards-node-item.node-performance {
+  margin-top: 10px;
+}
+
+.standards-node-item.node-responsive {
+  margin-top: 10px;
+}
+
+.standards-node-item.node-cost {
+  margin-top: 50px;
+}
+
+.standards-circle {
+  width: 146px;
+  height: 146px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 35px rgba(0, 102, 255, 0.12), 0 3px 12px rgba(15, 23, 42, 0.04);
+  border: 1.5px solid rgba(226, 232, 240, 0.6);
+  color: #0062FE;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.standards-icon {
+  width: 44px;
+  height: 44px;
+  transition: transform 0.35s ease;
+}
+
+.standards-node-item.is-active .standards-circle {
+  background: #0062FE;
+  background: linear-gradient(145deg, #0072F5 0%, #0056CB 100%);
+  color: #FFFFFF;
+  box-shadow: 0 16px 42px rgba(0, 98, 254, 0.42), 0 4px 16px rgba(0, 98, 254, 0.2);
+  border-color: transparent;
+}
+
+.standards-node-item:hover .standards-circle,
+.standards-node-item:focus-visible .standards-circle {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 20px 45px rgba(0, 98, 254, 0.22);
+}
+
+.standards-node-item.is-active:hover .standards-circle,
+.standards-node-item.is-active:focus-visible .standards-circle {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 22px 50px rgba(0, 98, 254, 0.5);
+}
+
+.standards-node-item:hover .standards-icon,
+.standards-node-item:focus-visible .standards-icon {
+  transform: scale(1.08);
+}
+
+.standards-label {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  letter-spacing: -0.01em;
+  transition: color 0.25s ease;
+}
+
+.standards-node-item:hover .standards-label,
+.standards-node-item:focus-visible .standards-label {
+  color: #0062FE;
+}
+
+@media (max-width: 991px) {
+  .standards-wave-svg {
+    display: none;
+  }
+  .standards-nodes-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+  .standards-node-item.node-seo,
+  .standards-node-item.node-performance,
+  .standards-node-item.node-responsive,
+  .standards-node-item.node-cost {
+    margin-top: 0;
+  }
+  .standards-circle {
+    width: 125px;
+    height: 125px;
+  }
+  .standards-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .standards-label {
+    font-size: 1.05rem;
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .standards-circle {
+    width: 105px;
+    height: 105px;
+  }
+  .standards-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .standards-label {
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+}

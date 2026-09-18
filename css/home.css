@@ -2,8 +2,6 @@
    WebSpire Labs - Homepage Stylesheet (home.css)
    Dedicated Component Styles for index.html
    Sections:
-     0. Top Announcement Strip (Teal / Cyan Bar)
-     0.1 Header & Mega Menu Navigation (Cognisive Inspired)
      1. Hero Section (Graphic, Diamond Art, Highlights)
      2. Our Services (3×2 Minimalist Frameless Grid)
      3. Why Choose Us (4 Feature Pillars)
@@ -11,249 +9,6 @@
      5. Our Work / Portfolio Grid (4 Project Cards)
      6. Homepage Responsive Media Queries
    ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   0. Top Announcement Strip (Cognisive Layout Inspired)
-   -------------------------------------------------------------------------- */
-.announcement-strip {
-  background-color: var(--color-cyan-accent, #00A3C4);
-  color: #FFFFFF;
-  position: relative;
-  z-index: 1002;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-  overflow: hidden;
-}
-
-.announcement-strip.dismissed {
-  max-height: 0 !important;
-  opacity: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  pointer-events: none;
-}
-
-.announcement-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 10px 36px 10px 16px;
-  min-height: 42px;
-}
-
-.announcement-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  text-align: center;
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: #FFFFFF;
-}
-
-.announcement-text {
-  color: #FFFFFF;
-}
-
-.announcement-link {
-  color: #FFFFFF;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.announcement-link:hover {
-  color: #FFFFFF;
-  opacity: 0.85;
-  transform: translateX(2px);
-}
-
-.announcement-dismiss-btn {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.85);
-  cursor: pointer;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.announcement-dismiss-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
-}
-
-/* --------------------------------------------------------------------------
-   0.1 Header & Mega Menu Navigation
-   -------------------------------------------------------------------------- */
-.header-navbar {
-  background-color: #F4F5F7;
-  border-bottom: none;
-  padding: 16px 0;
-  position: relative;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
-}
-
-.header-navbar .container {
-  max-width: 1240px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.header-navbar .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  .header-navbar .navbar-collapse {
-    display: flex !important;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-  }
-
-  .header-navbar .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    margin-left: auto;
-  }
-}
-
-.header-navbar.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 12px 0;
-  background-color: rgba(244, 245, 247, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px rgba(11, 27, 50, 0.08);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  animation: slideDownNav 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.brand-logo-img {
-  height: 42px;
-  width: auto;
-  max-width: 175px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.brand-logo-container:hover .brand-logo-img {
-  transform: scale(1.02);
-}
-
-.nav-link-custom {
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: #0F172A !important;
-  padding: 8px 16px !important;
-  border-radius: 8px;
-  transition: color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: none;
-}
-
-.nav-link-custom:hover,
-.nav-link-custom:focus {
-  color: var(--color-cyan-accent, #00A3C4) !important;
-}
-
-.nav-link-custom.active {
-  color: var(--color-primary, #0062FE) !important;
-}
-
-
-/* Header Right Actions & Pill Button */
-.header-nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn-nav-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 24px;
-  border-radius: 50px;
-  background-color: var(--color-midnight, #0B1B32);
-  color: #FFFFFF !important;
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  border: 1.5px solid var(--color-midnight, #0B1B32);
-  box-shadow: 0 4px 14px rgba(11, 27, 50, 0.12);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
-}
-
-.btn-nav-pill:hover {
-  background-color: var(--color-cyan-accent, #00A3C4);
-  border-color: var(--color-cyan-accent, #00A3C4);
-  color: #FFFFFF !important;
-  box-shadow: 0 6px 20px rgba(0, 163, 196, 0.35);
-  transform: translateY(-1px);
-}
-
-
-/* Mobile Mega Menu Adjustments (<992px) */
-@media (max-width: 991.98px) {
-  .announcement-inner {
-    padding: 8px 32px 8px 12px;
-  }
-
-  .announcement-content {
-    font-size: 0.82rem;
-  }
-
-  .header-navbar {
-    padding: 12px 0;
-  }
-
-
-  .header-nav-actions {
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid #E2E8F0;
-    width: 100%;
-  }
-
-  .btn-nav-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    1. Hero Section: 3-Slide Interactive Ecosystem Carousel (Cognisive Inspired)
@@ -265,7 +20,7 @@
   min-height: calc(100dvh - 74px);
   background-color: #F4F5F7;
   overflow: hidden;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,6 +32,25 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
+}
+
+/* Header Background Hero Image */
+.hero-image-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
 .hero-constellation-svg {
@@ -369,9 +143,6 @@
   text-align: center;
 }
 
-.hero-badge-pulse {
-  display: none;
-}
 
 .hero-headline {
   font-size: clamp(2.4rem, 3.2vw, 3.25rem);
@@ -448,146 +219,11 @@
   transform: translateX(3px);
 }
 
-/* Right Visual Artwork Card (Thing 2) */
-.hero-visual-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-artwork-card {
-  width: 100%;
-  max-width: 490px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-tech-svg {
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  filter: drop-shadow(0 12px 28px rgba(11, 27, 50, 0.05));
-  overflow: visible;
-}
-
-/* Floating Animations for Line-Art Diagram Nodes */
-.float-node-1 {
-  animation: floatSlow1 4s ease-in-out infinite;
-}
-
-.float-node-2 {
-  animation: floatSlow2 4.5s ease-in-out infinite;
-}
-
-.float-node-3 {
-  animation: floatSlow1 4.2s ease-in-out infinite 0.5s;
-}
-
-.float-node-4 {
-  animation: floatSlow2 3.8s ease-in-out infinite 0.8s;
-}
-
-@keyframes floatSlow1 {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes floatSlow2 {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(7px);
-  }
-}
-
-/* Bottom Tab Switcher */
-.hero-tabs-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 36px;
-  border-top: 1px solid rgba(226, 232, 240, 0.85);
-  padding-top: 14px;
-  padding-bottom: 16px;
-  margin-top: 16px;
-}
-
-.hero-tab-btn {
-  background: transparent;
-  border: none;
-  padding: 8px 0 14px 0;
-  font-family: var(--font-family);
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: #64748B;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-  transition: color 0.2s ease;
-  outline: none;
-}
-
-.hero-tab-btn:hover {
-  color: var(--color-heading, #0B1B32);
-}
-
-.hero-tab-num {
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: rgba(100, 116, 139, 0.6);
-  letter-spacing: 0.04em;
-  transition: color 0.2s ease;
-}
-
-.hero-tab-title {
-  white-space: nowrap;
-}
-
-.hero-tab-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-cyan-accent, #00A3C4);
-  border-radius: 3px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-tab-btn.active {
-  color: var(--color-heading, #0B1B32);
-  font-weight: 700;
-}
-
-.hero-tab-btn.active .hero-tab-num {
-  color: var(--color-cyan-accent, #00A3C4);
-}
-
-.hero-tab-btn.active .hero-tab-line {
-  transform: scaleX(1);
-}
 
 /* Tablet & Mobile Hero Breakpoints */
 @media (max-width: 991.98px) {
   .hero-section {
-    padding: 32px 0 28px 0;
+    padding: 32px 0 0 0;
     min-height: auto;
   }
 
@@ -629,7 +265,7 @@
 
 @media (max-width: 575.98px) {
   .hero-section {
-    padding: 24px 0 20px 0;
+    padding: 24px 0 0 0;
   }
 
   .hero-headline {
@@ -675,7 +311,7 @@
    2. Services Section — Minimalist Flex Layout with Ambient Hover
    -------------------------------------------------------------------------- */
 .services-section {
-  padding: 68px 0 55px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
   position: relative;
 }
@@ -805,7 +441,7 @@
    3. Why Choose Us — 4 Feature Pillars (Flex Minimalist with Hover)
    -------------------------------------------------------------------------- */
 .why-choose-section {
-  padding: 55px 0 68px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -1026,7 +662,7 @@
    -------------------------------------------------------------------------- */
 .testimonials-section {
   margin-top: 0;
-  padding: 0 0 68px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -1062,26 +698,6 @@
 .testimonials-header {
   margin-bottom: 38px;
   text-align: center;
-}
-
-.testimonials-header .section-eyebrow {
-  display: inline-block;
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: var(--color-cyan-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 8px;
-}
-
-.testimonials-header .section-title {
-  font-size: 2.35rem;
-  font-weight: 800;
-  color: var(--color-heading);
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  margin: 0;
-  text-transform: uppercase;
 }
 
 /* Carousel / Multi-Column Wrapper */
@@ -1263,7 +879,7 @@
    5. Our Work / Portfolio Grid (Image3 — Upper Half)
    -------------------------------------------------------------------------- */
 .portfolio-section {
-  padding: 68px 0 45px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page);
 }
 
@@ -1379,18 +995,96 @@
 }
 
 /* --------------------------------------------------------------------------
+   5.1 Call to Action Banner (Full-Bleed Gradient)
+   -------------------------------------------------------------------------- */
+.about-cta-banner-section {
+  padding: 20px 0 0 0;
+  background-color: var(--color-bg-subtle, #F8FAFC);
+}
+
+.about-cta-banner-inner {
+  background: linear-gradient(135deg, #0047C8 0%, #0062FE 55%, #1A74FF 100%);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--color-white, #FFFFFF);
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+}
+
+.about-cta-title .highlight-cyan {
+  color: #38BDF8;
+}
+
+.about-cta-title .highlight-amber {
+  color: #F59E0B;
+}
+
+.about-cta-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.btn-about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  background-color: var(--color-white, #FFFFFF);
+  color: var(--color-primary, #0062FE);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full, 9999px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base, 0.25s ease);
+  text-decoration: none;
+}
+
+.btn-about-cta svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-primary, #0062FE);
+  stroke-width: 2;
+  transition: transform var(--transition-fast, 0.15s ease);
+}
+
+.btn-about-cta:hover {
+  background-color: var(--color-midnight, #0B1B32);
+  color: var(--color-white, #FFFFFF);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-about-cta:hover svg {
+  stroke: var(--color-white, #FFFFFF);
+  transform: translateX(4px);
+}
+
+.about-cta-art-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-cta-svg-art {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
    6. Homepage Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
-  .why-pillars-grid {
-    gap: 28px 20px;
-  }
-
-  .pillar-card {
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-    padding: 24px 20px;
-  }
 
   .testimonials-wrapper {
     margin: 0;
@@ -1421,11 +1115,15 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .about-cta-art-col {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 767px) {
   .services-section {
-    padding: 48px 0;
+    padding: 20px 0 0 0;
   }
 
   .services-section .container,
@@ -1446,25 +1144,15 @@
     padding: 22px 18px;
   }
 
-  .why-pillars-grid {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .pillar-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 22px 18px;
-  }
 
   .why-choose-section,
   .portfolio-section {
-    padding: 48px 0;
+    padding: 20px 0 0 0;
   }
 
   .testimonials-section {
     margin-top: 0;
-    padding: 0 0 48px 0;
+    padding: 20px 0 0 0;
   }
 
   .testimonials-header {
@@ -1488,6 +1176,15 @@
 
   .portfolio-card-img img {
     height: 140px;
+  }
+
+  .about-cta-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-about-cta {
+    width: 100%;
+    justify-content: center;
   }
 }
 

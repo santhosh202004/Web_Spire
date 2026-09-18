@@ -1,0 +1,126 @@
+/* ==========================================================================
+   WEBSPIRE LABS — LAW FIRM WEBSITE DESIGN STYLESHEET (law-firm-website-design.css)
+   Page: law-firm-website-design.html
+   Isolated Stylesheet for Legal Web Design & Attorney Web Solutions
+   ========================================================================== */
+
+/* Note: Law Firm Hero Banner (Section 1) is styled by unified .subpage-hero in style.css */
+
+
+/* ==========================================================================
+   SECTION 2: Legal Engineering Capabilities
+   (2-Column Clean Minimalist Layout Inspired by Reference Screenshot)
+   ========================================================================== */
+.legal-capabilities-section {
+  padding: 20px 0 0 0;
+  background-color: var(--color-bg-page, #FFFFFF);
+  position: relative;
+}
+
+.legal-capabilities-section .section-header,
+.legal-features-section .section-header {
+  margin-bottom: 48px;
+}
+
+.legal-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 72px;
+}
+
+.legal-spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.legal-spec-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.legal-spec-bullet {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-cyan-accent, #00A3C4);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(0, 163, 196, 0.16);
+}
+
+.legal-spec-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.legal-spec-desc {
+  font-size: 0.96rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 23px;
+}
+
+/* ==========================================================================
+   SECTION 3: Law Firm Website Design Features
+   (2-Column Clean Minimalist Layout Inspired by Reference Screenshot)
+   ========================================================================== */
+.legal-features-section {
+  padding: 20px 0 0 0;
+  background-color: var(--color-bg-page, #FFFFFF);
+  position: relative;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 991px) {
+  .legal-capabilities-section,
+  .legal-features-section {
+    padding: 20px 0 0 0;
+  }
+
+  .legal-section-header {
+    margin-bottom: 40px;
+  }
+
+  .legal-spec-grid {
+    gap: 36px 44px;
+  }
+
+  .legal-spec-title {
+    font-size: 1.12rem;
+  }
+
+  .legal-spec-desc {
+    font-size: 0.93rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .legal-capabilities-section,
+  .legal-features-section {
+    padding: 20px 0 0 0;
+  }
+
+  .legal-section-header {
+    margin-bottom: 32px;
+  }
+
+  .legal-spec-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .legal-spec-desc {
+    padding-left: 23px;
+    font-size: 0.91rem;
+    line-height: 1.62;
+  }
+}

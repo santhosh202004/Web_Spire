@@ -1,0 +1,272 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Removed Hover Effects & Micro-Interactions
+   Project: WebSpire Labs
+   Date: 2026-09-02
+   Description:
+     This file contains all CSS hover rules and micro-animations removed from
+     `css/style.css` as requested. You can refer to or copy back any of these
+     rules if you ever wish to restore them in the future.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Header & Navigation
+   - Logo zoom on hover
+   - Glow expansion on outline CTA button
+   - Zoom on mobile hamburger button
+   -------------------------------------------------------------------------- */
+
+/* Logo Zoom */
+.brand-logo-img:hover {
+  transform: scale(1.02);
+}
+
+/* Nav Outline CTA Button Glow */
+.btn-nav-outline:hover {
+  box-shadow: var(--shadow-cta); /* 0 8px 20px rgba(0, 98, 254, 0.28) */
+}
+
+/* Nav Hamburger Button Zoom */
+.btn-nav-hamburger:hover {
+  transform: scale(1.05);
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Hero Section
+   - Primary hero button translateY(-2px) lift and glow expansion
+   - Secondary hero button translateY(-2px) lift and shadow
+   -------------------------------------------------------------------------- */
+
+/* Primary Hero Button Lift & Glow */
+.btn-primary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 98, 254, 0.35);
+}
+
+/* Secondary Hero Button Lift & Shadow */
+.btn-secondary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Key Performance Metrics / Stats Strip
+   - Stat icon wrap 1.08x scale on hover
+   - Stat icon wrap background color tint shift (#DDEBFF)
+   -------------------------------------------------------------------------- */
+
+/* Stat Badge Zoom & Background Tint */
+.stat-card-item:hover .stat-icon-wrap {
+  transform: scale(1.08);
+  background-color: #DDEBFF;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Services Grid
+   - Card vertical lift: translateY(-6px)
+   - Top linear-gradient accent line reveal on hover
+   -------------------------------------------------------------------------- */
+
+/* Top Accent Line (Inactive State) */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-cyan) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+/* Service Card Vertical Lift */
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Top Accent Line Reveal */
+.service-card:hover::before {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Why Choose Us (Pillars Grid)
+   - Pillar card vertical lift: translateY(-6px)
+   - Bottom linear-gradient accent line reveal on hover
+   -------------------------------------------------------------------------- */
+
+/* Bottom Accent Line (Inactive State) */
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-cyan) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+/* Pillar Card Vertical Lift */
+.pillar-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Bottom Accent Line Reveal */
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Feature Block
+   - Primary CTA button translateY(-2px) lift and glow expansion
+   - Primary CTA button arrow translateX(4px) forward motion
+   -------------------------------------------------------------------------- */
+
+/* Feature Primary CTA Button Lift & Glow */
+.btn-feature-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 98, 254, 0.38);
+}
+
+/* Feature Primary CTA Button Arrow Motion */
+.btn-feature-primary:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Our Process Steps
+   - Process step card translateY(-5px) elevation & shadow
+   - Process step top gradient accent line reveal
+   - Stage badge background color inversion & glow
+   - Stage icon background color swap & scale
+   - Deliverable tag border & background color highlight
+   -------------------------------------------------------------------------- */
+
+/* Process Step Top Accent Line Reveal */
+.process-step-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-cyan));
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.process-step-item:hover::before {
+  opacity: 1;
+}
+
+/* Process Step Card Lift & Shadow */
+.process-step-item:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-primary);
+  transform: translateY(-5px);
+}
+
+/* Stage Number Badge Inversion */
+.process-step-item:hover .process-step-badge {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 98, 254, 0.3);
+}
+
+.process-step-item:hover .process-badge-amber {
+  background-color: #D97706;
+  color: #FFFFFF;
+  border-color: #D97706;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3);
+}
+
+/* Icon Highlight & Scale */
+.process-step-item:hover .process-step-icon {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: scale(1.04);
+}
+
+.process-step-item:hover .process-icon-amber {
+  background: #FEF3C7;
+  border-color: #D97706;
+}
+
+/* Deliverables Tag Highlight */
+.process-step-item:hover .process-tag {
+  border-color: rgba(0, 98, 254, 0.2);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Portfolio Grid
+   - Portfolio card translateY(-6px) 3D lift
+   - Image overlay gradient reveal on hover
+   -------------------------------------------------------------------------- */
+
+/* Portfolio Card 3D Lift */
+.portfolio-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image Overlay (Inactive State) */
+.portfolio-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 98, 254, 0) 0%, rgba(0, 98, 254, 0.45) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+/* Image Overlay Reveal */
+.portfolio-card:hover .portfolio-card-img-overlay {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. Full-Bleed CTA Banner
+   - CTA button color flip to midnight navy (background #0B1B32 & white text)
+   - CTA button translateY(-2px) lift and shadow expansion
+   - CTA button arrow translateX(4px) forward motion
+   -------------------------------------------------------------------------- */
+
+/* CTA Banner Button Navy Flip, Lift & Shadow */
+.btn-cta-banner:hover,
+.btn-about-cta:hover {
+  background-color: var(--color-midnight);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* CTA Banner Button Arrow Motion & White Stroke */
+.btn-cta-banner:hover svg,
+.btn-about-cta:hover svg {
+  stroke: var(--color-white);
+  transform: translateX(4px);
+}
+
+
+/* --------------------------------------------------------------------------
+   10. Site Footer
+   - Footer navigation links 4px horizontal nudge (padding-left: 4px)
+   -------------------------------------------------------------------------- */
+
+/* Footer Nav Link Horizontal Nudge */
+.footer-nav-list a:hover {
+  padding-left: 4px;
+}

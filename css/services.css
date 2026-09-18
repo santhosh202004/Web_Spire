@@ -2,7 +2,6 @@
    WEBSPIRE LABS — SERVICES PAGE STYLESHEET (services.css)
    Dedicated Component Styles for services.html
    Sections:
-     S0. Header & Navigation Bar (Home & About Us Match)
      S1. Services Hero Banner (Cognisive-Inspired, Centered, Constellation Mesh)
      S2. Core Capabilities Feature Strip (4 Enterprise Pillars)
      S3. Comprehensive Services Catalog (Interactive Filter & 8 Service Cards)
@@ -15,210 +14,8 @@
      S10. Responsive Media Queries
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   S0. Header & Navigation Bar (Matches About Us & Home Page Seamless Look)
-   -------------------------------------------------------------------------- */
-.header-navbar {
-  background-color: #F4F5F7;
-  border-bottom: none;
-  padding: 16px 0;
-  position: relative;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
-}
+/* Note: Services Hero Banner (S1) is styled by unified .subpage-hero in style.css */
 
-.header-navbar .container {
-  max-width: 1240px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.header-navbar .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  .header-navbar .navbar-collapse {
-    display: flex !important;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-  }
-
-  .header-navbar .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    margin-left: auto;
-  }
-}
-
-.header-navbar.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 12px 0;
-  background-color: rgba(244, 245, 247, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px rgba(11, 27, 50, 0.08);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  animation: slideDownNav 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes slideDownNav {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.brand-logo-img {
-  height: 42px;
-  width: auto;
-  max-width: 175px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.brand-logo-container:hover .brand-logo-img {
-  transform: scale(1.02);
-}
-
-.nav-link-custom {
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: #0F172A !important;
-  padding: 8px 16px !important;
-  border-radius: 8px;
-  transition: color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: none;
-  text-decoration: none;
-}
-
-.nav-link-custom:hover,
-.nav-link-custom:focus {
-  color: var(--color-cyan-accent, #00A3C4) !important;
-}
-
-.nav-link-custom.active {
-  color: var(--color-primary, #0062FE) !important;
-}
-
-/* --------------------------------------------------------------------------
-   S1. Services Hero Banner (Cognisive-Inspired, Centered, Constellation Mesh)
-   -------------------------------------------------------------------------- */
-.hero-section#services-hero {
-  position: relative;
-  z-index: 1;
-  min-height: 380px;
-  background-color: #F4F5F7;
-  overflow: hidden;
-  padding: 44px 0 52px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
-}
-
-/* Background Constellation & Grid Mesh Overlay */
-.hero-network-backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-constellation-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.hero-container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-text-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  max-width: 820px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-slide-badge {
-  display: inline-block;
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: #64748B;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.hero-headline {
-  font-size: clamp(2.3rem, 3.2vw, 3.15rem);
-  font-weight: 800;
-  line-height: 1.14;
-  letter-spacing: -0.035em;
-  color: var(--color-heading, #0B1B32);
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.hero-headline .highlight-cyan {
-  color: var(--color-cyan-accent, #00A3C4);
-  position: relative;
-  display: inline-block;
-}
-
-.hero-description {
-  font-size: 1rem;
-  line-height: 1.62;
-  color: #64748B;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 24px;
-  text-align: center;
-}
 
 /* Quick Jump Chips */
 .services-hero-chips {
@@ -266,7 +63,7 @@
 .capabilities-strip {
   background-color: #FFFFFF;
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  padding: 34px 0;
+  padding: 20px 0 0 0;
   position: relative;
   z-index: 2;
 }
@@ -333,7 +130,7 @@
    S3. Comprehensive Services Catalog (Interactive Filter & 8 Cards)
    -------------------------------------------------------------------------- */
 .services-catalog-section {
-  padding: 80px 0 90px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -342,28 +139,6 @@
   text-align: center;
   max-width: 760px;
   margin: 0 auto 40px auto;
-}
-
-.section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-cyan-accent, #00A3C4);
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
-  font-weight: 800;
-  color: var(--color-heading, #0B1B32);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin-bottom: 14px;
-  text-transform: uppercase;
 }
 
 .section-subtitle {
@@ -609,10 +384,8 @@
    S4. Technology Stack Expertise (Interactive Tabbed Slider)
    -------------------------------------------------------------------------- */
 .tech-stack-section {
-  padding: 85px 0 90px 0;
+  padding: 20px 0 0 0;
   background-color: #FFFFFF;
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   position: relative;
 }
 
@@ -818,29 +591,12 @@
   white-space: nowrap;
 }
 
-/* Empty State */
-.tech-empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: #94A3B8;
-  background: #F8FAFC;
-  border-radius: 14px;
-  border: 1px dashed #CBD5E1;
-  max-width: 540px;
-  margin: 0 auto;
-}
-
-.tech-empty-text {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
 
 /* --------------------------------------------------------------------------
    S5. 5-Stage Agile Delivery Pipeline (Methodology & Milestones)
    -------------------------------------------------------------------------- */
 .services-process-section {
-  padding: 85px 0 90px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -927,9 +683,8 @@
    S6. Why Partner With WebSpire Labs (Client Value Proposition)
    -------------------------------------------------------------------------- */
 .why-partner-section {
-  padding: 85px 0 90px 0;
+  padding: 20px 0 0 0;
   background-color: #FFFFFF;
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .why-partner-grid {
@@ -993,9 +748,8 @@
    S7. Frequently Asked Questions (Accordion)
    -------------------------------------------------------------------------- */
 .services-faq-section {
-  padding: 85px 0 90px 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .faq-accordion-wrap {
@@ -1045,7 +799,7 @@
    S8. High-Impact Call to Action Banner
    -------------------------------------------------------------------------- */
 .about-cta-banner-section {
-  padding: 0;
+  padding: 20px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
 }
 
@@ -1125,12 +879,6 @@
   height: auto;
 }
 
-.btn-services-cta-outline svg {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-  stroke-width: 2;
-}
 
 
 
@@ -1144,9 +892,6 @@
   .services-catalog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .process-pipeline-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1155,39 +900,12 @@
   }
 }
 
-@media (max-width: 991.98px) {
-  .hero-section#services-hero {
-    min-height: auto;
-    padding: 36px 0 42px 0;
-  }
-}
-
 @media (max-width: 767px) {
-  .hero-section#services-hero {
-    min-height: auto;
-    padding: 28px 0 34px 0;
-  }
-  .hero-headline {
-    font-size: clamp(1.8rem, 6.5vw, 2.2rem);
-    line-height: 1.18;
-    margin-bottom: 12px;
-  }
-  .hero-slide-badge {
-    font-size: 0.72rem;
-    margin-bottom: 8px;
-  }
-  .hero-description {
-    font-size: 0.92rem;
-    margin-bottom: 18px;
-  }
   .capabilities-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
   .services-catalog-grid {
-    grid-template-columns: 1fr;
-  }
-  .tech-stack-grid {
     grid-template-columns: 1fr;
   }
   .process-pipeline-grid {
@@ -1199,14 +917,6 @@
   .footer-legal-links {
     justify-content: flex-start;
     margin-top: 10px;
-  }
-  .services-cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .btn-services-cta-white,
-  .btn-services-cta-outline {
-    justify-content: center;
   }
   .tech-expertise-title {
     font-size: 1.8rem;

@@ -1,0 +1,105 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused CSS Code from About Us Page (css/about.css)
+   Page: about.html
+   Date: 2026-09-10
+   Description:
+     This file preserves all unused CSS classes and media queries removed from
+     css/about.css. You can refer to or restore any of these rules if needed.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero Circular Arrow CTA Row
+   (The About hero banner does not contain an action button link)
+   -------------------------------------------------------------------------- */
+.hero-action-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-circle-cta {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-cyan-accent, #00A3C4);
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 163, 196, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.hero-action-row:hover .hero-circle-cta,
+.hero-circle-cta:hover {
+  background-color: var(--color-midnight, #0B1B32);
+  transform: scale(1.08) translateY(2px);
+  box-shadow: 0 8px 20px rgba(11, 27, 50, 0.25);
+  color: #FFFFFF !important;
+}
+
+.hero-action-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-action-row:hover .hero-action-label {
+  color: var(--color-cyan-accent, #00A3C4);
+  transform: translateX(3px);
+}
+
+@media (max-width: 575.98px) {
+  .hero-circle-cta {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-action-label {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Neutralize Legacy Hero Polygon Elements (Absent from about.html)
+   -------------------------------------------------------------------------- */
+.hero-bg-accent,
+.hero-bg-grid,
+.hero-diagonal-line,
+.hero-visual-wrapper {
+  display: none !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Floating Trust Badge Text Elements (Removed from .who-floating-badge in HTML)
+   -------------------------------------------------------------------------- */
+.who-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.who-badge-val {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--color-heading, #0B1B32);
+  line-height: 1.1;
+  font-family: var(--font-heading, 'Inter', sans-serif);
+}
+
+.who-badge-lbl {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+  margin-top: 2px;
+}

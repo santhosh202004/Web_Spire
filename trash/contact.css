@@ -1,0 +1,188 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused CSS Code from Contact Us Page (css/contact.css)
+   Page: contact.html
+   Date: 2026-09-10
+   Description:
+     This file preserves all unused CSS classes and media queries removed from
+     css/contact.css.
+     NOTE: .work-card-underline was KEPT in css/contact.css because it is actively
+     used as the blue accent underline below the "How Can We Help?" heading.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero Action Row CTA
+   -------------------------------------------------------------------------- */
+.hero-action-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-circle-cta {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-cyan-accent, #00A3C4);
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 163, 196, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.hero-action-row:hover .hero-circle-cta,
+.hero-circle-cta:hover {
+  background-color: var(--color-midnight, #0B1B32);
+  transform: scale(1.08) translateY(2px);
+  box-shadow: 0 8px 20px rgba(11, 27, 50, 0.25);
+  color: #FFFFFF !important;
+}
+
+.hero-action-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-action-row:hover .hero-action-label {
+  color: var(--color-cyan-accent, #00A3C4);
+  transform: translateX(3px);
+}
+
+@media (max-width: 575.98px) {
+  .hero-circle-cta {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-action-label {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Neutralize Legacy Hero Polygon Elements (Absent from contact.html)
+   -------------------------------------------------------------------------- */
+.hero-bg-accent,
+.hero-bg-grid,
+.hero-diagonal-line,
+.hero-visual-wrapper {
+  display: none !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Legacy Section 3: "Why Work With Us"
+   (Omitted from contact.html; .work-card-underline was kept in active contact.css)
+   -------------------------------------------------------------------------- */
+.work-with-us-section {
+  padding: 90px 0 100px 0;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.work-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 44px 24px 36px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 98, 254, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 98, 254, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.work-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.work-card:hover .work-card-icon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.work-card-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  transition: stroke var(--transition-fast);
+}
+
+.work-card:hover .work-card-icon svg {
+  stroke: var(--color-white);
+}
+
+.work-card-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.work-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-body);
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 1199px) {
+  .work-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .work-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Background Floating Translucent Glass Diamonds (Removed from HTML)
+   -------------------------------------------------------------------------- */
+.floating-glass-diamonds {
+  display: none !important;
+}

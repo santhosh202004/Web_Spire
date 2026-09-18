@@ -1,0 +1,209 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused CSS Code from Homepage (css/home.css)
+   Page: index.html
+   Date: 2026-09-10
+   Description:
+     This file preserves all unused CSS classes, animations, and media queries
+     removed from css/home.css. You can refer to or restore any of these rules
+     if needed in the future.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Legacy Hero Badge Pulse
+   -------------------------------------------------------------------------- */
+.hero-badge-pulse {
+  display: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Legacy 2-Column Hero Artwork Card & Floating Diagram Nodes
+   (Removed when the hero section was updated to a centered carousel)
+   -------------------------------------------------------------------------- */
+.hero-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-artwork-card {
+  width: 100%;
+  max-width: 490px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-tech-svg {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  filter: drop-shadow(0 12px 28px rgba(11, 27, 50, 0.05));
+  overflow: visible;
+}
+
+/* Floating Animations for Line-Art Diagram Nodes */
+.float-node-1 {
+  animation: floatSlow1 4s ease-in-out infinite;
+}
+
+.float-node-2 {
+  animation: floatSlow2 4.5s ease-in-out infinite;
+}
+
+.float-node-3 {
+  animation: floatSlow1 4.2s ease-in-out infinite 0.5s;
+}
+
+.float-node-4 {
+  animation: floatSlow2 3.8s ease-in-out infinite 0.8s;
+}
+
+@keyframes floatSlow1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSlow2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Legacy Hero Bottom Tab Switcher
+   -------------------------------------------------------------------------- */
+.hero-tabs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 36px;
+  border-top: 1px solid rgba(226, 232, 240, 0.85);
+  padding-top: 14px;
+  padding-bottom: 16px;
+  margin-top: 16px;
+}
+
+.hero-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 0 14px 0;
+  font-family: var(--font-family);
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.2s ease;
+  outline: none;
+}
+
+.hero-tab-btn:hover {
+  color: var(--color-heading, #0B1B32);
+}
+
+.hero-tab-num {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(100, 116, 139, 0.6);
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.hero-tab-title {
+  white-space: nowrap;
+}
+
+.hero-tab-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-cyan-accent, #00A3C4);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-tab-btn.active {
+  color: var(--color-heading, #0B1B32);
+  font-weight: 700;
+}
+
+.hero-tab-btn.active .hero-tab-num {
+  color: var(--color-cyan-accent, #00A3C4);
+}
+
+.hero-tab-btn.active .hero-tab-line {
+  transform: scaleX(1);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Legacy 4-Pillar Grid Media Queries (Replaced by Why Choose Us Accordion)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .why-pillars-grid {
+    gap: 28px 20px;
+  }
+
+  .pillar-card {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-pillars-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pillar-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 22px 18px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Redundant Testimonials Section Header Classes (Defined in common style.css)
+   -------------------------------------------------------------------------- */
+.testimonials-header .section-eyebrow {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-cyan-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+
+.testimonials-header .section-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+

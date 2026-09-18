@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B32" />
+      <stop offset="50%" stop-color="#0F2442" />
+      <stop offset="100%" stop-color="#071527" />
+    </linearGradient>
+
+    <!-- Cyan Accent Glow Gradient -->
+    <linearGradient id="cyanLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A3C4" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00A3C4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00A3C4" stop-opacity="0.20" />
+      <stop offset="60%" stop-color="#007799" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+      <circle cx="60" cy="60" r="1.5" fill="rgba(0, 229, 255, 0.18)" />
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)" />
+  <rect width="1920" height="1080" fill="url(#gridPattern)" />
+  <circle cx="960" cy="540" r="480" fill="url(#centerGlow)" />
+
+  <!-- Outer 100% Bleed Border -->
+  <rect x="2" y="2" width="1916" height="1076" fill="none" stroke="#00A3C4" stroke-width="4" stroke-opacity="0.8" />
+  <rect x="8" y="8" width="1904" height="1064" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" stroke-dasharray="8,6" />
+
+  <!-- 4 Corner Alignment Target Brackets -->
+  <!-- Top-Left -->
+  <path d="M 24 70 L 24 24 L 70 24" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" />
+  <text x="32" y="44" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">TOP-LEFT (0, 0)</text>
+
+  <!-- Top-Right -->
+  <path d="M 1850 24 L 1896 24 L 1896 70" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" />
+  <text x="1888" y="44" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="end">TOP-RIGHT (1920, 0)</text>
+
+  <!-- Bottom-Left -->
+  <path d="M 24 1010 L 24 1056 L 70 1056" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" />
+  <text x="32" y="1044" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">BOTTOM-LEFT (0, 1080)</text>
+
+  <!-- Bottom-Right -->
+  <path d="M 1850 1056 L 1896 1056 L 1896 1010" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" />
+  <text x="1888" y="1044" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="end">BOTTOM-RIGHT (1920, 1080)</text>
+
+  <!-- Header Navbar Allowance Guide (74px) -->
+  <line x1="0" y1="74" x2="1920" y2="74" stroke="rgba(255, 184, 0, 0.5)" stroke-width="1.5" stroke-dasharray="6,4" />
+  <rect x="32" y="52" width="280" height="20" rx="4" fill="rgba(255, 184, 0, 0.15)" stroke="rgba(255, 184, 0, 0.6)" stroke-width="1" />
+  <text x="42" y="66" fill="#FFC837" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">NAVBAR ZONE: ~74px TOP OFFSET</text>
+
+  <!-- Usable Viewport Indicator (~1006px) -->
+  <text x="1888" y="66" fill="rgba(255, 255, 255, 0.5)" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" text-anchor="end">REMAINING SCREEN HEIGHT: calc(100vh - 74px)</text>
+
+  <!-- 1240px Container Safe Zone (WebSpire Bootstrap Max-Width) -->
+  <rect x="340" y="74" width="1240" height="932" fill="rgba(0, 163, 196, 0.02)" stroke="#00A3C4" stroke-width="1.5" stroke-dasharray="8,6" rx="12" />
+  <rect x="356" y="90" width="310" height="26" rx="6" fill="#0B1B32" stroke="#00A3C4" stroke-width="1" />
+  <text x="368" y="107" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">SAFE CONTENT ZONE (1240px CONTAINER)</text>
+
+  <!-- Top Center Specification Banner (Clear of Central Hero Headline) -->
+  <rect x="730" y="88" width="460" height="30" rx="6" fill="#071527" stroke="#00A3C4" stroke-width="1.5" />
+  <text x="960" y="108" fill="#00E5FF" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle">WEBSPIRE LABS  •  1920 × 1080 px (16:9) CALIBRATION</text>
+
+  <!-- 992px Tablet Breakpoint Safe Zone -->
+  <line x1="464" y1="120" x2="464" y2="960" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="1456" y1="120" x2="1456" y2="960" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" stroke-dasharray="4,4" />
+  <text x="472" y="136" fill="rgba(255, 255, 255, 0.4)" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">992px TABLET</text>
+  <text x="1448" y="136" fill="rgba(255, 255, 255, 0.4)" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" text-anchor="end">992px TABLET</text>
+
+  <!-- Center Focal Axis Crosshairs (Clean Center for Hero Typography) -->
+  <line x1="100" y1="540" x2="1820" y2="540" stroke="url(#cyanLineGrad)" stroke-width="1.5" />
+  <line x1="960" y1="90" x2="960" y2="990" stroke="url(#cyanLineGrad)" stroke-width="1.5" />
+
+  <!-- Subtle Center Focal Rings (Non-Obtrusive) -->
+  <circle cx="960" cy="540" r="160" fill="none" stroke="rgba(0, 229, 255, 0.12)" stroke-width="1" stroke-dasharray="6,6" />
+  <circle cx="960" cy="540" r="90" fill="none" stroke="rgba(0, 229, 255, 0.2)" stroke-width="1" />
+  <circle cx="960" cy="540" r="8" fill="none" stroke="#00E5FF" stroke-width="2" />
+  <circle cx="960" cy="540" r="2" fill="#FFFFFF" />
+
+  <!-- Bottom Dimension & Calibration Information Bar -->
+  <rect x="660" y="960" width="600" height="34" rx="8" fill="#071527" fill-opacity="0.9" stroke="rgba(0, 163, 196, 0.5)" stroke-width="1" />
+  <text x="960" y="982" fill="#94A3B8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    Canvas: 1920×1080 | Container: 1240px | object-fit: cover | object-position: center center
+  </text>
+</svg>

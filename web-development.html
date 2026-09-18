@@ -165,7 +165,7 @@
               <a class="nav-link nav-link-custom" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom active" aria-current="page" href="services.html">Service</a>
+              <a class="nav-link nav-link-custom active" aria-current="page" href="services.html">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-custom" href="contact.html">Contact Us</a>
@@ -181,52 +181,20 @@
   </header>
 
   <!-- ==========================================================================
-       Breadcrumb Landmark Bar
-       ========================================================================== -->
-  <div class="service-breadcrumb-bar">
-    <div class="container">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-separator">&sol;</span>
-        <a href="services.html">Services</a>
-        <span class="breadcrumb-separator">&sol;</span>
-        <span class="breadcrumb-current" aria-current="page">Web Development</span>
-      </nav>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
        Main Content Area
        ========================================================================== -->
   <main id="main-content">
 
     <!-- ==========================================================================
-         W1. Web Development Hero Banner (Unified Master Hero Design)
+         W1. Web Development Hero Banner (Unified Master Hero Design — Matches services.html)
          ========================================================================== -->
-    <section class="hero-section" id="web-dev-hero" aria-labelledby="web-dev-hero-title">
-      <!-- High-Tech Constellation & Network Mesh Backdrop -->
-      <div class="hero-network-backdrop" aria-hidden="true">
-        <svg class="hero-constellation-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="heroGlow" cx="50%" cy="35%" r="65%">
-              <stop offset="0%" stop-color="rgba(0, 163, 196, 0.10)" />
-              <stop offset="55%" stop-color="rgba(0, 163, 196, 0.03)" />
-              <stop offset="100%" stop-color="rgba(244, 245, 247, 0)" />
-            </radialGradient>
-            <pattern id="dotGrid" width="36" height="36" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.2" fill="rgba(11, 27, 50, 0.045)" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#heroGlow)" />
-          <rect width="100%" height="100%" fill="url(#dotGrid)" />
-        </svg>
-      </div>
-
+    <section class="hero-section subpage-hero" id="web-dev-hero" aria-labelledby="web-dev-hero-title">
       <div class="container hero-container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-md-11 col-lg-9 col-xl-8 mx-auto hero-text-col text-center">
-            <span class="hero-slide-badge">
-              FULL-CYCLE WEB ENGINEERING
+          <!-- Center Content (Unified Inner-Page Banner) -->
+          <div class="col-12 hero-text-col">
+            <span class="section-eyebrow hero-slide-badge">
+              WEB DEVELOPMENT SERVICES
             </span>
             <h1 class="hero-headline" id="web-dev-hero-title">
               Custom Web Development Built for<br>
@@ -240,8 +208,8 @@
                 Start Your Project
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
-              <a href="#capabilities" class="btn-hero-secondary">
-                Explore Capabilities
+              <a href="#industries" class="btn-hero-secondary">
+                Explore Industries
               </a>
             </div>
           </div>
@@ -250,641 +218,1898 @@
     </section>
 
     <!-- ==========================================================================
-         W2. Performance & Core Web Vitals Feature Strip (4 Key Metrics)
+         W2. 12 Industry-Specific Website Design Solutions (Cards Grid)
          ========================================================================== -->
-    <section class="vitals-strip-section" aria-label="Performance Standards">
+    <section class="industry-solutions-section" id="industries" aria-labelledby="industriesTitle">
       <div class="container">
-        <div class="vitals-grid">
-          
-          <div class="vitals-card">
-            <div class="vitals-icon-box" aria-hidden="true">
+        
+        <div class="section-header-center">
+          <span class="section-eyebrow">TAILORED INDUSTRY SOLUTIONS</span>
+          <h2 class="section-title" id="industriesTitle">Industry-Specific Professional Website Design</h2>
+          <p class="section-subtitle">
+            We engineer high-converting, compliance-ready web solutions tailored specifically to the workflows, clientele, and lead-generation needs of modern professional practices.
+          </p>
+        </div>
+
+        <div class="industries-grid">
+
+          <!-- Industry Card 1: Law Firms -->
+          <article class="industry-card" id="card-legal">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                <path d="M12 3v18"></path>
+                <path d="m4 7 8-4 8 4"></path>
+                <path d="M6 18H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2"></path>
+                <path d="M18 18h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path>
+                <path d="M10 21h4"></path>
               </svg>
             </div>
-            <div class="vitals-content">
-              <span class="vitals-metric">&lt; 1.2s</span>
-              <span class="vitals-label">First Contentful Paint (FCP)</span>
-            </div>
-          </div>
+            <h3 class="industry-title">Law Firm Website Design</h3>
+            <a href="law-firm-website-design.html" class="btn-industry-action" aria-label="Learn More about Law Firm Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-          <div class="vitals-card">
-            <div class="vitals-icon-box" aria-hidden="true">
+          <!-- Industry Card 2: Accounting & CA -->
+          <article class="industry-card" id="card-accounting">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
               </svg>
             </div>
-            <div class="vitals-content">
-              <span class="vitals-metric">100%</span>
-              <span class="vitals-label">Mobile-First Fluid UI</span>
-            </div>
-          </div>
+            <h3 class="industry-title">Accounting &amp; CA Website Design</h3>
+            <a href="contact.html?service=web-development&industry=accounting" class="btn-industry-action" aria-label="Learn More about Accounting &amp; CA Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-          <div class="vitals-card">
-            <div class="vitals-icon-box" aria-hidden="true">
+          <!-- Industry Card 3: Consulting & Advisory -->
+          <article class="industry-card" id="card-consulting">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
             </div>
-            <div class="vitals-content">
-              <span class="vitals-metric">99.9%</span>
-              <span class="vitals-label">Uptime Architecture</span>
-            </div>
-          </div>
+            <h3 class="industry-title">Consulting Firm Website Design</h3>
+            <a href="contact.html?service=web-development&industry=consulting" class="btn-industry-action" aria-label="Learn More about Consulting Firm Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-          <div class="vitals-card">
-            <div class="vitals-icon-box" aria-hidden="true">
+          <!-- Industry Card 4: Healthcare & Medical -->
+          <article class="industry-card" id="card-healthcare">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="industry-title">Healthcare &amp; Medical Web Design</h3>
+            <a href="contact.html?service=web-development&industry=healthcare" class="btn-industry-action" aria-label="Learn More about Healthcare &amp; Medical Web Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 5: Real Estate -->
+          <article class="industry-card" id="card-realestate">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3 class="industry-title">Real Estate Professional Web Design</h3>
+            <a href="contact.html?service=web-development&industry=real-estate" class="btn-industry-action" aria-label="Learn More about Real Estate Professional Web Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 6: Financial Services -->
+          <article class="industry-card" id="card-finance">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="industry-title">Financial Services Website Design</h3>
+            <a href="contact.html?service=web-development&industry=finance" class="btn-industry-action" aria-label="Learn More about Financial Services Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 7: IT & Technology -->
+          <article class="industry-card" id="card-technology">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="industry-title">IT &amp; Technology Service Web Design</h3>
+            <a href="contact.html?service=web-development&industry=it-technology" class="btn-industry-action" aria-label="Learn More about IT &amp; Technology Service Web Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 8: Engineering Services -->
+          <article class="industry-card" id="card-engineering">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="industry-title">Engineering Services Website Design</h3>
+            <a href="contact.html?service=web-development&industry=engineering" class="btn-industry-action" aria-label="Learn More about Engineering Services Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 9: Marketing & Creative Agencies -->
+          <article class="industry-card" id="card-agency">
+            <div class="industry-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              </svg>
+            </div>
+            <h3 class="industry-title">Marketing Agency Website Design</h3>
+            <a href="contact.html?service=web-development&industry=agency" class="btn-industry-action" aria-label="Learn More about Marketing Agency Website Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
+
+          <!-- Industry Card 10: Corporate B2B -->
+          <article class="industry-card" id="card-corporate">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-            <div class="vitals-content">
-              <span class="vitals-metric">100/100</span>
-              <span class="vitals-label">Core Web Vitals Ready</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         W3. Specialized Web Development Capabilities (6 High-Value Cards)
-         ========================================================================== -->
-    <section class="capabilities-section" id="capabilities" aria-labelledby="capabilitiesTitle">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <!-- <span class="section-eyebrow">OUR CORE CAPABILITIES</span> -->
-          <h2 class="section-title" id="capabilitiesTitle">Engineered for Complex Business Challenges</h2>
-          <p class="section-subtitle">
-            From modern responsive interfaces to distributed enterprise cloud backends, we deliver end-to-end web engineering that drives tangible business outcomes.
-          </p>
-        </div>
-
-        <div class="capabilities-grid">
-
-          <!-- Capability Card 1: Custom Web Applications -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-              <h3 class="capability-title">Custom Web Applications (SPA &amp; SSR)</h3>
-              <p class="capability-desc">
-                High-interactivity single-page applications and server-rendered web portals engineered with React, Next.js, and TypeScript for instantaneous load times and seamless UX.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Component-driven modular architecture</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Dynamic state management (Zustand / Redux)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Server-side rendering (SSR) for high SEO ranking</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">React</span>
-              <span class="capability-tag">Next.js</span>
-              <span class="capability-tag">TypeScript</span>
-            </div>
+            <h3 class="industry-title">Corporate B2B Services Web Design</h3>
+            <a href="contact.html?service=web-development&industry=corporate-b2b" class="btn-industry-action" aria-label="Learn More about Corporate B2B Services Web Design">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </article>
 
-          <!-- Capability Card 2: Enterprise SaaS & Portals -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <h3 class="capability-title">Enterprise SaaS Platforms &amp; Portals</h3>
-              <p class="capability-desc">
-                Scalable, multi-tenant cloud SaaS systems with role-based access control (RBAC), multi-region databases, enterprise billing integration, and real-time operational analytics.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Multi-tenant database tenancy isolation</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>OAuth2, SSO &amp; JWT authentication pipelines</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>High-concurrency microservices infrastructure</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">Node.js</span>
-              <span class="capability-tag">PostgreSQL</span>
-              <span class="capability-tag">AWS</span>
-            </div>
-          </article>
-
-          <!-- Capability Card 3: E-Commerce & Storefronts -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="21" r="1"></circle>
-                  <circle cx="20" cy="21" r="1"></circle>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-              </div>
-              <h3 class="capability-title">E-Commerce &amp; Custom Storefronts</h3>
-              <p class="capability-desc">
-                Conversion-focused digital storefronts, customized Shopify/WooCommerce ecosystems, and headless commerce platforms with sub-second page transitions and secure checkout flows.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Frictionless 1-click checkout &amp; payment gateways</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Real-time inventory &amp; ERP synchronization</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Cart abandonment recovery &amp; analytics tracking</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">Headless</span>
-              <span class="capability-tag">Stripe</span>
-              <span class="capability-tag">Redis</span>
-            </div>
-          </article>
-
-          <!-- Capability Card 4: Headless CMS Architecture -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <h3 class="capability-title">Headless CMS &amp; Content Architecture</h3>
-              <p class="capability-desc">
-                Decoupled content management systems empowering non-technical editorial teams while allowing frontend developers to build ultra-fast, tailored web experiences without CMS bloat.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Strapi, Sanity &amp; WordPress REST integrations</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Dynamic preview &amp; live editorial workflows</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Static generation (SSG) with incremental rebuilds</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">Strapi</span>
-              <span class="capability-tag">Sanity</span>
-              <span class="capability-tag">GraphQL</span>
-            </div>
-          </article>
-
-          <!-- Capability Card 5: Progressive Web Apps (PWA) -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                </svg>
-              </div>
-              <h3 class="capability-title">Progressive Web Applications (PWA)</h3>
-              <p class="capability-desc">
-                Websites that behave like native mobile apps. Fast, installable directly from the browser without app store hurdles, featuring offline caching and background sync capabilities.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Service workers for instant offline accessibility</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Native mobile push notifications support</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Smooth 60fps touch-optimized interactions</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">PWA</span>
-              <span class="capability-tag">Service Workers</span>
-              <span class="capability-tag">IndexedDB</span>
-            </div>
-          </article>
-
-          <!-- Capability Card 6: RESTful & GraphQL APIs -->
-          <article class="capability-card">
-            <div>
-              <div class="capability-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="18" cy="5" r="3"></circle>
-                  <circle cx="6" cy="12" r="3"></circle>
-                  <circle cx="18" cy="19" r="3"></circle>
-                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                </svg>
-              </div>
-              <h3 class="capability-title">RESTful &amp; GraphQL API Engineering</h3>
-              <p class="capability-desc">
-                Robust, well-documented backend services and integration hubs connecting your web application securely with CRM, payment systems, marketing tools, and internal legacy software.
-              </p>
-              <ul class="capability-checklist">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Strict Swagger / OpenAPI schema documentation</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Rate limiting, CORS &amp; API key authorization</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Automated webhook dispatchers &amp; queue handling</span>
-                </li>
-              </ul>
-            </div>
-            <div class="capability-tags">
-              <span class="capability-tag">GraphQL</span>
-              <span class="capability-tag">FastAPI</span>
-              <span class="capability-tag">Docker</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         W4. Real-World Project Showcase (Featured Architecture)
-         ========================================================================== -->
-    <section class="project-showcase-section" aria-labelledby="showcaseTitle">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <!-- <span class="section-eyebrow">PORTFOLIO EXCELLENCE</span> -->
-          <h2 class="section-title" id="showcaseTitle">Proven Web Engineering Deliveries</h2>
-          <p class="section-subtitle">
-            Explore recent web engineering projects built by WebSpire Labs delivering proven results, speed, and business impact.
-          </p>
-        </div>
-
-        <div class="project-cards-grid">
-
-          <!-- Project 1: Business Dashboard -->
-          <div class="project-card">
-            <div class="project-img-wrapper">
-              <img src="asstes/project-business-dashboard.jpg" alt="Enterprise Business Analytics Web Application" width="400" height="220" loading="lazy">
-              <span class="project-category-badge">SAAS &amp; ANALYTICS</span>
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-title">Cloud Business Intelligence Portal</h3>
-              <p class="project-card-desc">
-                A high-speed SaaS dashboard providing multi-tenant telemetry, automated recurring invoicing, and real-time revenue visualization.
-              </p>
-              <div class="project-tech-pills">
-                <span class="project-tech-pill">Next.js</span>
-                <span class="project-tech-pill">TypeScript</span>
-                <span class="project-tech-pill">PostgreSQL</span>
-              </div>
-              <a href="contact.html?service=web-development" class="project-link-btn">
-                Inquire Similar Solution
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 2: E-Commerce Platform -->
-          <div class="project-card">
-            <div class="project-img-wrapper">
-              <img src="asstes/project-ecommerce-platform.jpg" alt="Custom Headless E-Commerce Platform" width="400" height="220" loading="lazy">
-              <span class="project-category-badge">E-COMMERCE</span>
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-title">Omnichannel Retail Storefront</h3>
-              <p class="project-card-desc">
-                Headless e-commerce platform with automated logistics tracking, lightning-fast product filtering, and multi-currency payment checkout.
-              </p>
-              <div class="project-tech-pills">
-                <span class="project-tech-pill">React</span>
-                <span class="project-tech-pill">Node.js</span>
-                <span class="project-tech-pill">Stripe</span>
-              </div>
-              <a href="contact.html?service=web-development" class="project-link-btn">
-                Inquire Similar Solution
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 3: Corporate Website -->
-          <div class="project-card">
-            <div class="project-img-wrapper">
-              <img src="asstes/project-corporate-website.jpg" alt="Corporate Brand Web Portal" width="400" height="220" loading="lazy">
-              <span class="project-category-badge">ENTERPRISE PORTAL</span>
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-title">Modern Corporate Platform</h3>
-              <p class="project-card-desc">
-                Interactive corporate web presence built for high conversion, search authority, seamless multilingual support, and sub-second load times.
-              </p>
-              <div class="project-tech-pills">
-                <span class="project-tech-pill">HTML5/CSS3</span>
-                <span class="project-tech-pill">JavaScript</span>
-                <span class="project-tech-pill">SEO Suite</span>
-              </div>
-              <a href="contact.html?service=web-development" class="project-link-btn">
-                Inquire Similar Solution
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         W5. Technology Stack Ecosystem (Categorized Badges)
-         ========================================================================== -->
-    <section class="tech-ecosystem-section" aria-labelledby="techEcosystemTitle">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <!-- <span class="section-eyebrow">TECHNOLOGY STACK</span> -->
-          <h2 class="section-title" id="techEcosystemTitle">Modern Frameworks &amp; Tooling</h2>
-          <p class="section-subtitle">
-            We employ industry-leading, proven technologies that guarantee maintainability, long-term scalability, and peak developer velocity.
-          </p>
-        </div>
-
-        <div class="tech-categories-grid">
-
-          <!-- Front-End Stack -->
-          <div class="tech-cat-card">
-            <div class="tech-cat-header">
-              <div class="tech-cat-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <h3 class="tech-cat-title">Front-End &amp; Client Architecture</h3>
-            </div>
-            <div class="tech-items-wrap">
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 115 102" fill="none"><ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="7"/><ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="7" transform="rotate(60 57.5 51)"/><ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="7" transform="rotate(120 57.5 51)"/><circle cx="57.5" cy="51" r="10" fill="#00D8FF"/></svg>
-                <span>React.js</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 180 180" fill="none"><circle cx="90" cy="90" r="90" fill="#000"/><path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="#FFF"/><rect x="113" y="48" width="16" height="84" fill="#FFF"/></svg>
-                <span>Next.js</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 128 128" fill="none"><rect width="128" height="128" rx="20" fill="#3178C6"/><path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFF"/><path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFF"/></svg>
-                <span>TypeScript</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 128 128" fill="none"><path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/><path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/></svg>
-                <span>Vue.js</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 128 128" fill="none"><path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/></svg>
-                <span>Tailwind CSS</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 128 128" fill="none"><rect width="128" height="128" rx="20" fill="#F7DF1E"/><path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000"/><path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000"/></svg>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Back-End Stack -->
-          <div class="tech-cat-card">
-            <div class="tech-cat-header">
-              <div class="tech-cat-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                </svg>
-              </div>
-              <h3 class="tech-cat-title">Back-End &amp; Cloud Infrastructure</h3>
-            </div>
-            <div class="tech-items-wrap">
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 128 128" fill="none"><path d="M64 12L112 39.7V95.3L64 123L16 95.3V39.7L64 12Z" fill="#339933"/></svg>
-                <span>Node.js</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0062FE" stroke-width="2"><path d="M4 14h6m-6 4h16M4 10h16M4 6h16"/></svg>
-                <span>Express</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#3178C6" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Python</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                <span>PostgreSQL</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#4DB33D" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                <span>MongoDB</span>
-              </div>
-              <div class="tech-pill-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#E10098" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg>
-                <span>GraphQL</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         W6. 5-Stage Engineering Lifecycle (Methodology & Deliverables)
-         ========================================================================== -->
-    <section class="engineering-lifecycle-section" aria-labelledby="lifecycleTitle">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <!-- <span class="section-eyebrow">OUR METHODOLOGY</span> -->
-          <h2 class="section-title" id="lifecycleTitle">5-Stage Web Engineering Lifecycle</h2>
-          <p class="section-subtitle">
-            A battle-tested agile framework engineered for predictable delivery, zero scope surprises, and spotless code hygiene.
-          </p>
-        </div>
-
-        <div class="lifecycle-steps-grid">
-
-          <!-- Stage 1 -->
-          <div class="lifecycle-step-card">
-            <div class="lifecycle-step-number">01</div>
-            <h3 class="lifecycle-step-title">Discovery &amp; Spec</h3>
-            <p class="lifecycle-step-desc">
-              Requirement elicitation, competitor research, user journey mapping, and detailed technical architecture planning.
-            </p>
-            <div class="lifecycle-deliverable">Output: Technical Blueprint</div>
-          </div>
-
-          <!-- Stage 2 -->
-          <div class="lifecycle-step-card">
-            <div class="lifecycle-step-number">02</div>
-            <h3 class="lifecycle-step-title">UI/UX &amp; Prototyping</h3>
-            <p class="lifecycle-step-desc">
-              Wireframes, high-fidelity Figma components, interactive user testing, and complete design system establishment.
-            </p>
-            <div class="lifecycle-deliverable">Output: Figma Design System</div>
-          </div>
-
-          <!-- Stage 3 -->
-          <div class="lifecycle-step-card">
-            <div class="lifecycle-step-number">03</div>
-            <h3 class="lifecycle-step-title">Full-Stack Sprints</h3>
-            <p class="lifecycle-step-desc">
-              Agile 2-week development sprints, modular frontend styling, robust database schemas, and microservice APIs.
-            </p>
-            <div class="lifecycle-deliverable">Output: Staging Environment</div>
-          </div>
-
-          <!-- Stage 4 -->
-          <div class="lifecycle-step-card">
-            <div class="lifecycle-step-number">04</div>
-            <h3 class="lifecycle-step-title">QA &amp; Vitals Audit</h3>
-            <p class="lifecycle-step-desc">
-              Automated end-to-end testing, cross-browser validation, vulnerability penetration scans, and Core Web Vitals profiling.
-            </p>
-            <div class="lifecycle-deliverable">Output: Audit &amp; Test Report</div>
-          </div>
-
-          <!-- Stage 5 -->
-          <div class="lifecycle-step-card">
-            <div class="lifecycle-step-number">05</div>
-            <h3 class="lifecycle-step-title">Launch &amp; Scaling</h3>
-            <p class="lifecycle-step-desc">
-              Zero-downtime production deployment, CDN setup, DNS routing, real-time APM telemetry, and handover.
-            </p>
-            <div class="lifecycle-deliverable">Output: Live Production Release</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         W7. Why Choose WebSpire Labs (Differentiators & Guarantees)
-         ========================================================================== -->
-    <section class="why-web-section" aria-labelledby="whyWebTitle">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <!-- <span class="section-eyebrow">WHY WEBSPIRE LABS</span> -->
-          <h2 class="section-title" id="whyWebTitle">Why Leading Brands Choose Us</h2>
-          <p class="section-subtitle">
-            We don't just deliver code — we partner to engineer web solutions that convert visitors into lifetime customers.
-          </p>
-        </div>
-
-        <div class="why-features-grid">
-
-          <div class="why-feature-card">
-            <div class="why-feature-icon" aria-hidden="true">
+          <!-- Industry Card 11: Education & Coaching -->
+          <article class="industry-card" id="card-education">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
             </div>
-            <h3 class="why-feature-title">100% Code Ownership</h3>
-            <p class="why-feature-desc">
-              Full intellectual property rights, non-proprietary tech stacks, and fully commented git repositories upon delivery.
-            </p>
-          </div>
+            <h3 class="industry-title">Professional Coaching &amp; Academy Websites</h3>
+            <a href="contact.html?service=web-development&industry=education" class="btn-industry-action" aria-label="Learn More about Professional Coaching &amp; Academy Websites">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-          <div class="why-feature-card">
-            <div class="why-feature-icon" aria-hidden="true">
+          <!-- Industry Card 12: Website Redesign -->
+          <article class="industry-card" id="card-redesign">
+            <div class="industry-icon-wrap" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
               </svg>
             </div>
-            <h3 class="why-feature-title">Obsessive Performance</h3>
-            <p class="why-feature-desc">
-              Sub-second page rendering, automated image compression, and high Google PageSpeed scores guaranteed out-of-the-box.
-            </p>
-          </div>
-
-          <div class="why-feature-card">
-            <div class="why-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <h3 class="why-feature-title">Security by Design</h3>
-            <p class="why-feature-desc">
-              Enterprise SSL/TLS encryption, CSRF/XSS protection, secure SQL query parametrization, and continuous dependency patching.
-            </p>
-          </div>
-
-          <div class="why-feature-card">
-            <div class="why-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-            </div>
-            <h3 class="why-feature-title">Transparent Sprints</h3>
-            <p class="why-feature-desc">
-              Weekly progress reviews, direct developer communication, staging environment preview links, and zero hidden costs.
-            </p>
-          </div>
+            <h3 class="industry-title">Professional Service Website Redesign</h3>
+            <a href="contact.html?service=web-development&industry=website-redesign" class="btn-industry-action" aria-label="Learn More about Professional Service Website Redesign">
+              <span>Learn More</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         W8. Frequently Asked Questions (SEO Rich Snippet Accordion)
+         W3. 5-Stage Engineering Lifecycle / Sprint Roadmap (Minimalist Stepper)
+         ========================================================================== -->
+    <section class="process-section" id="process" aria-labelledby="processTitle">
+      <div class="container">
+        
+        <div class="section-header-center">
+          <span class="section-eyebrow">OUR PROVEN PROCESS</span>
+          <h2 class="section-title" id="processTitle">5-Stage Engineering Lifecycle</h2>
+          <p class="section-subtitle">
+            From technical discovery to zero-downtime deployment, our structured agile sprints deliver high-performance web applications with complete transparency.
+          </p>
+        </div>
+
+        <div class="process-steps-container">
+
+          <!-- Row 1: Steps 1, 2, 3 -->
+          <div class="process-steps-row process-row-top">
+
+            <!-- Step 1 -->
+            <div class="process-step-item">
+              <div class="process-step-num" aria-label="Step 1">1</div>
+              <h3 class="process-step-title">Discovery &amp; Architecture</h3>
+              <p class="process-step-desc">
+                We audit your business workflows, define technical requirements, and architect a scalable database schema and system blueprint.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step-item">
+              <div class="process-step-num" aria-label="Step 2">2</div>
+              <h3 class="process-step-title">UI/UX &amp; Prototyping</h3>
+              <p class="process-step-desc">
+                We design pixel-perfect Figma interfaces, design systems, and responsive user flows crafted specifically for high conversion.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step-item">
+              <div class="process-step-num" aria-label="Step 3">3</div>
+              <h3 class="process-step-title">Agile Sprint Development</h3>
+              <p class="process-step-desc">
+                We write clean, modular frontend and robust API backend code with bi-weekly sprint demos and live staging previews.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Row 2: Steps 4, 5 (Centered) -->
+          <div class="process-steps-row process-row-bottom">
+
+            <!-- Step 4 -->
+            <div class="process-step-item">
+              <div class="process-step-num" aria-label="Step 4">4</div>
+              <h3 class="process-step-title">QA &amp; Speed Optimization</h3>
+              <p class="process-step-desc">
+                We execute comprehensive automated testing, Core Web Vitals performance tuning, and strict enterprise security hardening.
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step-item">
+              <div class="process-step-num" aria-label="Step 5">5</div>
+              <h3 class="process-step-title">Deployment &amp; Handover</h3>
+              <p class="process-step-desc">
+                We manage seamless cloud deployment, DNS configuration, search console indexing, and transfer 100% full source code ownership.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         W4. Our Technology Expertise (Interactive Tabbed Slider — Matches Services)
+         ========================================================================== -->
+    <section class="tech-stack-section" id="tech-stack" aria-labelledby="techStackTitle">
+      <div class="container">
+        
+        <div class="section-header-center tech-expertise-header">
+          <span class="section-eyebrow">OUR TECHNOLOGY STACK</span>
+          <h2 class="section-title tech-expertise-title" id="techStackTitle">Our Technology Expertise</h2>
+        </div>
+
+        <!-- Category Navigation Tabs -->
+        <nav class="tech-tabs-nav" role="tablist" aria-label="Technology Categories">
+          <button type="button" class="tech-tab-btn active" id="tab-web-dev" data-target="panel-web-dev" role="tab" aria-selected="true" aria-controls="panel-web-dev">Web Development</button>
+          <button type="button" class="tech-tab-btn" id="tab-front-end" data-target="panel-front-end" role="tab" aria-selected="false" aria-controls="panel-front-end">Front End</button>
+          <button type="button" class="tech-tab-btn" id="tab-back-end" data-target="panel-back-end" role="tab" aria-selected="false" aria-controls="panel-back-end">Back End</button>
+          <button type="button" class="tech-tab-btn" id="tab-db" data-target="panel-db" role="tab" aria-selected="false" aria-controls="panel-db">DB</button>
+          <button type="button" class="tech-tab-btn" id="tab-cloud" data-target="panel-cloud" role="tab" aria-selected="false" aria-controls="panel-cloud">Cloud &amp; DevOps</button>
+        </nav>
+
+        <!-- Tab Panels Container -->
+        <div class="tech-panels-container">
+          <!-- Tab Panel: panel-web-dev -->
+          <div class="tech-tab-panel active" id="panel-web-dev" role="tabpanel">
+            <div class="tech-carousel-wrapper">
+              <button type="button" class="tech-carousel-arrow prev" aria-label="Previous technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="tech-carousel-track">
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Tailwind CSS</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Tailwind CSS</span>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="28" fill="#7952B3"/>
+                      <path d="M42 34H68C78 34 85 39 85 47C85 53 81 58 74 60C83 62 88 68 88 77C88 87 79 94 67 94H42V34ZM56 46V58H67C72 58 75 56 75 52C75 48 72 46 67 46H56ZM56 70V82H68C74 82 77 80 77 76C77 72 74 70 68 70H56Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Bootstrap</span>
+                </div>
+
+                <!-- Node.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 12L112 39.7V95.3L64 123L16 95.3V39.7L64 12Z" fill="#339933"/>
+                      <path d="M64 22L103 44.5V89.5L64 112L25 89.5V44.5L64 22Z" fill="#5FA04E"/>
+                      <path d="M48 55C48 49 53 45 61 45C68 45 74 48 78 52L72 58C69 55 66 54 62 54C57 54 55 56 55 59C55 62 57 64 64 66C73 69 78 73 78 80C78 87 72 92 63 92C55 92 48 88 44 83L50 77C54 81 58 83 63 83C68 83 71 81 71 78C71 75 68 73 61 71C53 68 48 64 48 55Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Node.js</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M63.5 12C41.3 12 42.7 21.6 42.7 21.6L42.8 31.6H64V34.8H34.4C22.6 34.8 12 46.2 12 63.8C12 81.4 22.3 80.6 22.3 80.6H29.1V71C29.1 59.8 38.6 50.3 49.8 50.3H70.9C79.8 50.3 87 43.1 87 34.2V21.6C87 21.6 85.8 12 63.5 12ZM53.6 20.3C56.6 20.3 59 22.7 59 25.7C59 28.7 56.6 31.1 53.6 31.1C50.6 31.1 48.2 28.7 48.2 25.7C48.2 22.7 50.6 20.3 53.6 20.3Z" fill="#3776AB"/>
+                      <path d="M64.5 116C86.7 116 85.3 106.4 85.3 106.4L85.2 96.4H64V93.2H93.6C105.4 93.2 116 81.8 116 64.2C116 46.6 105.7 47.4 105.7 47.4H98.9V57C98.9 68.2 89.4 77.7 78.2 77.7H57.1C48.2 77.7 41 84.9 41 93.8V106.4C41 106.4 42.2 116 64.5 116ZM74.4 107.7C71.4 107.7 69 105.3 69 102.3C69 99.3 71.4 96.9 74.4 96.9C77.4 96.9 79.8 99.3 79.8 102.3C79.8 105.3 77.4 107.7 74.4 107.7Z" fill="#FFD43B"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Python</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#336791"/>
+                      <path d="M64 24C44 24 32 38 32 58C32 76 43 90 57 95V104H71V95C85 90 96 76 96 58C96 38 84 24 64 24ZM52 50C55.3 50 58 52.7 58 56C58 59.3 55.3 62 52 62C48.7 62 46 59.3 46 56C46 52.7 48.7 50 52 50ZM76 50C79.3 50 82 52.7 82 56C82 59.3 79.3 62 76 62C72.7 62 70 59.3 70 56C70 52.7 72.7 50 76 50Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">PostgreSQL</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#2496ED"/>
+                      <path d="M108 58C105 58 102.5 59.5 101 62C97.5 59.5 93 58 88 58C86.5 58 85 58.3 83.5 58.7C80 50 72 44 62 44H34V76C34 88.5 44 98.5 56.5 98.5C74 98.5 88.5 87 93.5 72C99 72 104 69 107.5 64C108.5 64.2 109.5 64.2 110.5 64C114 63.3 116 60.5 116 60.5C116 60.5 113.5 58 108 58Z" fill="#FFFFFF"/>
+                      <rect x="42" y="52" width="10" height="8" fill="#2496ED"/>
+                      <rect x="54" y="52" width="10" height="8" fill="#2496ED"/>
+                      <rect x="66" y="52" width="10" height="8" fill="#2496ED"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Docker</span>
+                </div>
+              </div>
+
+              <button type="button" class="tech-carousel-arrow next" aria-label="Next technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Panel: panel-front-end -->
+          <div class="tech-tab-panel" id="panel-front-end" role="tabpanel">
+            <div class="tech-carousel-wrapper">
+              <button type="button" class="tech-carousel-arrow prev" aria-label="Previous technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="tech-carousel-track">
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Tailwind CSS</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Tailwind CSS</span>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="28" fill="#7952B3"/>
+                      <path d="M42 34H68C78 34 85 39 85 47C85 53 81 58 74 60C83 62 88 68 88 77C88 87 79 94 67 94H42V34ZM56 46V58H67C72 58 75 56 75 52C75 48 72 46 67 46H56ZM56 70V82H68C74 82 77 80 77 76C77 72 74 70 68 70H56Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Bootstrap</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+              </div>
+
+              <button type="button" class="tech-carousel-arrow next" aria-label="Next technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Panel: panel-back-end -->
+          <div class="tech-tab-panel" id="panel-back-end" role="tabpanel">
+            <div class="tech-carousel-wrapper">
+              <button type="button" class="tech-carousel-arrow prev" aria-label="Previous technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="tech-carousel-track">
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#F7DF1E"/>
+                      <path d="M37 90C39.5 94.5 44 96.5 49 96.5C55 96.5 58.5 93 58.5 86.5V45H69.5V86.5C69.5 99.5 61.5 106.5 48.5 106.5C40 106.5 33.5 102 30 95L37 90Z" fill="#000000"/>
+                      <path d="M79 89C82 92 86.5 94.5 92.5 94.5C98.5 94.5 102 92 102 87.5C102 83 98.5 81 91 78C80 73.5 74 68.5 74 59.5C74 50 82 43.5 93.5 43.5C100 43.5 106 46 110 50.5L103.5 58.5C100.5 55.5 97 54 93 54C88.5 54 85 56 85 59.5C85 63 88 64.5 95.5 67.5C107 72 113.5 76.5 113.5 86.5C113.5 97.5 104.5 104.5 91.5 104.5C83 104.5 75 100.5 70 94.5L79 89Z" fill="#000000"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">JavaScript</span>
+                </div>
+
+                <!-- Vue.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M78.8 14H106.6L64 87.7L21.4 14H49.2L64 39.6L78.8 14Z" fill="#42B883"/>
+                      <path d="M78.8 14H95.4L64 68.4L32.6 14H49.2L64 39.6L78.8 14Z" fill="#35495E"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vue.js</span>
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 14L14 32L21.6 98L64 122L106.4 98L114 32L64 14Z" fill="#DD0031"/>
+                      <path d="M64 14V122L106.4 98L114 32L64 14Z" fill="#C3002F"/>
+                      <path d="M64 30L40 84H50.5L55.2 72.5H72.8L77.5 84H88L64 30ZM69.5 64H58.5L64 50.5L69.5 64Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Angular</span>
+                </div>
+
+                <!-- HTML5 & CSS3 -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M19 14L28 114L64 124L100 114L109 14H19Z" fill="#E44D26"/>
+                      <path d="M64 23V114L92 106L99 23H64Z" fill="#F16529"/>
+                      <path d="M64 48H44L46 64H64V48ZM64 77H47.5L49 92L64 96V77Z" fill="#EBEBEB"/>
+                      <path d="M64 48V64H82L80 77H64V96L79 92L80.5 77H96.5L94 106L64 114" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">HTML5 &amp; CSS3</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M34 56C38 40 48 34 64 34C84 34 86 48 98 50C106 51 112 46 116 38C112 54 102 60 86 60C66 60 64 46 52 44C44 43 38 48 34 56ZM12 90C16 74 26 68 42 68C62 68 64 82 76 84C84 85 90 80 94 72C90 88 80 94 64 94C44 94 42 80 30 78C22 77 16 82 12 90Z" fill="#38BDF8"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Tailwind CSS</span>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="28" fill="#7952B3"/>
+                      <path d="M42 34H68C78 34 85 39 85 47C85 53 81 58 74 60C83 62 88 68 88 77C88 87 79 94 67 94H42V34ZM56 46V58H67C72 58 75 56 75 52C75 48 72 46 67 46H56ZM56 70V82H68C74 82 77 80 77 76C77 72 74 70 68 70H56Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Bootstrap</span>
+                </div>
+
+                <!-- Node.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M64 12L112 39.7V95.3L64 123L16 95.3V39.7L64 12Z" fill="#339933"/>
+                      <path d="M64 22L103 44.5V89.5L64 112L25 89.5V44.5L64 22Z" fill="#5FA04E"/>
+                      <path d="M48 55C48 49 53 45 61 45C68 45 74 48 78 52L72 58C69 55 66 54 62 54C57 54 55 56 55 59C55 62 57 64 64 66C73 69 78 73 78 80C78 87 72 92 63 92C55 92 48 88 44 83L50 77C54 81 58 83 63 83C68 83 71 81 71 78C71 75 68 73 61 71C53 68 48 64 48 55Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Node.js</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M63.5 12C41.3 12 42.7 21.6 42.7 21.6L42.8 31.6H64V34.8H34.4C22.6 34.8 12 46.2 12 63.8C12 81.4 22.3 80.6 22.3 80.6H29.1V71C29.1 59.8 38.6 50.3 49.8 50.3H70.9C79.8 50.3 87 43.1 87 34.2V21.6C87 21.6 85.8 12 63.5 12ZM53.6 20.3C56.6 20.3 59 22.7 59 25.7C59 28.7 56.6 31.1 53.6 31.1C50.6 31.1 48.2 28.7 48.2 25.7C48.2 22.7 50.6 20.3 53.6 20.3Z" fill="#3776AB"/>
+                      <path d="M64.5 116C86.7 116 85.3 106.4 85.3 106.4L85.2 96.4H64V93.2H93.6C105.4 93.2 116 81.8 116 64.2C116 46.6 105.7 47.4 105.7 47.4H98.9V57C98.9 68.2 89.4 77.7 78.2 77.7H57.1C48.2 77.7 41 84.9 41 93.8V106.4C41 106.4 42.2 116 64.5 116ZM74.4 107.7C71.4 107.7 69 105.3 69 102.3C69 99.3 71.4 96.9 74.4 96.9C77.4 96.9 79.8 99.3 79.8 102.3C79.8 105.3 77.4 107.7 74.4 107.7Z" fill="#FFD43B"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Python</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#3178C6"/>
+                      <path d="M26 42H60V56H49V102H37V56H26V42Z" fill="#FFFFFF"/>
+                      <path d="M69 88.5C72 91 76.5 92.5 81.5 92.5C87 92.5 90.5 90 90.5 86C90.5 82 87 80 80 77.5C70 74 64 69.5 64 61C64 51.5 72 45 83 45C89 45 94.5 47 98 50.5L92 60C89.5 57.5 86 56 82.5 56C78 56 75.5 58 75.5 61C75.5 64.5 78.5 66 85.5 68.5C96 72.5 102 77 102 85.5C102 96 93.5 103.5 81 103.5C73.5 103.5 66.5 100.5 62 96L69 88.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">TypeScript</span>
+                </div>
+
+<div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 115 102" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(60 57.5 51)"/>
+                      <ellipse cx="57.5" cy="51" rx="54" ry="20" stroke="#00D8FF" stroke-width="6.5" transform="rotate(120 57.5 51)"/>
+                      <circle cx="57.5" cy="51" r="9.5" fill="#00D8FF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">React</span>
+                </div>
+
+                <!-- Next.js -->
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <circle cx="90" cy="90" r="90" fill="#000000"/>
+                      <path d="M149.5 160.5L70.5 48H52V132H68V68.5L141.5 172.5C144.3 168.8 147 164.8 149.5 160.5Z" fill="url(#nextGrad)"/>
+                      <rect x="113" y="48" width="16" height="84" fill="#FFFFFF"/>
+                      <defs>
+                        <linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="white"/>
+                          <stop offset="1" stop-color="white" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Next.js</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#E10098"/>
+                      <path d="M64 24L99 44V84L64 104L29 84V44L64 24Z" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+                      <circle cx="64" cy="24" r="9" fill="#FFFFFF"/>
+                      <circle cx="99" cy="44" r="9" fill="#FFFFFF"/>
+                      <circle cx="99" cy="84" r="9" fill="#FFFFFF"/>
+                      <circle cx="64" cy="104" r="9" fill="#FFFFFF"/>
+                      <circle cx="29" cy="84" r="9" fill="#FFFFFF"/>
+                      <circle cx="29" cy="44" r="9" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">GraphQL</span>
+                </div>
+              </div>
+
+              <button type="button" class="tech-carousel-arrow next" aria-label="Next technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Panel: panel-db -->
+          <div class="tech-tab-panel" id="panel-db" role="tabpanel">
+            <div class="tech-carousel-wrapper">
+              <button type="button" class="tech-carousel-arrow prev" aria-label="Previous technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="tech-carousel-track">
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#336791"/>
+                      <path d="M64 24C44 24 32 38 32 58C32 76 43 90 57 95V104H71V95C85 90 96 76 96 58C96 38 84 24 64 24ZM52 50C55.3 50 58 52.7 58 56C58 59.3 55.3 62 52 62C48.7 62 46 59.3 46 56C46 52.7 48.7 50 52 50ZM76 50C79.3 50 82 52.7 82 56C82 59.3 79.3 62 76 62C72.7 62 70 59.3 70 56C70 52.7 72.7 50 76 50Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">PostgreSQL</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#13AA52"/>
+                      <path d="M64 20C64 20 40 46 40 70C40 86 52 100 64 108C76 100 88 86 88 70C88 46 64 20 64 20Z" fill="#FFFFFF"/>
+                      <path d="M64 20V108C64 108 88 86 88 70C88 46 64 20 64 20Z" fill="#E8F5E9"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">MongoDB</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#DC382D"/>
+                      <path d="M64 32L94 48L64 64L34 48L64 32Z" fill="#FFFFFF"/>
+                      <path d="M34 56L64 72V96L34 80V56Z" fill="#FFFFFF" fill-opacity="0.85"/>
+                      <path d="M94 56L64 72V96L94 80V56Z" fill="#FFFFFF" fill-opacity="0.7"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Redis</span>
+                </div>
+              </div>
+
+              <button type="button" class="tech-carousel-arrow next" aria-label="Next technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Panel: panel-cloud -->
+          <div class="tech-tab-panel" id="panel-cloud" role="tabpanel">
+            <div class="tech-carousel-wrapper">
+              <button type="button" class="tech-carousel-arrow prev" aria-label="Previous technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="tech-carousel-track">
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#232F3E"/>
+                      <path d="M42 62L34 38H44L49 54L54 38H64L56 62H42Z" fill="#FFFFFF"/>
+                      <path d="M72 62L66 38H76L81 53L86 38H96L90 62H80L75 48L72 62Z" fill="#FFFFFF"/>
+                      <path d="M34 78C56 90 76 90 96 78C98 76.5 100 78 98.5 79.5C87 89 67 94 44 87C40 85.5 32 80 34 78Z" fill="#FF9900"/>
+                      <path d="M92 73L102 77L96 85L95 78L92 73Z" fill="#FF9900"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">AWS</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#2496ED"/>
+                      <path d="M108 58C105 58 102.5 59.5 101 62C97.5 59.5 93 58 88 58C86.5 58 85 58.3 83.5 58.7C80 50 72 44 62 44H34V76C34 88.5 44 98.5 56.5 98.5C74 98.5 88.5 87 93.5 72C99 72 104 69 107.5 64C108.5 64.2 109.5 64.2 110.5 64C114 63.3 116 60.5 116 60.5C116 60.5 113.5 58 108 58Z" fill="#FFFFFF"/>
+                      <rect x="42" y="52" width="10" height="8" fill="#2496ED"/>
+                      <rect x="54" y="52" width="10" height="8" fill="#2496ED"/>
+                      <rect x="66" y="52" width="10" height="8" fill="#2496ED"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Docker</span>
+                </div>
+
+                <div class="tech-item">
+                  <div class="tech-icon-box">
+                    <svg viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect width="128" height="128" rx="20" fill="#000000"/>
+                      <polygon points="64,28 104,98 24,98" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <span class="tech-name">Vercel</span>
+                </div>
+              </div>
+
+              <button type="button" class="tech-carousel-arrow next" aria-label="Next technologies">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- ==========================================================================
+         W5. Frequently Asked Questions (SEO Rich Snippet Accordion)
          ========================================================================== -->
     <section class="faq-section" aria-labelledby="faqTitle">
       <div class="container">
         
         <div class="section-header-center">
-          <!-- <span class="section-eyebrow">COMMON QUESTIONS</span> -->
+          <span class="section-eyebrow">COMMON QUESTIONS</span>
           <h2 class="section-title" id="faqTitle">Frequently Asked Questions</h2>
           <p class="section-subtitle">
             Get quick answers regarding timelines, frameworks, pricing, and our engineering standards.
@@ -952,44 +2177,6 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         W9. Full-Bleed Call to Action Banner (Blue Gradient, Matches About Us & Services)
-         ========================================================================== -->
-    <section class="about-cta-banner-section" aria-labelledby="ctaBannerTitle">
-      <div class="about-cta-bg-art" aria-hidden="true">
-        <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <circle cx="150" cy="160" r="280" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-          <circle cx="150" cy="160" r="180" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="8 8" />
-          <circle cx="1290" cy="160" r="320" stroke="rgba(0,163,196,0.12)" stroke-width="1.5" />
-          <circle cx="1290" cy="160" r="200" stroke="rgba(0,163,196,0.15)" stroke-width="1.5" stroke-dasharray="6 6" />
-        </svg>
-      </div>
-
-      <div class="container position-relative" style="z-index: 1;">
-        <div class="row align-items-center justify-content-between gy-4">
-          <div class="col-lg-8">
-            <h2 class="about-cta-title" id="ctaBannerTitle">
-              Ready to Build a High-Performance Web Solution?
-            </h2>
-            <p class="about-cta-subtitle">
-              Let's turn your vision into scalable, high-converting digital technology. Schedule a free technical discovery consultation today.
-            </p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <div class="about-cta-actions justify-content-lg-end">
-              <a href="contact.html?service=web-development" class="btn-about-cta-primary">
-                Schedule Consultation
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <a href="services.html" class="btn-about-cta-secondary">
-                View All Services
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ==========================================================================
@@ -1022,10 +2209,11 @@
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
-            <!-- Twitter / X -->
-            <a href="#" class="footer-social-link" aria-label="Follow WebSpire Labs on Twitter / X" rel="noopener noreferrer">
+            <!-- Email -->
+            <a href="mailto:webspirelabs@gmail.com" class="footer-social-link" aria-label="Email WebSpire Labs">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </a>
             <!-- Instagram -->
@@ -1125,13 +2313,15 @@
     <span class="whatsapp-tooltip">Chat with us</span>
   </a>
 
+
+
   <!-- Bootstrap 5 Bundle JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <!-- Custom Main JS -->
   <script src="js/main.js"></script>
 
-  <!-- Interactive Accordion & Current Year Scripts -->
+  <!-- Interactive Accordion, Year & Blueprint Modal Controller Scripts -->
   <script>
     // Dynamic Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -1165,6 +2355,19 @@
         }
       });
     });
+
+    // Make industry cards navigate directly to the Learn More link on click
+    document.querySelectorAll('.industry-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('.btn-industry-action')) {
+          const link = card.querySelector('.btn-industry-action');
+          if (link) link.click();
+        }
+      });
+    });
+
+
   </script>
 </body>
 </html>
+

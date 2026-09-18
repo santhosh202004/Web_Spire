@@ -1,0 +1,96 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused CSS Code from Services Page (css/services.css)
+   Page: services.html
+   Date: 2026-09-10
+   Description:
+     This file preserves all unused CSS classes and media queries removed from
+     css/services.css. You can refer to or restore any of these rules if needed.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tech Stack Empty State Fallback
+   -------------------------------------------------------------------------- */
+.tech-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94A3B8;
+  background: #F8FAFC;
+  border-radius: 14px;
+  border: 1px dashed #CBD5E1;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.tech-empty-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Legacy Dual-Button CTA Layout Styles
+   (Unified with .btn-about-cta on services.html)
+   -------------------------------------------------------------------------- */
+.btn-services-cta-outline svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+@media (max-width: 767px) {
+  .services-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-services-cta-white,
+  .btn-services-cta-outline {
+    justify-content: center;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Legacy Static Tech Stack Grid Media Queries
+   (Updated to interactive carousel .tech-carousel-wrapper)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Page-Level Section Header Overrides (Consolidated into common style.css)
+   -------------------------------------------------------------------------- */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan-accent, #00A3C4);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-heading, #0B1B32);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+

@@ -163,6 +163,7 @@ Web_spire/
 │
 └── document/                      # Architectural Blueprints & Design Specifications
     ├── DESIGN_SYSTEM_SPECIFICATION.md  # Comprehensive Architectural & BS5 Spec Guide
+    ├── HEADER_IMAGE_SPECIFICATIONS.md  # Full-Screen Header Image Dimensions & Implementation Guide
     ├── HOME_PAGE_SPECIFICATION.md      # Detailed Homepage Blueprint & Wireframes
     └── REMOVED_HOVER_EFFECTS.md        # UI/UX Transition Audit Logs
 ```
