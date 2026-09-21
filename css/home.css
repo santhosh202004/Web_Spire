@@ -31,7 +31,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* Header Background Hero Image */
@@ -311,7 +311,7 @@
    2. Services Section — Minimalist Flex Layout with Ambient Hover
    -------------------------------------------------------------------------- */
 .services-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
   position: relative;
 }
@@ -441,7 +441,7 @@
    3. Why Choose Us — 4 Feature Pillars (Flex Minimalist with Hover)
    -------------------------------------------------------------------------- */
 .why-choose-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -662,7 +662,7 @@
    -------------------------------------------------------------------------- */
 .testimonials-section {
   margin-top: 0;
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -879,7 +879,7 @@
    5. Our Work / Portfolio Grid (Image3 — Upper Half)
    -------------------------------------------------------------------------- */
 .portfolio-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
 }
 
@@ -954,51 +954,12 @@
   color: var(--color-muted);
 }
 
-.portfolio-cta-wrap {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.btn-portfolio-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 32px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: var(--radius-md);
-  border: none;
-  box-shadow: var(--shadow-cta);
-  text-decoration: none;
-  transition: all var(--transition-base);
-}
-
-.btn-portfolio-cta svg {
-  width: 16px;
-  height: 16px;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  transition: transform var(--transition-fast);
-}
-
-.btn-portfolio-cta:hover {
-  background-color: var(--color-primary-hover);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 98, 254, 0.38);
-}
-
-.btn-portfolio-cta:hover svg {
-  transform: translateX(4px);
-}
 
 /* --------------------------------------------------------------------------
    5.1 Call to Action Banner (Full-Bleed Gradient)
    -------------------------------------------------------------------------- */
 .about-cta-banner-section {
-  padding: 20px 0 0 0;
+  padding: 80px 0 0 0;
   background-color: var(--color-bg-subtle, #F8FAFC);
 }
 
@@ -1033,40 +994,6 @@
   margin-bottom: 28px;
 }
 
-.btn-about-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 34px;
-  background-color: var(--color-white, #FFFFFF);
-  color: var(--color-primary, #0062FE);
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: var(--radius-full, 9999px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: all var(--transition-base, 0.25s ease);
-  text-decoration: none;
-}
-
-.btn-about-cta svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-primary, #0062FE);
-  stroke-width: 2;
-  transition: transform var(--transition-fast, 0.15s ease);
-}
-
-.btn-about-cta:hover {
-  background-color: var(--color-midnight, #0B1B32);
-  color: var(--color-white, #FFFFFF);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-
-.btn-about-cta:hover svg {
-  stroke: var(--color-white, #FFFFFF);
-  transform: translateX(4px);
-}
 
 .about-cta-art-col {
   display: flex;
@@ -1182,10 +1109,6 @@
     font-size: 1.8rem;
   }
 
-  .btn-about-cta {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {

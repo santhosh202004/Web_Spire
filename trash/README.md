@@ -35,3 +35,31 @@ This directory contains archived, unused CSS classes and legacy components that 
      - Blueprint Modal & unused industry card sub-elements (`.blueprint-modal`, `.industry-desc`, `.industry-features-list`, etc.).
      - Hero Constellation & Network Backdrop (`.hero-network-backdrop`, `.hero-constellation-svg`).
      - Core Engineering Standards Wavy Connected Roadmap (`.standards-section`, `.standards-roadmap-wrap`, `.standards-wave-svg`, `.standards-nodes-track`, `.standards-node-item`, `.standards-circle`, etc.).
+
+6. **[style.css](style.css)** *(Archived: 2026-09-21)*
+   - Archived from: `css/style.css` (global stylesheet)
+   - Contains:
+     - Legacy header right actions & pill button (`.header-nav-actions`, `.btn-nav-pill`).
+     - Legacy custom dropdown menu, outline button & hamburger (`.nav-dropdown-chevron`, `.custom-dropdown-menu`, `.custom-dropdown-item`, `.btn-nav-outline`, `.btn-nav-hamburger`).
+     - Legacy minimal footer (`.footer-simple`).
+     - Obsolete responsive diamond frame & stats-grid media queries (`.diamond-image-frame`, `.stats-grid`, `.stat-card-item`, `.stat-icon-wrap`, `.stat-number`, `.stat-label`).
+     - Obsolete 4-column Why Pillars flex grid (`.why-pillars-grid`, `.pillar-card`, `.pillar-icon-wrap`, etc.).
+     - Obsolete feature / about block collage (`.feature-block-section`, `.feature-image-collage`, `.feature-img-main`, `.feature-img-secondary`, `.feature-clients-badge`, `.feature-checklist`, etc.).
+     - Obsolete portfolio CTA button (`.portfolio-cta-wrap`, `.btn-portfolio-cta`).
+     - Obsolete old CTA banner (`.cta-banner-section`, `.cta-banner-inner`, `.cta-banner-pixels`, `.btn-cta-banner`).
+     - Corresponding responsive media query rules across 1199px, 991px, and 767px breakpoints.
+
+7. **[law-firm-website-design.css](law-firm-website-design.css)** *(Archived: 2026-09-21)*
+   - Archived from: `css/law-firm-website-design.css` (for `law-firm-website-design.html`)
+   - Contains: Unused `.featured` state rules for `.legal-why-card.featured`.
+
+---
+
+## Archive Log
+- **2026-09-10**: Initial cleanup and decoupling of unused classes across `home.css`, `about.css`, `services.css`, `contact.css`, and `web-development.css`.
+- **2026-09-21**: Comprehensive audit, decoupling of 109 dead rules, and Mission & Vision redesign:
+  - Created `trash/style.css` with legacy navigation, stats, collage, and CTA banner rules.
+  - Updated `trash/home.css` with legacy `.portfolio-cta-wrap`, `.btn-portfolio-cta`, and `.btn-about-cta`.
+  - Updated `trash/about.css` with legacy `.btn-about-cta`, `.mv-center-donut`, `.mv-donut-svg`, and `.mv-title-underline`.
+  - Updated `trash/services.css` with legacy `.btn-about-cta`.
+  - Created `trash/law-firm-website-design.css` with unused `.featured` card rules.

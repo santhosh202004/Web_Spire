@@ -16,12 +16,15 @@
 
 /* Note: Hero Banner (A0.1) is styled by unified .subpage-hero in style.css */
 
+.highlight-blue {
+  color: var(--color-primary, #0062FE);
+}
 
 /* --------------------------------------------------------------------------
    A1. Who We Are Section (image5.png - Top)
    -------------------------------------------------------------------------- */
 .who-we-are-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -151,7 +154,7 @@
    A2. What We Do Inline Feature Strip (image5.png - Core Capabilities)
    -------------------------------------------------------------------------- */
 .what-we-do-strip {
-  padding: 20px 0 0 0;
+  padding: 80px 0 0 0;
   background-color: #FFFFFF;
   position: relative;
   z-index: 10;
@@ -241,7 +244,7 @@
    A3. Our Journey / Timeline (image5.png - Bottom)
    -------------------------------------------------------------------------- */
 .journey-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -384,10 +387,10 @@
 }
 
 /* --------------------------------------------------------------------------
-   A4. Mission & Vision Section (image7.png)
+   A4. Mission & Vision Section (Refined Card Design matching Screenshot 2)
    -------------------------------------------------------------------------- */
 .mission-vision-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -395,112 +398,117 @@
 
 .mv-panels-wrapper {
   display: grid;
-  grid-template-columns: 1fr 180px 1fr;
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: stretch;
   position: relative;
 }
 
 .mv-panel {
-  background: linear-gradient(145deg, #F0F6FF 0%, #FFFFFF 100%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 44px 36px;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-smooth);
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 16px;
+  padding: 40px 36px 42px 36px;
+  box-shadow: 0 4px 20px rgba(11, 27, 50, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
   height: 100%;
 }
 
 .mv-panel:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--color-border-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 98, 254, 0.08);
+  border-color: rgba(0, 98, 254, 0.3);
 }
 
 .mv-panel-icon {
-  width: 68px;
-  height: 68px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background-color: var(--color-primary-light);
+  background-color: #EBF3FE;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--color-primary);
+  color: var(--color-primary, #0062FE);
   transition: all var(--transition-base);
+  flex-shrink: 0;
 }
 
 .mv-panel:hover .mv-panel-icon {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary, #0062FE);
+  color: #FFFFFF;
   transform: scale(1.06);
 }
 
 .mv-panel-icon svg {
-  width: 34px;
-  height: 34px;
-  stroke: var(--color-primary);
-  stroke-width: 1.75;
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-primary, #0062FE);
+  stroke-width: 1.8;
   transition: stroke var(--transition-fast);
 }
 
 .mv-panel:hover .mv-panel-icon svg {
-  stroke: var(--color-white);
+  stroke: #FFFFFF;
 }
 
 .mv-eyebrow {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary, #0062FE);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 8px;
+  display: inline-block;
 }
 
 .mv-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--color-heading);
-  line-height: 1.25;
-  margin-bottom: 12px;
-}
-
-.mv-title-underline {
-  width: 44px;
-  height: 3.5px;
-  background-color: var(--color-primary);
-  border-radius: 2px;
-  margin-bottom: 20px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-heading, #0B1B32);
+  line-height: 1.35;
+  margin-bottom: 14px;
+  text-align: left;
 }
 
 .mv-desc {
   font-size: 0.94rem;
-  color: var(--color-body);
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.65;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
-/* Center Donut Ring with W Monogram */
-.mv-center-donut {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 5;
+/* Centered Bottom Blue Pill Accent Bar */
+.mv-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 3.5px;
+  background-color: var(--color-primary, #0062FE);
+  border-radius: 3px 3px 0 0;
+  transition: width 0.3s ease;
 }
 
-.mv-donut-svg {
-  width: 170px;
-  height: 170px;
-  filter: drop-shadow(0 10px 24px rgba(0, 98, 254, 0.18));
+.mv-panel:hover .mv-bottom-bar {
+  width: 84px;
 }
 
 /* --------------------------------------------------------------------------
    A5. Core Values Section (image6.png - Top)
    -------------------------------------------------------------------------- */
 .core-values-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -589,7 +597,7 @@
    A6. Our Approach Section (image6.png - Bottom)
    -------------------------------------------------------------------------- */
 .approach-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page);
   position: relative;
   overflow: hidden;
@@ -707,7 +715,7 @@
    A7. Our Commitment Block (image8.png - Top)
    -------------------------------------------------------------------------- */
 .commitment-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -914,7 +922,7 @@
    A8. About Page Full-Bleed CTA Banner (image8.png - Bottom)
    -------------------------------------------------------------------------- */
 .about-cta-banner-section {
-  padding: 20px 0 0 0;
+  padding: 80px 0 0 0;
   background-color: var(--color-bg-subtle);
 }
 
@@ -946,39 +954,6 @@
   text-align: justify;
 }
 
-.btn-about-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 34px;
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: all var(--transition-base);
-}
-
-.btn-about-cta svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-primary);
-  stroke-width: 2;
-  transition: transform var(--transition-fast);
-}
-
-.btn-about-cta:hover {
-  background-color: var(--color-midnight);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-
-.btn-about-cta:hover svg {
-  stroke: var(--color-white);
-  transform: translateX(4px);
-}
 
 .about-cta-art-col {
   display: flex;
@@ -1020,14 +995,6 @@
     display: none;
   }
 
-  .mv-panels-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .mv-center-donut {
-    display: none;
-  }
 }
 
 @media (max-width: 991px) {
@@ -1126,6 +1093,15 @@
 
   .about-cta-title {
     font-size: 1.8rem;
+  }
+
+  .mv-panels-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mv-panel {
+    padding: 32px 24px 36px 24px;
   }
 }
 

@@ -94,3 +94,49 @@
   text-transform: uppercase;
 }
 
+/* ==========================================================================
+   ARCHIVE UPDATE: Unused CSS Code from Services (css/services.css)
+   Date: 2026-09-21
+   Description:
+     Legacy CTA banner button (.btn-about-cta).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   5. Legacy CTA Banner Button
+   -------------------------------------------------------------------------- */
+.btn-about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-about-cta svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  transition: transform var(--transition-fast);
+}
+
+.btn-about-cta:hover {
+  background-color: var(--color-midnight);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-about-cta:hover svg {
+  stroke: var(--color-white);
+  transform: translateX(4px);
+}
+
+

@@ -15,7 +15,7 @@
    C2. Section 2: Let's Connect + Form + Interactive Map (2_form_map.png)
    -------------------------------------------------------------------------- */
 .contact-main-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -229,7 +229,7 @@
    C4. Section 4: How Can We Help? (4_how_can_i.png)
    -------------------------------------------------------------------------- */
 .how-can-we-help-section {
-  padding: 20px 0 0 0;
+  padding: 0 0 80px 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
   overflow: hidden;
@@ -347,9 +347,57 @@
   stroke: var(--color-cyan-accent-hover);
 }
 
+/* --------------------------------------------------------------------------
+   C5. Contact Page Full-Bleed CTA Banner ("Let's Build Something Great Together")
+   -------------------------------------------------------------------------- */
+.about-cta-banner-section {
+  padding: 80px 0 0 0;
+  background-color: var(--color-bg-subtle, #F8FAFC);
+}
+
+.about-cta-banner-inner {
+  background: linear-gradient(135deg, #0047C8 0%, #0062FE 55%, #1A74FF 100%);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--color-white, #FFFFFF);
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+}
+
+.about-cta-title .highlight-cyan {
+  color: #38BDF8;
+}
+
+.about-cta-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.about-cta-art-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-cta-svg-art {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
 
 /* ==========================================================================
-   C5. CONTACT PAGE RESPONSIVE QUERIES
+   C6. CONTACT PAGE RESPONSIVE QUERIES
    ========================================================================== */
 @media (max-width: 1199px) {
 
@@ -362,7 +410,11 @@
   }
 }
 
-
+@media (max-width: 991px) {
+  .about-cta-art-col {
+    margin-top: 30px;
+  }
+}
 
 @media (max-width: 767px) {
 
@@ -375,4 +427,9 @@
   .connect-info-card {
     padding: 30px 20px;
   }
+
+  .about-cta-title {
+    font-size: 1.8rem;
+  }
 }
+

@@ -63,7 +63,7 @@
 .capabilities-strip {
   background-color: #FFFFFF;
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  padding: 20px 0 0 0;
+  padding: 80px 0 0 0;
   position: relative;
   z-index: 2;
 }
@@ -130,7 +130,7 @@
    S3. Comprehensive Services Catalog (Interactive Filter & 8 Cards)
    -------------------------------------------------------------------------- */
 .services-catalog-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -384,7 +384,7 @@
    S4. Technology Stack Expertise (Interactive Tabbed Slider)
    -------------------------------------------------------------------------- */
 .tech-stack-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: #FFFFFF;
   position: relative;
 }
@@ -596,7 +596,7 @@
    S5. 5-Stage Agile Delivery Pipeline (Methodology & Milestones)
    -------------------------------------------------------------------------- */
 .services-process-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -680,75 +680,16 @@
 }
 
 /* --------------------------------------------------------------------------
-   S6. Why Partner With WebSpire Labs (Client Value Proposition)
+   S6. Why Businesses Choose Us (The WebSpire Advantage)
+   Note: Styled by unified .why-choose-grid / .why-partner-grid in common css/style.css
    -------------------------------------------------------------------------- */
-.why-partner-section {
-  padding: 20px 0 0 0;
-  background-color: #FFFFFF;
-}
 
-.why-partner-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
-  margin-top: 40px;
-}
-
-.why-partner-card {
-  background: #FAFBFC;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 18px;
-  padding: 30px 24px;
-  transition: all 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.why-partner-card:hover {
-  background: #FFFFFF;
-  transform: translateY(-5px);
-  border-color: rgba(0, 98, 254, 0.3);
-  box-shadow: 0 14px 34px rgba(11, 27, 50, 0.08);
-}
-
-.why-partner-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(0, 98, 254, 0.08);
-  color: var(--color-primary, #0062FE);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.why-partner-icon svg {
-  width: 26px;
-  height: 26px;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-.why-partner-title {
-  font-size: 1.12rem;
-  font-weight: 700;
-  color: var(--color-heading, #0B1B32);
-  margin-bottom: 10px;
-}
-
-.why-partner-desc {
-  font-size: 0.88rem;
-  color: #64748B;
-  line-height: 1.6;
-  margin: 0;
-}
 
 /* --------------------------------------------------------------------------
    S7. Frequently Asked Questions (Accordion)
    -------------------------------------------------------------------------- */
 .services-faq-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
 }
 
@@ -799,7 +740,7 @@
    S8. High-Impact Call to Action Banner
    -------------------------------------------------------------------------- */
 .about-cta-banner-section {
-  padding: 20px 0 0 0;
+  padding: 80px 0 0 0;
   background-color: var(--color-bg-page, #FFFFFF);
 }
 
@@ -831,40 +772,6 @@
   text-align: justify;
 }
 
-.btn-about-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 34px;
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: all var(--transition-base);
-  text-decoration: none;
-}
-
-.btn-about-cta svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-primary);
-  stroke-width: 2;
-  transition: transform var(--transition-fast);
-}
-
-.btn-about-cta:hover {
-  background-color: var(--color-midnight);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-
-.btn-about-cta:hover svg {
-  stroke: var(--color-white);
-  transform: translateX(4px);
-}
 
 .about-cta-art-col {
   display: flex;
@@ -895,9 +802,6 @@
   .process-pipeline-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .why-partner-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 767px) {
@@ -911,9 +815,7 @@
   .process-pipeline-grid {
     grid-template-columns: 1fr;
   }
-  .why-partner-grid {
-    grid-template-columns: 1fr;
-  }
+
   .footer-legal-links {
     justify-content: flex-start;
     margin-top: 10px;

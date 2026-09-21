@@ -12,7 +12,7 @@
    (2-Column Clean Minimalist Layout Inspired by Reference Screenshot)
    ========================================================================== */
 .legal-capabilities-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -25,46 +25,58 @@
 .legal-spec-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px 72px;
+  gap: 46px 64px;
 }
 
 .legal-spec-item {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
+  gap: 16px;
+  position: relative;
 }
 
-.legal-spec-head {
+.legal-spec-icon-wrap {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
+  justify-content: center;
+  color: var(--color-primary, #0062FE);
+  margin-top: 3px;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.legal-spec-bullet {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--color-cyan-accent, #00A3C4);
-  flex-shrink: 0;
-  box-shadow: 0 0 0 3px rgba(0, 163, 196, 0.16);
+.legal-check-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.legal-spec-item:hover .legal-spec-icon-wrap {
+  transform: scale(1.15);
+  color: var(--color-cyan-accent, #00A3C4);
+}
+
+.legal-spec-content {
+  flex: 1;
 }
 
 .legal-spec-title {
-  font-size: 1.2rem;
+  font-size: 1.20rem;
   font-weight: 700;
   color: var(--color-heading, #0B1B32);
   line-height: 1.35;
   letter-spacing: -0.015em;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .legal-spec-desc {
   font-size: 0.96rem;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.68;
   margin: 0;
-  padding-left: 23px;
+  padding-left: 0;
 }
 
 /* ==========================================================================
@@ -72,26 +84,34 @@
    (2-Column Clean Minimalist Layout Inspired by Reference Screenshot)
    ========================================================================== */
 .legal-features-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
 
 /* ==========================================================================
+   SECTION 4: Why Choose Us (3x2 Cards Grid)
+   Note: Styled by unified .why-choose-grid / .legal-why-grid in common css/style.css
+   ========================================================================== */
+
+
+/* ==========================================================================
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 991px) {
+
   .legal-capabilities-section,
   .legal-features-section {
     padding: 20px 0 0 0;
   }
 
-  .legal-section-header {
+  .legal-capabilities-section .section-header,
+  .legal-features-section .section-header {
     margin-bottom: 40px;
   }
 
   .legal-spec-grid {
-    gap: 36px 44px;
+    gap: 36px 40px;
   }
 
   .legal-spec-title {
@@ -104,12 +124,14 @@
 }
 
 @media (max-width: 767px) {
+
   .legal-capabilities-section,
   .legal-features-section {
     padding: 20px 0 0 0;
   }
 
-  .legal-section-header {
+  .legal-capabilities-section .section-header,
+  .legal-features-section .section-header {
     margin-bottom: 32px;
   }
 
@@ -118,9 +140,24 @@
     gap: 28px;
   }
 
+  .legal-spec-item {
+    gap: 14px;
+  }
+
+  .legal-spec-icon-wrap {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+
+  .legal-check-icon {
+    width: 19px;
+    height: 19px;
+  }
+
   .legal-spec-desc {
-    padding-left: 23px;
-    font-size: 0.91rem;
+    padding-left: 0;
+    font-size: 0.92rem;
     line-height: 1.62;
   }
 }

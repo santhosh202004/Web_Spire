@@ -1,0 +1,29 @@
+/* ==========================================================================
+   TRASH / ARCHIVE: Unused CSS Code from Law Firm Stylesheet
+   File: css/law-firm-website-design.css
+   Date: 2026-09-21
+   Description:
+     Unused .featured class on .legal-why-card (not present in law-firm-website-design.html).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Featured State for Legal Why Card (Unused in HTML)
+   -------------------------------------------------------------------------- */
+.legal-why-card.featured .legal-why-icon-wrap {
+  background-color: #FFFFFF;
+  color: #0B57D0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.legal-why-card.featured .legal-why-card-title {
+  color: #FFFFFF;
+}
+
+.legal-why-card.featured .legal-why-card-desc {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.legal-why-card.featured:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 50px rgba(11, 87, 208, 0.35);
+}

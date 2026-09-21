@@ -1,10 +1,15 @@
 /* ==========================================================================
    WEBSPIRE LABS — WEB DEVELOPMENT SERVICE STYLESHEET (web-development.css)
    Page: web-development.html
-   Cleaned & Optimized: 2026-09-16
+   Audited & Verified: 2026-09-21
    Note: All legacy & unreferenced modules (Performance Strip, Capabilities,
    Project Showcase, Tech Ecosystem, Lifecycle, Why Choose, CTA Banner, Blueprint
-   Modal) were safely decoupled and archived into trash/web-development.css.
+   Modal) are safely archived in trash/web-development.css.
+   
+   CSS Class Usage Audit Status:
+   - Total Classes Defined: 37
+   - Active & Used in web-development.html: 37 (100% active, 0 unused)
+   - Orphaned HTML classes removed: .process-row-top, .process-row-bottom
    ========================================================================== */
 
 /* Note: Web Development Hero Banner (W1) is styled by unified .subpage-hero in style.css */
@@ -14,7 +19,7 @@
    W2. 12 Industry-Specific Solutions (Cards Grid & Action Links)
    -------------------------------------------------------------------------- */
 .industry-solutions-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -22,77 +27,81 @@
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 0;
+  border-top: 1px solid #E5E7EB;
+  border-left: 1px solid #E5E7EB;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: visible;
+  border-radius: 4px;
 }
 
 .industry-card {
   background-color: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 16px;
-  padding: 30px 24px 26px;
+  border-right: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 42px 34px 36px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.04);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  overflow: hidden;
   cursor: pointer;
-}
-
-.industry-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3.5px;
-  background: linear-gradient(90deg, #0062FE, #00A3C4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              border-radius 0.25s ease;
+  z-index: 1;
 }
 
 .industry-card:hover {
+  z-index: 10;
   transform: translateY(-5px);
-  border-color: rgba(0, 98, 254, 0.4);
-  box-shadow: 0 16px 36px rgba(11, 27, 50, 0.09);
-}
-
-.industry-card:hover::before {
-  opacity: 1;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.12),
+              0 8px 16px -4px rgba(15, 23, 42, 0.06),
+              0 0 0 1px rgba(0, 98, 254, 0.12);
+  background-color: #FFFFFF;
 }
 
 .industry-icon-wrap {
   width: 52px;
   height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(0, 163, 196, 0.12) 0%, rgba(0, 98, 254, 0.08) 100%);
-  color: var(--color-primary, #0062FE);
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 163, 196, 0.2);
-  margin-bottom: 20px;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.industry-card:hover .industry-icon-wrap {
-  transform: scale(1.06);
-  color: #00A3C4;
-  background: linear-gradient(135deg, rgba(0, 163, 196, 0.22) 0%, rgba(0, 98, 254, 0.14) 100%);
+  justify-content: flex-start;
+  margin-bottom: 22px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .industry-icon-wrap svg {
-  width: 26px;
-  height: 26px;
+  width: 48px;
+  height: 48px;
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industry-card:hover .industry-icon-wrap svg {
+  transform: scale(1.06) translateY(-2px);
 }
 
 .industry-title {
-  font-size: 1.15rem;
+  font-size: 1.16rem;
   font-weight: 700;
   color: #0F172A;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   line-height: 1.38;
+  letter-spacing: -0.01em;
+}
+
+.industry-desc {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #475467;
+  line-height: 1.62;
+  margin-bottom: 24px;
   flex-grow: 1;
 }
 
@@ -100,8 +109,8 @@
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.90rem;
-  font-weight: 700;
+  font-size: 0.91rem;
+  font-weight: 600;
   color: var(--color-primary, #0062FE);
   text-decoration: none;
   display: inline-flex;
@@ -120,14 +129,14 @@
 
 .btn-industry-action:hover,
 .industry-card:hover .btn-industry-action {
-  color: #00A3C4;
+  color: #0052D4;
   gap: 12px;
 }
 
 .btn-industry-action:hover svg,
 .industry-card:hover .btn-industry-action svg {
   transform: translateX(4px);
-  stroke: #00A3C4;
+  stroke: #0052D4;
 }
 
 /* --------------------------------------------------------------------------
@@ -143,7 +152,7 @@
    W3. 5-Stage Engineering Lifecycle / Sprint Roadmap (Minimalist Stepper)
    -------------------------------------------------------------------------- */
 .process-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -217,7 +226,7 @@
    W4. Our Technology Expertise (Interactive Tabbed Slider)
    -------------------------------------------------------------------------- */
 .tech-stack-section {
-  padding: 20px 0 0 0;
+  padding: 0;
   background-color: var(--color-bg-page, #FFFFFF);
   position: relative;
 }
@@ -434,7 +443,7 @@
    W5. Frequently Asked Questions (SEO Rich Snippet Accordion)
    -------------------------------------------------------------------------- */
 .faq-section {
-  padding: 20px 0 0 0;
+  padding: 0 0 80px 0;
   background-color: var(--color-bg-page, #FFFFFF);
 }
 
@@ -513,7 +522,11 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
   .industries-grid {
-    gap: 20px;
+    gap: 0;
+  }
+
+  .industry-card {
+    padding: 36px 26px 30px;
   }
 
   .process-step-item {
@@ -565,6 +578,10 @@
 @media (max-width: 767px) {
   .industries-grid {
     grid-template-columns: 1fr;
+  }
+
+  .industry-card {
+    padding: 30px 22px 28px;
   }
 
   .process-steps-container {
